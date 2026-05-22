@@ -1,44 +1,58 @@
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
+import { AnimateOnScroll } from '@/components/animate-on-scroll'
 
-const items = [
+const features = [
   {
-    title: 'Feature-Based Architecture',
+    title: 'Lightning Fast Performance',
     description:
-      'Organized by features for scalability and clear separation of concerns.',
+      'Built on Vite with optimized code splitting and lazy loading. Every interaction feels instant, every page loads in milliseconds.',
+    image: 'https://picsum.photos/800/600?random=10',
   },
   {
-    title: 'Type-Safe',
+    title: 'Scalable Architecture',
     description:
-      'Built with TypeScript for reliable refactoring and fewer runtime errors.',
+      'Feature-based modular structure with strict unidirectional dependencies. Your codebase stays clean as it grows from prototype to production.',
+    image: 'https://picsum.photos/800/600?random=11',
   },
   {
-    title: 'Modern Styling',
+    title: 'Beautiful by Default',
     description:
-      'Tailwind CSS v4 with shadcn/ui components for rapid, consistent UI development.',
+      'Tailwind CSS v4 with shadcn/ui components give you a polished design system out of the box. Customize everything to match your brand.',
+    image: 'https://picsum.photos/800/600?random=12',
   },
-] as const
+]
 
 export function FeaturesSection() {
   return (
-    <section className="bg-muted/50 py-24">
-      <div className="container mx-auto px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold">Features</h2>
-        <div className="grid gap-6 md:grid-cols-3">
-          {items.map((item) => (
-            <Card key={item.title}>
-              <CardHeader>
-                <CardTitle>{item.title}</CardTitle>
-                <CardDescription>{item.description}</CardDescription>
-              </CardHeader>
-            </Card>
-          ))}
-        </div>
-      </div>
+    <section>
+      {features.map((feature, i) => {
+        const isOdd = i % 2 === 0
+        return (
+          <div
+            key={feature.title}
+            className="container mx-auto grid items-center gap-12 px-4 py-24 md:grid-cols-2"
+          >
+            <AnimateOnScroll
+              animation={isOdd ? 'fade-right' : 'fade-left'}
+              className={isOdd ? '' : 'md:order-last'}
+            >
+              <img
+                src={feature.image}
+                alt={feature.title}
+                className="w-full rounded-xl shadow-lg"
+              />
+            </AnimateOnScroll>
+            <AnimateOnScroll
+              animation={isOdd ? 'fade-left' : 'fade-right'}
+              className={isOdd ? '' : 'md:order-first'}
+            >
+              <h2 className="text-3xl font-bold">{feature.title}</h2>
+              <p className="text-muted-foreground mt-4 text-lg">
+                {feature.description}
+              </p>
+            </AnimateOnScroll>
+          </div>
+        )
+      })}
     </section>
   )
 }
