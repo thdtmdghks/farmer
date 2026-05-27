@@ -67,7 +67,7 @@ export const companies: CompanyData[] = [
     period: '2022.08 ~ 2025.07',
     role: '프론트엔드 개발자',
     summary: [
-      '결제 서비스 단독 개발·운영 & 대시보드 (보안 접근 제어, 유효성 검증, S3 템플릿 롤백)',
+      '결제 서비스 초기 MVP 단독 수행 & 대시보드 (보안 접근 제어, 유효성 검증, S3 템플릿 롤백)',
       '외상 결제 데모몰 (비개발자 자동 구동 스크립트)',
       '사업자 정보 검증 API (서버리스, 3단계 테스트)',
       '백오피스 리뉴얼 (Vue → Next.js, Figma 버전 관리 제안)',
@@ -79,7 +79,7 @@ export const companies: CompanyData[] = [
         problem:
           '결제 시나리오를 매 배포마다 수동 클릭 검증 → 휴먼 에러 및 장애 리스크',
         solution:
-          '단위(Vitest) + E2E(Playwright) 자동화 파이프라인 구축, 결제 서비스 운영 장애 0건',
+          '단위(Vitest) + E2E(Playwright) 파이프라인을 구축하고 테스트 실패 시 배포를 차단하여, 수동 QA에서 누락되던 예외 케이스를 사전 탐지하고 서비스 안정성을 확보',
         tags: ['Vitest', 'Playwright', 'CI/CD'],
         category: 'frontend',
         group: 'test-zero-incident',
@@ -90,7 +90,7 @@ export const companies: CompanyData[] = [
         problem:
           '백엔드 리소스 부재로 직접 구현, 배포 전 Lambda 동작을 로컬에서 검증할 방법 필요',
         solution:
-          '3단계 테스트(Jest→SAM→LocalStack) 구축, 단독 수행, 운영 장애 0건',
+          '3단계 테스트(Jest→SAM→LocalStack)를 구축하여 배포 전 인프라 동작을 검증, 안정적인 운영 달성',
         tags: ['Lambda', 'SAM', 'Docker'],
         category: 'backend',
         group: 'test-zero-incident',
@@ -111,7 +111,7 @@ export const companies: CompanyData[] = [
         problem:
           'JSON Server는 localhost 한정이라 모바일 실기기 테스트 불가, 매번 배포 대기',
         solution:
-          'MSW(Service Worker) 전환으로 배포 URL에서도 mock 동작, QA 배포 대기 제거',
+          'MSW(Service Worker) 전환으로 배포 없이도 모바일 환경에서 즉시 테스트 가능, 에러·엣지 케이스도 mock 응답 전환만으로 검증',
         tags: ['MSW', 'JSON Server'],
         category: 'frontend',
       },
