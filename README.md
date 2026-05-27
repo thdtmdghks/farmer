@@ -35,13 +35,16 @@ ESLint로 의존성 방향과 네이밍 컨벤션을 자동 강제하여, 규칙
 src/
 ├── app/              # 루트 컴포넌트 (라우터 생성)
 ├── routes/           # 페이지 = feature 조합
+│   ├── index.tsx     # / (랜딩 페이지)
+│   └── resume.tsx    # /resume (이력서 카드)
 ├── features/         # 기능 단위 모듈 (독립적)
 │   ├── hero/
 │   ├── navigation/
 │   ├── features/
 │   ├── stats/
 │   ├── showcase/
-│   └── cta/
+│   ├── cta/
+│   └── resume/       # 이력서 키워드 카드 + SVG 다이어그램
 ├── components/       # 공유 UI (shadcn/ui + 커스텀)
 ├── hooks/            # 공유 훅 (useInView)
 ├── config/           # 사이트 설정, 애니메이션 설정
@@ -81,13 +84,14 @@ pnpm install
 pnpm dev        # 개발 서버
 pnpm build      # 프로덕션 빌드 (tsc + vite)
 pnpm lint       # 아키텍처 규칙 포함 린트
+pnpm format     # Prettier 포맷
 ```
 
 ## 설계 문서
 
 - [`docs/decisions.md`](docs/decisions.md) — 기술 결정 기록
+- [`docs/coding-conventions.md`](docs/coding-conventions.md) — 코딩 컨벤션
 - [`docs/scroll-animation-spec.md`](docs/scroll-animation-spec.md) — 스크롤 애니메이션 스펙
 - [`docs/design-system.md`](docs/design-system.md) — 디자인 시스템
-- [`docs/coding-conventions.md`](docs/coding-conventions.md) — 코딩 컨벤션
-- [`docs/data-structure.md`](docs/data-structure.md) — 데이터 구조
-- [`docs/section-specs.md`](docs/section-specs.md) — 섹션별 상세 스펙
+- [`docs/resume-card-design.md`](docs/resume-card-design.md) — 이력서 카드 레이아웃 설계
+- [`docs/archive/`](docs/archive/) — 초기 설계 문서 (참고용)

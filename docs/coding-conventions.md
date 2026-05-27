@@ -6,68 +6,79 @@
 src/
 ├── main.tsx                ← 진입점 (ReactDOM.createRoot)
 ├── index.css               ← Tailwind + 테마 + print CSS
-├── app.tsx                 ← 섹션 조합
-├── sections/               ← 페이지 섹션 컴포넌트
+├── routeTree.gen.ts        ← TanStack Router 자동 생성 (수동 편집 금지)
+├── app/
+│   └── app.tsx             ← RouterProvider 설정
+├── routes/                 ← 파일 기반 라우팅
+│   ├── __root.tsx
+│   ├── index.tsx           ← / (랜딩 페이지)
+│   └── resume.tsx          ← /resume (이력서 페이지)
+├── features/               ← 도메인별 기능 모듈
+│   ├── hero/
+│   ├── navigation/
+│   ├── features/
+│   ├── showcase/
+│   ├── stats/
+│   ├── cta/
+│   └── resume/             ← 이력서 카드 + SVG 다이어그램
 ├── components/             ← 공유 컴포넌트
-│   └── ui/                 ← shadcn 컴포넌트
-├── hooks/                  ← 커스텀 훅
-├── data/                   ← 이력서 데이터 (상수 + 타입)
+│   ├── ui/                 ← shadcn 컴포넌트
+│   ├── animate-on-scroll.tsx
+│   └── debug-overlay.tsx
+├── hooks/                  ← 공유 커스텀 훅
+├── lib/                    ← 유틸리티 (cn 등)
+├── config/                 ← 설정값
 ├── types/                  ← 공유 타입 정의
-└── config/                 ← 설정값
+├── utils/                  ← 유틸리티 함수
+└── assets/                 ← 정적 자원
 ```
 
-## 의존성 방향
+## 의존성 방향 (ESLint 자동 강제)
 
 ```
-config, types, data
+shared (components, hooks, lib, types, utils, config)
        ↓
-    hooks
+   features/
        ↓
-  components
+    routes/
        ↓
-   sections
-       ↓
-   app.tsx
+     app/
 ```
 
-- `sections/` → `components/`, `hooks/`, `data/`, `config/`, `types/` import 가능
-- `components/` → `hooks/`, `config/`, `types/` import 가능
-- `sections/` 간 교차 import 금지
-- `components/` → `sections/` import 금지
+- `features/` → `shared` import 가능
+- `routes/` → `features/`, `shared` import 가능
+- `features/` → `app/` import 금지
+- `shared` → `features/`, `app/` import 금지
+- **feature 간 직접 import 금지** (조합은 routes에서만)
 
-ESLint `import-x/no-restricted-paths`로 자동 강제.
+ESLint `import-x/no-restricted-paths`로 자동 강제. 위반 시 빌드 실패.
 
 ## 네이밍
 
-| 대상            | 규칙                  | 예시                                                  |
-| --------------- | --------------------- | ----------------------------------------------------- |
-| 파일/폴더       | kebab-case            | `hero.tsx`, `use-in-view.ts`, `animate-on-scroll.tsx` |
-| 컴포넌트        | PascalCase            | `Hero`, `DecisionCard`, `AnimateOnScroll`             |
-| 훅              | camelCase, use 접두사 | `useInView`, `useCountUp`                             |
-| 타입/인터페이스 | PascalCase            | `Decision`, `Project`, `Experience`                   |
-| 상수            | UPPER_SNAKE_CASE      | `ANIMATION_DURATION`, `OBSERVER_ROOT_MARGIN`          |
-| 데이터 배열     | camelCase 복수형      | `experiences`, `decisions`, `projects`                |
+| 대상            | 규칙                  | 예시                                                   |
+| --------------- | --------------------- | ------------------------------------------------------ |
+| 파일/폴더       | KEBAB_CASE            | `hero-section.tsx`, `use-in-view.ts`, `resume-data.ts` |
+| 컴포넌트        | PascalCase            | `HeroSection`, `KeywordCardComponent`                  |
+| 훅              | camelCase, use 접두사 | `useInView`, `useCountUp`                              |
+| 타입/인터페이스 | PascalCase            | `KeywordCard`, `CompanyData`                           |
+| 상수            | UPPER_SNAKE_CASE      | `ANIMATION_DURATION`, `OBSERVER_ROOT_MARGIN`           |
 
 ESLint `check-file` 플러그인으로 파일/폴더 네이밍 자동 강제.
+`src/routes/`는 TanStack Router 규칙(`__root.tsx` 등)을 따르므로 예외 처리.
 
 ## 컴포넌트 패턴
 
-### 섹션 컴포넌트
+### Feature 컴포넌트
 
 ```tsx
-// sections/hero.tsx
-export function Hero() {
-  return (
-    <section id="hero" className="...">
-      {/* 섹션 내용 */}
-    </section>
-  )
+// features/hero/components/hero-section.tsx
+export function HeroSection() {
+  return <section>{/* 섹션 내용 */}</section>
 }
 ```
 
-- 최상위 태그는 `<section>` + `id` 속성 (앵커 네비게이션용)
-- 데이터는 `data/`에서 import
-- 한 파일에 한 섹션
+- feature 내부에 `components/`, `hooks/`, `data/` 하위 구조 가능
+- `export function` (default export 사용 안 함)
 
 ### 공유 컴포넌트
 
@@ -80,38 +91,28 @@ interface AnimateOnScrollProps {
   className?: string
 }
 
-export function AnimateOnScroll({
-  children,
-  animation,
-  delay = 0,
-  className,
-}: AnimateOnScrollProps) {
+export function AnimateOnScroll({ ... }: AnimateOnScrollProps) {
   // ...
 }
 ```
 
 - Props 인터페이스를 컴포넌트 바로 위에 정의
-- `export function` (default export 사용 안 함)
 - children이 있으면 `ReactNode` 타입
 
-### 데이터 파일
+### 라우트 파일
 
 ```tsx
-// data/resume.ts
-import type { Experience, Decision } from '@/types/resume'
+// routes/resume.tsx
+import { createFileRoute } from '@tanstack/react-router'
+import { ResumePage } from '@/features/resume/components/resume-page'
 
-export const experiences: Experience[] = [
-  // ...
-]
-
-export const decisions: Decision[] = [
-  // ...
-]
+export const Route = createFileRoute('/resume')({
+  component: ResumePage,
+})
 ```
 
-- 타입은 `types/`에서 import
-- `as const` 또는 명시적 타입 배열로 선언
-- 데이터 파일에 로직 없음 (순수 상수)
+- `createFileRoute`로 라우트 정의
+- 실제 UI는 features에서 import
 
 ## 스타일
 
@@ -119,18 +120,13 @@ export const decisions: Decision[] = [
 
 - 인라인 Tailwind 클래스 사용 (CSS 파일 분리 안 함)
 - 긴 클래스는 `cn()` 유틸로 조건부 결합
-- 반복되는 스타일 조합은 컴포넌트로 추출 (유틸 클래스 @apply 사용 안 함)
+- 반복되는 스타일 조합은 컴포넌트로 추출 (`@apply` 사용 안 함)
 - 색상은 CSS 변수 참조 (`text-foreground`, `bg-muted` 등)
 
 ### 반응형
 
 - 모바일 퍼스트 (`sm:`, `md:`, `lg:` 순서로 확장)
-- 브레이크포인트: Tailwind 기본값 사용 (sm:640, md:768, lg:1024)
-
-### 다크모드
-
-- CSS 변수 기반 (`.dark` 클래스 토글)
-- 컴포넌트에서 `dark:` variant 직접 사용 최소화 → CSS 변수로 처리
+- 브레이크포인트: Tailwind 기본값 사용
 
 ## Import 규칙
 
@@ -139,20 +135,18 @@ export const decisions: Decision[] = [
 import { useState } from 'react'
 
 // 2. 외부 라이브러리
-import { cva } from 'class-variance-authority'
+import { createFileRoute } from '@tanstack/react-router'
 
 // 3. 내부 절대 경로 (@/)
 import { cn } from '@/lib/utils'
 import { useInView } from '@/hooks/use-in-view'
-import { experiences } from '@/data/resume'
 
 // 4. 타입 (type-only import)
-import type { Decision } from '@/types/resume'
+import type { KeywordCard } from '../data/resume-data'
 ```
 
-- 절대 경로 `@/*` 사용
+- 절대 경로 `@/*` 사용 (feature 내부는 상대 경로 허용)
 - 타입은 `import type` 사용
-- 그룹 간 빈 줄 (Prettier가 자동 정렬)
 
 ## 코드 스타일 (Prettier)
 
@@ -160,9 +154,9 @@ import type { Decision } from '@/types/resume'
 - 싱글 쿼트
 - 탭 너비 2칸
 - trailing comma
-- Tailwind 클래스 자동 정렬
+- Tailwind 클래스 자동 정렬 (`prettier-plugin-tailwindcss`)
 
-## Git 커밋
+## Git
 
-- Husky + lint-staged: 커밋 시 자동 린트/포맷
-- 커밋 메시지: 자유 형식 (commitlint 미적용)
+- Husky + lint-staged: 커밋 시 자동 ESLint fix + Prettier format
+- staged 파일만 대상 (`*.{ts,tsx}` → eslint + prettier, `*.{json,css,md}` → prettier)
