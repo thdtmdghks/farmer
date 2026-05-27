@@ -3,6 +3,7 @@ import { routeTree } from '@/routeTree.gen'
 
 const router = createRouter({
   routeTree,
+  basepath: '/farmer',
   defaultNotFoundComponent: () => (
     <div className="flex min-h-screen flex-col items-center justify-center gap-4">
       <h1 className="text-4xl font-bold">404</h1>
