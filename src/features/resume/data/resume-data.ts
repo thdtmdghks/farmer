@@ -21,10 +21,10 @@ export const companies: CompanyData[] = [
   {
     company: '엑심베이',
     description: '글로벌 결제 서비스 기업',
-    period: '2025.03 ~ 재직중',
+    period: '2026.03 ~ 재직중',
     role: '프론트엔드 개발자',
     summary: [
-      '결제 백오피스 & 어드민 시스템 (RSA 암호화, Zod 검증, shadcn/ui, Vitest)',
+      '결제 백오피스 & 어드민 시스템 (RSA 암호화, Zod 검증, shadcn/ui, Vitest, MSW 도메인 분리 모킹)',
       '블록체인 지갑 API + UI 개발 (NestJS, Drizzle, E2E 테스트)',
       'Coinflux 암호화폐 결제 Sandbox 통합 테스트',
     ],
@@ -37,16 +37,6 @@ export const companies: CompanyData[] = [
         solution:
           '공유 패키지를 빌드 없이 소스 export하여 앱 Vite가 직접 컴파일하는 구조로 설계, 의존성 계층 규칙으로 순환 참조 방지',
         tags: ['React 19', 'pnpm', 'Vite 6'],
-        category: 'frontend',
-      },
-      {
-        id: 'fe-independence',
-        keyword: 'FE 독립 개발 환경',
-        problem:
-          '백엔드 API 미완성 시 프론트엔드 개발이 전면 홀딩되는 반복적 병목',
-        solution:
-          'MSW 2 도메인별 핸들러 분리 + 조건부 활성화로 백엔드 없이 개발·테스트 완결',
-        tags: ['MSW 2', 'dynamic import'],
         category: 'frontend',
       },
       {
@@ -71,6 +61,7 @@ export const companies: CompanyData[] = [
       '외상 결제 데모몰 (비개발자 자동 구동 스크립트)',
       '사업자 정보 검증 API (서버리스, 3단계 테스트)',
       '백오피스 리뉴얼 (Vue → Next.js, Figma 버전 관리 제안)',
+      '슬랙 워크플로우 자동화 제작·배포, GitHub 이슈/PR 생성 간소화 방법 팀 공유',
     ],
     cards: [
       {
@@ -130,7 +121,7 @@ export const companies: CompanyData[] = [
         problem:
           '상세 확인 시 매번 페이지 이동, 정산 수수료 수작업 계산의 피로도',
         solution:
-          'Split Panel UI로 이동 제거 + 달력 기반 수수료 자동 계산기 제안·도입',
+          'Split Panel UI로 이동 제거 + 달력 기반 수수료 자동 계산기 제안·구현',
         tags: ['Next.js', 'React', 'MUI'],
         category: 'frontend',
       },
