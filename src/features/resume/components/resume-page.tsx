@@ -9,7 +9,17 @@ export function ResumePage() {
       <header className="mb-8">
         <div className="flex items-baseline justify-between">
           <h1 className="text-3xl font-bold text-gray-900">송승환</h1>
-          <span className="text-sm text-gray-500">ghksl4157@gmail.com</span>
+          <div className="text-right text-sm text-gray-500">
+            <p>ghksl4157@gmail.com</p>
+            <a
+              href="https://github.com/thdtmdghks"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:underline"
+            >
+              github.com/thdtmdghks
+            </a>
+          </div>
         </div>
         <p className="mt-1 text-lg text-gray-600">소프트웨어 개발자 · 6년차</p>
         <p className="mt-3 leading-relaxed text-gray-500">

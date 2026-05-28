@@ -21,7 +21,7 @@ export const companies: CompanyData[] = [
     period: '2026.03 ~ 재직중',
     role: '프론트엔드 개발자',
     summary: [
-      '결제 백오피스 & 어드민 Turborepo 모노레포 설계 (RSA 암호화, Zod 검증, shadcn/ui, Vitest, MSW 도메인 분리 모킹)',
+      '결제 백오피스 & 어드민 Turborepo 모노레포 설계 (RSA 암호화, Zod 검증, MSW 도메인 분리 모킹)',
       '블록체인 지갑 API + UI 개발 (NestJS, Drizzle, 인메모리 서명 락, E2E 테스트)',
       'Coinflux 암호화폐 결제 Sandbox 통합 테스트',
     ],
@@ -32,7 +32,7 @@ export const companies: CompanyData[] = [
     period: '2022.08 ~ 2025.07',
     role: '프론트엔드 개발자',
     summary: [
-      '결제 서비스 초기 MVP 단독 수행 & 대시보드 (보안 접근 제어, 유효성 검증, S3 템플릿 롤백)',
+      '결제 서비스 초기 MVP 단독 수행 & 대시보드 (다단계 플로우, 유효성 검증)',
       '외상 결제 데모몰 (비개발자 자동 구동 스크립트)',
       '사업자 정보 검증 API (서버리스, Jest→SAM→LocalStack 3단계 테스트)',
       '백오피스 리뉴얼 (Vue → Next.js, Split Panel UI, 달력 기반 수수료 계산기 제안·구현)',
@@ -70,7 +70,7 @@ export const stories: StoryCard[] = [
     problem:
       '피처가 늘어나면서 한 곳 수정 시 영향받는 곳을 모두 수동 테스트해야 하는 상황. 시간 소요 + 휴먼 에러로 시나리오 누락 발생. 결제 서비스 특성상 모든 시나리오 검증이 까다로움',
     solution:
-      '유닛 테스트로 복잡한 로직(연체 수수료 등) 검증 → 버그 의심 시 테스트만 돌려 빠르게 원인 파악. Playwright E2E로 결제 전체 플로우 자동화 + CI 배포 차단. 같은 원칙을 서버리스 API(3레이어 분리 + 3단계 테스트)와 블록체인 지갑(nock mock + PostgreSQL E2E)에도 적용',
+      '유닛 테스트로 복잡한 로직(연체 수수료 등) 검증 → 버그 의심 시 빠르게 원인 파악. Playwright E2E로 결제 전체 플로우 자동화 + CI 배포 차단. 같은 원칙을 서버리스 API(3레이어 분리 + 3단계 테스트)와 블록체인 지갑(nock mock + PostgreSQL E2E)에도 적용',
     tags: ['Vitest', 'Playwright', 'Jest', 'CI/CD', 'nock'],
   },
   {
@@ -100,7 +100,7 @@ export const simplifiedStories: StoryCard[] = [
     problem:
       '• 처음엔 테스트의 필요성을 크게 느끼지 못했으나, 기능이 늘면서 수동 회귀 테스트 시간 증가 + 휴먼 에러로 시나리오 누락 발생\n• 결제 서비스 특성상 모든 시나리오 검증이 까다로움\n• 연체 수수료 등 다변수 계산 로직의 수동 검증 한계',
     solution:
-      '• 유닛 테스트: 연체 수수료 등 복잡한 로직 검증 → 버그 의심 시 테스트만 돌려 빠르게 원인 파악\n• Playwright E2E: Cypress와 직접 비교 후 선택 → CI 배포 차단 안전장치 설계\n• 테스트 원칙 확장: 서버리스(Jest→SAM→LocalStack 3단계)와 블록체인 지갑(nock + PostgreSQL E2E)에도 적용',
+      '• 유닛 테스트: 연체 수수료 등 복잡한 로직 검증 → 버그 의심 시 빠르게 원인 파악\n• Playwright E2E: Cypress와 직접 비교 후 선택 → CI 배포 차단 안전장치 설계\n• 테스트 원칙 확장: 서버리스(Jest→SAM→LocalStack 3단계)와 블록체인 지갑(nock + PostgreSQL E2E)에도 적용',
     tags: ['Vitest', 'Playwright', 'Jest', 'CI/CD', 'nock'],
   },
   {
