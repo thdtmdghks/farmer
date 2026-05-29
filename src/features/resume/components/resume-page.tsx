@@ -134,7 +134,7 @@ export function ResumePage() {
       {/* 작성한 글 */}
       <section className="rounded-lg bg-gray-50 p-6">
         <h2 className="mb-3 text-xl font-bold text-gray-900">작성한 글</h2>
-        <ul className="space-y-1.5 text-sm">
+        <ul className="space-y-1.5 text-xs">
           <li>
             <a
               href="https://www.notion.so/UI-2616441365fb80be87e0c62b978265c4"

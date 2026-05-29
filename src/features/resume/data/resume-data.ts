@@ -1,9 +1,14 @@
+export type Project = {
+  name: string
+  details: string[]
+}
+
 export type CompanyData = {
   company: string
   description: string
   period: string
   role: string
-  summary: string[]
+  projects: Project[]
 }
 
 export type StoryCard = {
@@ -19,11 +24,26 @@ export const companies: CompanyData[] = [
     company: '엑심베이',
     description: '글로벌 결제 서비스 기업',
     period: '2026.03 ~ 재직중',
-    role: '프론트엔드 개발자',
-    summary: [
-      '결제 백오피스 & 어드민 Turborepo 모노레포 설계 (RSA 암호화, Zod 검증, MSW 도메인 분리 모킹)',
-      '블록체인 지갑 API + UI 개발 (NestJS, Drizzle, 인메모리 서명 락, E2E 테스트)',
-      'Coinflux 암호화폐 결제 Sandbox 통합 테스트',
+    role: '풀스택 개발자',
+    projects: [
+      {
+        name: '결제 백오피스 & 어드민',
+        details: [
+          '아키텍처 설계부터 단독 수행',
+          'Turborepo 모노레포, RSA 암호화, Zod 검증, MSW 도메인 분리 모킹',
+        ],
+      },
+      {
+        name: '블록체인 지갑 API',
+        details: [
+          '설계 → 구현 → 테스트 → 문서화 단독 수행',
+          'NestJS, Drizzle, 인메모리 서명 락, nock + PostgreSQL E2E 테스트',
+        ],
+      },
+      {
+        name: 'Coinflux 암호화폐 결제',
+        details: ['Sandbox 통합 테스트'],
+      },
     ],
   },
   {
@@ -31,14 +51,40 @@ export const companies: CompanyData[] = [
     description: 'B2B 결제 솔루션 스타트업',
     period: '2022.08 ~ 2025.07',
     role: '프론트엔드 개발자',
-    summary: [
-      '결제 서비스 초기 MVP 단독 수행 & 대시보드 (다단계 플로우, 유효성 검증)',
-      '외상 결제 데모몰 (비개발자 자동 구동 스크립트)',
-      '사업자 정보 검증 API (서버리스, Jest→SAM→LocalStack 3단계 테스트)',
-      '백오피스 리뉴얼 (Vue → Next.js, Split Panel UI, 달력 기반 수수료 계산기 제안·구현)',
-      'pnpm 모노레포 전환 (공통 UI·API 클라이언트·유틸 패키지 분리)',
-      'PDF 완납증명서 (라이브러리 소스 분석 → 행 단위 분할 로직 직접 구현)',
-      '슬랙 워크플로우 자동화 제작·배포, GitHub 이슈/PR 생성 간소화 방법 팀 공유',
+    projects: [
+      {
+        name: '결제 서비스 & 대시보드',
+        details: [
+          '첫 FE 개발자로 합류, 코어 화면 초기 MVP 단독 구현',
+          'pnpm 모노레포 전환 (공통 UI·API 클라이언트·유틸 패키지 분리)',
+          'PDF 완납증명서 (라이브러리 소스 분석 → 행 단위 분할 로직 직접 구현)',
+        ],
+      },
+      {
+        name: '외상 결제 데모몰',
+        details: ['비개발자 자동 구동 스크립트'],
+      },
+      {
+        name: '사업자 정보 검증 API',
+        details: [
+          'BE 리소스 부재 상황에서 자진하여 단독 수행',
+          '서버리스, Jest→SAM→LocalStack 3단계 테스트',
+        ],
+      },
+      {
+        name: '백오피스 리뉴얼',
+        details: [
+          'Vue → Next.js 전면 리뉴얼',
+          'Split Panel UI, 달력 기반 수수료 계산기 제안·구현',
+        ],
+      },
+      {
+        name: '팀 생산성 개선',
+        details: [
+          '슬랙 워크플로우 자동화 제작·배포',
+          'GitHub 이슈/PR 생성 간소화 방법 팀 공유',
+        ],
+      },
     ],
   },
   {
@@ -46,10 +92,28 @@ export const companies: CompanyData[] = [
     description: '방송·미디어 솔루션 기업',
     period: '2020.06 ~ 2022.04',
     role: '웹 개발자',
-    summary: [
-      '웹 기반 영상 편집 솔루션 NLE (Canvas 타임라인 렌더링, 로그 스케일 줌, 멀티 레이어 아이템 드래그·스냅·멀티 셀렉션)',
-      '보도정보시스템 고도화 (Node.js 버전 통일 → 3개월 지연 프로젝트 2주 조기 완료, iOS 키보드 버그 해결)',
-      'CMS 재구축 (24시간 모니터링 — Heap Snapshot으로 메모리 누수 특정·해결, Vue.js, Laravel)',
+    projects: [
+      {
+        name: '웹 기반 영상 편집 솔루션 (NLE)',
+        details: [
+          '코어 기능 개발 (타임라인, 드래그, 스냅)',
+          'Canvas 타임라인 렌더링, 로그 스케일 줌, 멀티 레이어 멀티 셀렉션',
+        ],
+      },
+      {
+        name: '보도정보시스템 고도화',
+        details: [
+          '원인 분석 → Node.js 버전 통일로 3개월 지연 프로젝트 정상화 (2주 조기 완료)',
+          'iOS 키보드 버그 해결',
+        ],
+      },
+      {
+        name: 'CMS 재구축',
+        details: [
+          '아키텍처 재설계 + 24시간 모니터링 개발 (Vue.js, Laravel)',
+          'Heap Snapshot으로 메모리 누수 특정·해결',
+        ],
+      },
     ],
   },
 ]
