@@ -12,7 +12,7 @@ export function CompanySection({ data }: { data: CompanyData }) {
         </div>
         <span className="text-sm text-gray-400">{data.period}</span>
       </div>
-      <div className="space-y-2.5">
+      <div className="space-y-2.5 pl-5">
         {data.projects.map((project) => (
           <div key={project.name}>
             <p className="text-sm font-semibold text-gray-700">
