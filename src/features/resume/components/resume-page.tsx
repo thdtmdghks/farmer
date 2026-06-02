@@ -23,9 +23,9 @@ export function ResumePage() {
         </div>
         <p className="mt-1 text-lg text-gray-600">소프트웨어 개발자 · 6년차</p>
         <p className="mt-3 leading-relaxed text-gray-500">
-          의존성 없는 독립적인 개발 환경과 안정적인 서비스를 중요하게 생각하는
-          소프트웨어 개발자입니다. Mock 기반 독립 개발 환경을 구축하고, 테스트
-          자동화로 배포 전 결함을 차단하며, 모노레포로 코드 정합성을
+          독립적인 개발 환경과 안정적인 서비스를 추구하며 영역을 가리지 않고
+          도전하는 소프트웨어 개발자입니다. Mock 기반 독립 개발 환경을 구축하고,
+          테스트 자동화로 배포 전 결함을 차단하며, 모노레포로 코드 일관성을
           확보해왔습니다.
         </p>
       </header>
@@ -114,6 +114,7 @@ export function ResumePage() {
               farmer
             </a>
             <ul className="mt-1 border-l-2 border-gray-300 pl-3 text-sm text-gray-500">
+              <li>· 코드 품질 규칙을 자동으로 강제하는 프로젝트 구조 설계</li>
               <li>
                 · ESLint로 단방향 의존성 흐름(shared → features → app) 자동 강제
               </li>

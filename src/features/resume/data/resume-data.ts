@@ -121,7 +121,7 @@ export const companies: CompanyData[] = [
 export const stories: StoryCard[] = [
   {
     id: 'fe-independence',
-    title: 'FE 독립 개발 환경',
+    title: '독립 개발 환경',
     problem:
       '백엔드 API 없이는 개발 진행 불가. JSON Server로 1차 해결했으나, localhost 기반이라 모바일 실기기에서 접근하려면 네트워크 설정과 URL 변경이 필요하고, 에러 케이스 검증을 위해 서버를 임의 배포/롤백하는 반복',
     solution:
@@ -151,7 +151,7 @@ export const stories: StoryCard[] = [
 export const simplifiedStories: StoryCard[] = [
   {
     id: 'fe-independence',
-    title: 'FE 독립 개발 환경',
+    title: '독립 개발 환경',
     problem:
       '• 백엔드 API 없이는 개발 진행 불가로 병목 발생\n• JSON Server는 localhost 기반이라 모바일 실기기 테스트 시 네트워크 설정·URL 변경 반복\n• 에러/엣지 케이스 검증을 위해 백엔드 서버를 임의 배포/롤백하는 비효율',
     solution:
