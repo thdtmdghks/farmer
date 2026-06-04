@@ -73,11 +73,11 @@ export const companies: CompanyData[] = [
         ],
       },
       {
-        name: '사업자 정보 검증 API',
+        name: '사업자 정보 검증 서버리스 API',
         details: [
           'BE 리소스 부재 상황에서 자진하여 단독 수행',
-          '3레이어 분리 아키텍처 설계 및 각 레이어 테스트',
-          '서버리스, 상시 서버 비용 제거',
+          '3레이어 분리 아키텍처 설계 (핸들러/서비스/외부 API)',
+          'Jest 유닛 → SAM 이벤트 → LocalStack 통합 3단계 테스트',
         ],
       },
       {
@@ -177,6 +177,36 @@ export const simplifiedStories: StoryCard[] = [
       '• 결제 서비스와 대시보드 간 동일 UI·로직이 복사/붙여넣기로 관리되어 일관성 깨짐\n• 엑심베이에서도 2개 앱이 공통 코드를 공유해야 하는 동일한 상황',
     solution:
       '• [파이노버스랩] pnpm workspace로 공통 패키지 분리 (당시 Turborepo는 규모 대비 과하다고 판단)\n• [엑심베이] 패키지 7개 규모에서 캐싱·병렬 이점을 고려하여 Turborepo 선택\n• ESLint로 apps → packages 단방향 의존성 자동 강제, 위반 시 빌드 실패',
+    tags: ['pnpm', 'Turborepo', 'ESLint', 'Vite'],
+  },
+]
+
+export const highlightedStories: StoryCard[] = [
+  {
+    id: 'fe-independence',
+    title: '독립 개발 환경',
+    problem:
+      '• 백엔드 API 없이는 개발 진행 불가로 **개발 병목 발생**\n• [파이노버스랩] JSON Server의 localhost 한계로 모바일 실기기 테스트 시 **네트워크 설정·URL 변경 반복**\n• 에러/엣지 케이스 검증을 위해 백엔드 서버를 임의 배포/롤백하는 **반복성 비효율**',
+    solution:
+      '• API 합의 방식 고도화: 노션 문서 → OpenAPI 레포로 명세 관리 진화\n• [파이노버스랩] MSW 전환: 비교 문서 작성·제안 후 도입하여 **모바일 실기기 + 에러 케이스를 mock으로 해결**\n• [엑심베이] MSW 도메인별 분리 + 프로덕션 번들 미포함 조건부 격리로 **모노레포 다중 앱 확장**',
+    tags: ['JSON Server', 'MSW', 'OpenAPI', 'Service Worker'],
+  },
+  {
+    id: 'test-stability',
+    title: '테스트로 서비스 안정성 확보',
+    problem:
+      '• 기능이 늘면서 수동 회귀 테스트 시간 증가 + **휴먼 에러로 시나리오 누락 발생**\n• 결제 서비스 특성상 모든 시나리오 검증이 까다로움\n• 연체 수수료 등 다변수 계산 로직의 **수동 검증 한계**',
+    solution:
+      '• 유닛 테스트: 연체 수수료 등 복잡한 로직 검증 → 버그 의심 시 빠르게 원인 파악\n• [파이노버스랩] Playwright E2E: Cypress와 직접 비교 후 선택 ➔ **CI 배포 차단 안전장치 설계**\n• [풀스택 확장] 서버리스 API(3레이어 분리 + 각 레이어 테스트)와 블록체인 지갑(nock 격리 + PostgreSQL E2E)에도 **동일 원칙 적용**',
+    tags: ['Vitest', 'Playwright', 'Jest', 'CI/CD', 'nock'],
+  },
+  {
+    id: 'monorepo',
+    title: '모노레포로 코드 공유 구조화',
+    problem:
+      '• 결제 서비스와 대시보드 간 동일 UI·로직이 복사/붙여넣기로 관리되어 **일관성 깨짐**\n• 엑심베이에서도 2개 앱이 공통 코드를 공유해야 하는 동일한 상황',
+    solution:
+      '• [파이노버스랩] pnpm workspace로 공통 패키지 분리 (**당시 규모 대비 과하다고 판단**)\n• [엑심베이] 패키지 7개 규모에서 **캐싱·병렬 이점을 고려하여 Turborepo 선택**\n• ESLint로 apps → packages **단방향 의존성 자동 강제, 위반 시 빌드 실패**',
     tags: ['pnpm', 'Turborepo', 'ESLint', 'Vite'],
   },
 ]
