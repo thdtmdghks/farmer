@@ -1,4 +1,4 @@
-import { companies, simplifiedStories } from '../data/resume-data'
+import { companies, highlightedStories } from '../data/resume-data'
 import { CompanySection } from './company-section'
 import { SimplifiedStoryCardComponent } from './simplified-story-card'
 
@@ -22,47 +22,32 @@ export function ResumePage() {
           </div>
         </div>
         <p className="mt-1 text-lg text-gray-600">소프트웨어 개발자 · 6년차</p>
+        <div className="mt-3 flex flex-wrap gap-2 text-xs font-semibold text-indigo-700">
+          <span className="rounded-md bg-indigo-50 px-2.5 py-1 ring-1 ring-indigo-700/10">
+            독립 개발 환경 설계
+          </span>
+          <span className="rounded-md bg-indigo-50 px-2.5 py-1 ring-1 ring-indigo-700/10">
+            테스트 자동화
+          </span>
+          <span className="rounded-md bg-indigo-50 px-2.5 py-1 ring-1 ring-indigo-700/10">
+            모노레포 아키텍처
+          </span>
+        </div>
         <p className="mt-3 leading-relaxed text-gray-500">
           독립적인 개발 환경과 안정적인 서비스를 추구하며 영역을 가리지 않고
           도전하는 소프트웨어 개발자입니다. Mock 기반 독립 개발 환경을 구축하고,
           테스트 자동화로 배포 전 결함을 차단하며, 모노레포로 코드 일관성을
-          확보해왔습니다.
+          확보해왔습니다. 문제를 발견하면 문서로 정리해 팀에 제안하고, 도구로
+          자동화하여 정착시킵니다.
         </p>
       </header>
 
-      {/* 기술 스택 */}
-      <div className="mb-8 grid grid-cols-2 gap-3 rounded-lg border border-gray-200 bg-white p-5 text-sm">
-        <div>
-          <span className="text-xs font-semibold text-gray-400">Language</span>
-          <p className="mt-0.5 text-gray-700">TypeScript · JavaScript</p>
-        </div>
-        <div>
-          <span className="text-xs font-semibold text-gray-400">Frontend</span>
-          <p className="mt-0.5 text-gray-700">
-            React · Vue.js · Next.js · Tailwind CSS
-          </p>
-        </div>
-        <div>
-          <span className="text-xs font-semibold text-gray-400">Backend</span>
-          <p className="mt-0.5 text-gray-700">NestJS · Node.js · PostgreSQL</p>
-        </div>
-        <div>
-          <span className="text-xs font-semibold text-gray-400">Test</span>
-          <p className="mt-0.5 text-gray-700">
-            Vitest · Playwright · MSW · Jest
-          </p>
-        </div>
-        <div>
-          <span className="text-xs font-semibold text-gray-400">Infra</span>
-          <p className="mt-0.5 text-gray-700">
-            Docker · AWS Lambda/SAM · GitHub Actions
-          </p>
-        </div>
-        <div>
-          <span className="text-xs font-semibold text-gray-400">Tooling</span>
-          <p className="mt-0.5 text-gray-700">
-            Turborepo 모노레포 · ESLint 규칙 자동화 · ADR
-          </p>
+      {/* 스토리 카드 */}
+      <div className="mb-10">
+        <div className="grid grid-cols-1 gap-5">
+          {highlightedStories.map((story) => (
+            <SimplifiedStoryCardComponent key={story.id} story={story} />
+          ))}
         </div>
       </div>
 
@@ -72,15 +57,6 @@ export function ResumePage() {
         {companies.map((company) => (
           <CompanySection key={company.company} data={company} />
         ))}
-      </div>
-
-      {/* 스토리 카드 */}
-      <div className="mb-10">
-        <div className="grid grid-cols-1 gap-5">
-          {simplifiedStories.map((story) => (
-            <SimplifiedStoryCardComponent key={story.id} story={story} />
-          ))}
-        </div>
       </div>
 
       {/* 개인 프로젝트 */}
@@ -124,6 +100,42 @@ export function ResumePage() {
         </div>
       </section>
 
+      {/* 기술 스택 */}
+      <div className="mb-8 grid grid-cols-2 gap-3 rounded-lg border border-gray-200 bg-white p-5 text-sm">
+        <div>
+          <span className="text-xs font-semibold text-gray-400">Language</span>
+          <p className="mt-0.5 text-gray-700">TypeScript · JavaScript</p>
+        </div>
+        <div>
+          <span className="text-xs font-semibold text-gray-400">Frontend</span>
+          <p className="mt-0.5 text-gray-700">
+            React · Vue.js · Next.js · Tailwind CSS
+          </p>
+        </div>
+        <div>
+          <span className="text-xs font-semibold text-gray-400">Backend</span>
+          <p className="mt-0.5 text-gray-700">NestJS · Node.js · PostgreSQL</p>
+        </div>
+        <div>
+          <span className="text-xs font-semibold text-gray-400">Test</span>
+          <p className="mt-0.5 text-gray-700">
+            Vitest · Playwright · MSW · Jest
+          </p>
+        </div>
+        <div>
+          <span className="text-xs font-semibold text-gray-400">Infra</span>
+          <p className="mt-0.5 text-gray-700">
+            Docker · AWS Lambda/SAM · GitHub Actions
+          </p>
+        </div>
+        <div>
+          <span className="text-xs font-semibold text-gray-400">Tooling</span>
+          <p className="mt-0.5 text-gray-700">
+            Turborepo 모노레포 · ESLint 규칙 자동화 · ADR
+          </p>
+        </div>
+      </div>
+
       {/* 자격증 */}
       <section className="mb-8 rounded-lg bg-gray-50 p-6">
         <h2 className="mb-2 text-xl font-bold text-gray-900">자격증</h2>
@@ -135,7 +147,7 @@ export function ResumePage() {
       {/* 작성한 글 */}
       <section className="rounded-lg bg-gray-50 p-6">
         <h2 className="mb-3 text-xl font-bold text-gray-900">작성한 글</h2>
-        <ul className="space-y-1.5 text-xs">
+        <ul className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-xs">
           <li>
             <a
               href="https://www.notion.so/UI-2616441365fb80be87e0c62b978265c4"

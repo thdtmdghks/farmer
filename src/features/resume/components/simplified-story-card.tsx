@@ -16,6 +16,19 @@ function getSimplifiedDiagram(id: string) {
   }
 }
 
+function parseBoldText(text: string, boldClassName: string) {
+  const parts = text.split(/\*\*([^*]+)\*\*/g)
+  return parts.map((part, index) => {
+    return index % 2 === 1 ? (
+      <strong key={index} className={boldClassName}>
+        {part}
+      </strong>
+    ) : (
+      part
+    )
+  })
+}
+
 export function SimplifiedStoryCardComponent({ story }: { story: StoryCard }) {
   const diagram = getSimplifiedDiagram(story.id)
 
@@ -25,13 +38,23 @@ export function SimplifiedStoryCardComponent({ story }: { story: StoryCard }) {
 
       <div className="mb-3 space-y-1 text-sm leading-relaxed text-rose-400 print:text-gray-600">
         {story.problem.split('\n').map((line, index) => (
-          <p key={index}>{line}</p>
+          <p key={index}>
+            {parseBoldText(
+              line,
+              'font-extrabold text-rose-600 print:text-black',
+            )}
+          </p>
         ))}
       </div>
 
       <div className="mb-3 space-y-1 text-sm leading-relaxed text-emerald-500 print:text-gray-800">
         {story.solution.split('\n').map((line, index) => (
-          <p key={index}>{line}</p>
+          <p key={index}>
+            {parseBoldText(
+              line,
+              'font-extrabold text-emerald-800 print:text-black',
+            )}
+          </p>
         ))}
       </div>
 
