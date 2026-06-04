@@ -114,7 +114,7 @@ export function ResumePage() {
               farmer
             </a>
             <ul className="mt-1 border-l-2 border-gray-300 pl-3 text-sm text-gray-500">
-              <li>· 코드 품질 규칙을 자동으로 강제하는 프로젝트 구조 설계</li>
+              <li>· React 아키텍처 규칙 검증 프로젝트</li>
               <li>
                 · ESLint로 단방향 의존성 흐름(shared → features → app) 자동 강제
               </li>
