@@ -36,24 +36,18 @@ export function SimplifiedStoryCardComponent({ story }: { story: StoryCard }) {
     <div className="rounded-lg border border-l-4 border-gray-200 border-l-indigo-500 bg-white p-6 transition-all duration-300 hover:shadow-md">
       <h3 className="mb-3 text-lg font-bold text-gray-900">{story.title}</h3>
 
-      <div className="mb-3 space-y-1 text-sm leading-relaxed text-rose-400 print:text-gray-600">
+      <div className="mb-3 space-y-1 text-sm leading-relaxed text-gray-600">
         {story.problem.split('\n').map((line, index) => (
           <p key={index}>
-            {parseBoldText(
-              line,
-              'font-extrabold text-rose-600 print:text-black',
-            )}
+            {parseBoldText(line, 'font-extrabold text-rose-700')}
           </p>
         ))}
       </div>
 
-      <div className="mb-3 space-y-1 text-sm leading-relaxed text-emerald-500 print:text-gray-800">
+      <div className="mb-3 space-y-1 text-sm leading-relaxed text-gray-800">
         {story.solution.split('\n').map((line, index) => (
           <p key={index}>
-            {parseBoldText(
-              line,
-              'font-extrabold text-emerald-800 print:text-black',
-            )}
+            {parseBoldText(line, 'font-extrabold text-emerald-800')}
           </p>
         ))}
       </div>

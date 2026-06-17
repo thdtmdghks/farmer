@@ -23,11 +23,11 @@ export function StoryCardComponent({ story }: { story: StoryCard }) {
     <div className="rounded-lg border border-l-4 border-gray-200 border-l-blue-500 bg-white p-6">
       <h3 className="mb-3 text-lg font-bold text-gray-900">{story.title}</h3>
 
-      <p className="mb-3 text-sm leading-relaxed text-rose-400 print:text-gray-600">
+      <p className="mb-3 text-sm leading-relaxed text-gray-600">
         {story.problem}
       </p>
 
-      <p className="mb-3 text-sm leading-relaxed text-emerald-500 print:text-gray-800">
+      <p className="mb-3 text-sm leading-relaxed text-gray-800">
         {story.solution}
       </p>
 
