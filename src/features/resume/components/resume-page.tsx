@@ -73,11 +73,29 @@ export function ResumePage() {
               potato
             </a>
             <ul className="mt-1 border-l-2 border-gray-300 pl-3 text-sm text-gray-500">
-              <li>· Next.js App Router 기반 기업 홈페이지 (SEO 최적화)</li>
               <li>
-                · Repository 패턴으로 DB 의존성 추상화, DB 없이 개발·빌드 가능
+                · Next.js App Router 및 Supabase 기반의 풀스택 비즈니스 플랫폼
+                및 관리자 CMS
               </li>
-              <li>· ADR로 기술 선택 근거 문서화</li>
+              <li>
+                · Repository 패턴으로 DB 의존성을 격리하여 오프라인 Mock ➔
+                Supabase 자동 스위칭 구현
+              </li>
+              <li>
+                · Gemini API 멀티모달 이미지 분석을 활용한 SEO 최적화 시공 설명
+                자동 생성 구현
+              </li>
+              <li>
+                ·{' '}
+                <a
+                  href="https://app.notion.com/p/seunghwansong/Next-js-SSR-vs-On-demand-ISR-3836441365fb8030a273d282971dc0fc?source=copy_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-blue-500 hover:underline"
+                >
+                  [지식 공유] Next.js SSR vs On-demand ISR 분석 및 적용기 ➔
+                </a>
+              </li>
             </ul>
           </div>
           <div>
@@ -90,11 +108,18 @@ export function ResumePage() {
               farmer
             </a>
             <ul className="mt-1 border-l-2 border-gray-300 pl-3 text-sm text-gray-500">
-              <li>· React 아키텍처 규칙 검증 프로젝트</li>
               <li>
-                · ESLint로 단방향 의존성 흐름(shared → features → app) 자동 강제
+                · Bulletproof React 아키텍처를 도입한 타입 안전 프론트엔드
+                포트폴리오
               </li>
-              <li>· 파일/폴더 KEBAB_CASE 네이밍 자동 검증</li>
+              <li>
+                · ESLint Flat Config(import-x) 기반 단방향 의존성 흐름 및
+                KEBAB_CASE 네이밍 규칙 자동화 강제
+              </li>
+              <li>
+                · Framer Motion 없이 브라우저 API(Intersection Observer)를
+                커스텀화한 고성능 UI 애니메이션 구현
+              </li>
             </ul>
           </div>
         </div>
@@ -148,6 +173,16 @@ export function ResumePage() {
       <section className="rounded-lg bg-gray-50 p-6">
         <h2 className="mb-3 text-xl font-bold text-gray-900">작성한 글</h2>
         <ul className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-xs">
+          <li>
+            <a
+              href="https://app.notion.com/p/seunghwansong/Next-js-SSR-vs-On-demand-ISR-3836441365fb8030a273d282971dc0fc?source=copy_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-blue-500 hover:underline"
+            >
+              Next.js SSR vs On-demand ISR 분석 및 적용기
+            </a>
+          </li>
           <li>
             <a
               href="https://www.notion.so/UI-2616441365fb80be87e0c62b978265c4"
