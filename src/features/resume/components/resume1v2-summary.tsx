@@ -161,8 +161,8 @@ export function Resume1V2Summary() {
               출시 견인
             </li>
             <li>
-              · 정산 어드민의 Next.js 리뉴얼 및 수수료 자동 대조 연산 적용으로
-              정산 수동 공수 제거
+              · 정산 어드민 Next.js 리뉴얼 및 달력 UI 기반의 실시간 수수료 자동
+              계산 도입으로 수동 정산 공수 제거
             </li>
             <li>
               · JSON Server에서 MSW로 Mock 환경 마이그레이션을 주도하여 모바일
