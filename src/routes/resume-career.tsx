@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { Resume1Details } from '@/features/resume/components/resume1-details'
+import { Resume1V2Details } from '@/features/resume/components/resume1v2-details'
 
 export const Route = createFileRoute('/resume-career')({
   component: ResumeCareerPage,
@@ -8,7 +8,7 @@ export const Route = createFileRoute('/resume-career')({
 function ResumeCareerPage() {
   return (
     <div className="mx-auto max-w-3xl bg-white p-8 print:p-6">
-      <Resume1Details />
+      <Resume1V2Details />
     </div>
   )
 }
