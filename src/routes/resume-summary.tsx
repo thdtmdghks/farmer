@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { Resume1V2Summary } from '@/features/resume/components/resume1v2-summary'
+import { Resume2Summary } from '@/features/resume/components/resume2-summary'
 
 export const Route = createFileRoute('/resume-summary')({
   component: ResumeSummaryPage,
@@ -8,7 +8,7 @@ export const Route = createFileRoute('/resume-summary')({
 function ResumeSummaryPage() {
   return (
     <div className="mx-auto max-w-3xl bg-white p-8 print:p-6">
-      <Resume1V2Summary />
+      <Resume2Summary />
     </div>
   )
 }
