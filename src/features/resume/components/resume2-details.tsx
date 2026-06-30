@@ -3,8 +3,6 @@ import { profile } from '@/features/resume/data/resume-v2-data'
 export function Resume2Details() {
   return (
     <>
-      <hr className="my-10 border-gray-300" />
-
       {/* 상세 경력 헤더 */}
       <header className="mb-8">
         <div className="flex items-baseline justify-between">
@@ -22,6 +20,11 @@ export function Resume2Details() {
           </div>
         </div>
       </header>
+
+      <p className="mb-8 text-sm text-gray-500">
+        요약 이력서에 기재한 프로젝트의 기술적 의사결정과 문제 해결 과정을
+        정리했습니다.
+      </p>
 
       <section>
         {/* ───── 엑심베이 ───── */}

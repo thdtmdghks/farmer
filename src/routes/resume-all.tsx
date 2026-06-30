@@ -10,6 +10,7 @@ function ResumeAllPage() {
   return (
     <div className="mx-auto max-w-3xl bg-white p-8 print:p-6">
       <Resume2Summary />
+      <hr className="my-10 border-gray-300" />
       <Resume2Details />
     </div>
   )

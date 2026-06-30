@@ -170,7 +170,7 @@ export function Resume2Summary() {
             rel="noopener noreferrer"
             className="text-xs text-blue-500 hover:underline"
           >
-            상세 경력기술서 ↗
+            프로젝트별 상세 내용 ↗
           </a>
         </div>
 
