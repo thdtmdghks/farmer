@@ -168,7 +168,7 @@ export function Resume2Summary() {
             href="https://thdtmdghks.github.io/farmer/resume-career"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs text-blue-500 hover:underline"
+            className="text-sm text-blue-500 hover:underline"
           >
             프로젝트별 상세 내용 ↗
           </a>

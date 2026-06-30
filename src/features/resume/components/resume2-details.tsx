@@ -21,7 +21,7 @@ export function Resume2Details() {
         </div>
       </header>
 
-      <p className="mb-8 text-sm text-gray-500">
+      <p className="mb-8 border-l-4 border-gray-300 pl-4 text-base text-gray-800">
         요약 이력서에 기재한 프로젝트의 기술적 의사결정과 문제 해결 과정을
         정리했습니다.
       </p>
