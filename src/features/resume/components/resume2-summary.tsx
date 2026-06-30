@@ -102,7 +102,7 @@ export function Resume2Summary() {
           개발 생산성과 서비스 안정성을 함께 높여왔습니다.
         </p>
         <p className="text-base leading-relaxed text-gray-800">
-          빠른 개발과 안정적인 배포로 비즈니스 성장에 기여합니다.
+          개발 생산성과 안정적인 서비스 운영을 통해 비즈니스 성장에 기여합니다.
         </p>
       </section>
 

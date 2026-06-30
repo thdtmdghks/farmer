@@ -60,7 +60,8 @@ export function Resume2Details() {
               </li>
               <li>
                 ESLint로 apps → packages 단방향 의존성 자동 강제, 위반 시 빌드
-                실패 처리하여 순환 참조 0건 유지
+                실패 처리하여{' '}
+                <span className="font-semibold">순환 참조 0건</span> 유지
               </li>
               <li>
                 MSW 기반 독립 Mock 환경 설계 — 백엔드 완성 전 피처 개발·모바일
@@ -160,14 +161,16 @@ export function Resume2Details() {
               </li>
               <li>
                 Playwright E2E + CI/CD 연계로 결제 핵심 플로우 자동 검증 — 회귀
-                QA 2~3일 → 반나절 단축, 결함 배포 원천 차단
+                QA <span className="font-semibold">2~3일 → 반나절</span> 단축,
+                결함 배포 원천 차단
               </li>
               <li>
                 JSON Server → MSW 전환을 비교 문서 작성 후 팀에 제안·실행 —
                 모바일 실기기 + 배포 환경에서도 Mock QA 가능하게 개선
               </li>
               <li>
-                pnpm workspace 모노레포 전환으로 공통 변경 시 PR/배포 2회 → 1회
+                pnpm workspace 모노레포 전환으로 공통 변경 시 PR/배포{' '}
+                <span className="font-semibold">2회 → 1회</span>
                 통합, 서비스 간 코드 중복 제거
               </li>
             </ul>
@@ -207,7 +210,7 @@ export function Resume2Details() {
               <li className="font-medium">단독. 인프라 설계~배포</li>
               <li>
                 핸들러/서비스/클라이언트 3계층 분리 + 각 레이어 독립 테스트로
-                장애 0건 운영
+                <span className="font-semibold">장애 0건</span> 운영
               </li>
             </ul>
 
@@ -294,12 +297,14 @@ export function Resume2Details() {
               <li className="font-medium">유지보수 및 모니터링 개발</li>
               <li>
                 24시간 가동 모니터링 대시보드 개발 — 16시간 후 OOM 발생 문제를
-                힙 스냅샷 분석으로 원인 특정(setInterval 미해제), 72시간+ 무중단
+                힙 스냅샷 분석으로 원인 특정(setInterval 미해제),{' '}
+                <span className="font-semibold">72시간+ 무중단</span>
                 가동 확인
               </li>
               <li>
                 배포 서버 간 Node.js 버전 불일치 근본 원인 추적 → 3개월 지연
-                프로젝트를 투입 후 2주 조기 완료
+                프로젝트를 투입 후{' '}
+                <span className="font-semibold">2주 조기 완료</span>
               </li>
               <li>
                 Cordova 기반 모바일 앱 iOS 키보드 포커스 버그 해결 등 크로스
