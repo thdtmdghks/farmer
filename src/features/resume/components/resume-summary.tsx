@@ -65,7 +65,7 @@ const personalProjectsSummary = [
 
 // ─── 컴포넌트 ───
 
-export function Resume2Summary() {
+export function ResumeSummary() {
   return (
     <>
       {/* 헤더 */}

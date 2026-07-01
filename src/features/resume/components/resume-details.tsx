@@ -1,6 +1,6 @@
 import { profile } from '@/features/resume/data/resume-v2-data'
 
-export function Resume2Details() {
+export function ResumeDetails() {
   return (
     <>
       {/* 상세 경력 헤더 */}
