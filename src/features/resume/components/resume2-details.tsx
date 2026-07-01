@@ -129,6 +129,17 @@ export function Resume2Details() {
               </div>
             </div>
           </div>
+
+          {/* 기타 기여 */}
+          <div className="mt-4 pl-1">
+            <p className="text-sm font-semibold text-gray-700">기타 기여</p>
+            <ul className="mt-1.5 space-y-1 pl-3 text-sm text-gray-600">
+              <li>
+                · Coinflux Sandbox 통합 테스트 — 암호화폐 결제 요청·승인·콜백
+                시나리오 검증
+              </li>
+            </ul>
+          </div>
         </div>
 
         {/* ───── 파이노버스랩 ───── */}
@@ -211,11 +222,8 @@ export function Resume2Details() {
 
             <ul className="mt-3 list-disc space-y-1.5 pl-8 text-sm text-gray-700">
               <li className="font-medium">
-                BE 리소스 부재로 가입 플로우 블로킹 — 자진하여 단독 수행
-              </li>
-              <li>
-                AWS Lambda 기반 서버리스 API를 인프라 설계부터 배포까지 단독
-                수행
+                BE 리소스 부재로 가입 플로우 블로킹 — AWS Lambda 기반 서버리스
+                API를 인프라 설계부터 배포까지 자진하여 단독 수행
               </li>
               <li>
                 컨트롤러/서비스/레포지토리 3계층 분리 + Jest 유닛 테스트, SAM
@@ -245,6 +253,21 @@ export function Resume2Details() {
                 </p>
               </div>
             </div>
+          </div>
+
+          {/* 기타 기여 */}
+          <div className="mt-4 pl-1">
+            <p className="text-sm font-semibold text-gray-700">기타 기여</p>
+            <ul className="mt-1.5 space-y-1 pl-3 text-sm text-gray-600">
+              <li>
+                · 백오피스 리뉴얼 — Vue → Next.js 전면 재구축, 달력 기반 수수료
+                자동 계산 기능 개발
+              </li>
+              <li>
+                · 외상 결제 데모몰 — Next.js SSR 및 API Route 구현, MSW 기반
+                모바일 QA 환경 구축
+              </li>
+            </ul>
           </div>
         </div>
 
