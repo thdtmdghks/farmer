@@ -99,10 +99,8 @@ export function Resume2Summary() {
         </p>
         <p className="text-base leading-relaxed text-gray-800">
           Mock 기반 병렬 개발 환경 구축, 테스트 자동화, 모노레포 구성을 통해
-          개발 생산성과 서비스 안정성을 함께 높여왔습니다.
-        </p>
-        <p className="text-base leading-relaxed text-gray-800">
-          개발 생산성과 안정적인 서비스 운영을 통해 비즈니스 성장에 기여합니다.
+          개발 생산성과 서비스 안정성을 함께 높여왔으며, 이를 통해 비즈니스
+          성장에 기여합니다.
         </p>
       </section>
 
