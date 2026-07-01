@@ -55,7 +55,7 @@ export type ArticleLink = {
 
 export const profile = {
   name: '송승환',
-  title: '소프트웨어 개발자 · 6년차',
+  title: '웹 개발자 · 6년차',
   email: 'ghksl4157@gmail.com',
   github: 'https://github.com/thdtmdghks',
   githubLabel: 'github.com/thdtmdghks',
