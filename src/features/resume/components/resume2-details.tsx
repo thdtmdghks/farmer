@@ -160,7 +160,7 @@ export function Resume2Details() {
 
             <ul className="mt-3 list-disc space-y-1.5 pl-8 text-sm text-gray-700">
               <li className="font-medium">
-                FE 1명→2명. MVP 단독 구축 후 파트 리드
+                MVP 단독 구축. 이후 FE 1명 추가 합류하여 파트 리드
               </li>
               <li>
                 Playwright E2E + CI/CD 연계로 결제 핵심 플로우 자동 검증 — 회귀
@@ -210,9 +210,16 @@ export function Resume2Details() {
             </p>
 
             <ul className="mt-3 list-disc space-y-1.5 pl-8 text-sm text-gray-700">
-              <li className="font-medium">단독. 인프라 설계~배포</li>
+              <li className="font-medium">
+                BE 리소스 부재로 가입 플로우 블로킹 — 자진하여 단독 수행
+              </li>
               <li>
-                핸들러/서비스/클라이언트 3계층 분리 + 각 레이어 독립 테스트로
+                AWS Lambda 기반 서버리스 API를 인프라 설계부터 배포까지 단독
+                수행
+              </li>
+              <li>
+                컨트롤러/서비스/레포지토리 3계층 분리 + Jest 유닛 테스트, SAM
+                CLI 이벤트 테스트, LocalStack 통합 테스트로{' '}
                 <span className="font-semibold">장애 0건</span> 운영
               </li>
             </ul>
@@ -228,16 +235,13 @@ export function Resume2Details() {
                 </p>
                 <p className="mt-1 text-gray-600">
                   <span className="mr-1 text-red-400">▸</span>
-                  BE 리소스 부재로 가입 플로우가 블로킹된 상황에서, Lambda
-                  기반이라 코드 수정마다 AWS 배포가 필요해 피드백 루프가 매우 긴
-                  문제
+                  Lambda 기반이라 코드 수정마다 AWS 배포가 필요해 피드백 루프가
+                  매우 긴 문제
                 </p>
                 <p className="mt-1">
                   <span className="mr-1 text-emerald-500">▸</span>
-                  FE 개발자로서 직무 경계를 넘어 단독 수행. 코드를 3계층
-                  분리하여 비즈니스 로직만 단위 테스트 가능하게 구조화하고,
-                  LocalStack으로 로컬에 Lambda 환경을 재현하여 배포 없이 통합
-                  검증
+                  LocalStack + Docker로 로컬에 Lambda/API Gateway 환경을
+                  재현하여 배포 없이 통합 검증 가능한 구조 확보
                 </p>
               </div>
             </div>
