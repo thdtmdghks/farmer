@@ -16,7 +16,7 @@ src/
 ├── features/               ← 도메인별 기능 모듈
 │   ├── hero/
 │   ├── navigation/
-│   ├── features/
+│   ├── highlights/
 │   ├── showcase/
 │   ├── stats/
 │   ├── cta/
