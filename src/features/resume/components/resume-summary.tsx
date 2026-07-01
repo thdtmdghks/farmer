@@ -234,9 +234,16 @@ export function ResumeSummary() {
         ))}
       </section>
 
-      {/* 자격증 + 작성한 글 — 한 줄로 */}
+      {/* 학력 · 자격증 */}
       <section className="mb-4">
         <div className="flex items-baseline gap-6 text-sm">
+          <div>
+            <span className="font-semibold text-gray-900">학력</span>
+            <span className="ml-2 text-gray-600">
+              대구가톨릭대학교 컴퓨터공학과
+              <span className="text-gray-400"> · 2019 졸업</span>
+            </span>
+          </div>
           <div>
             <span className="font-semibold text-gray-900">자격증</span>
             {certifications.map((cert) => (
