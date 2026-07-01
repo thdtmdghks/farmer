@@ -91,7 +91,7 @@ export function Resume2Summary() {
       <section className="mb-6 space-y-2">
         <p className="text-base leading-relaxed text-gray-800">
           문제를 구조적으로 해결하고, 개발 생산성과 안정적인 배포를 위한 기반을
-          만드는 웹 개발자입니다.
+          만드는 소프트웨어 엔지니어입니다.
         </p>
         <p className="text-base leading-relaxed text-gray-800">
           대규모 레거시 CMS 재구축부터 서비스 초기 기획, 설계, 개발, 출시까지 전
