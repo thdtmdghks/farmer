@@ -372,6 +372,21 @@ export function ResumeFeDetails() {
               </div>
             </div>
           </div>
+
+          {/* 기타 기여 */}
+          <div className="mt-4 pl-1">
+            <p className="text-sm font-semibold text-gray-700">기타 기여</p>
+            <ul className="mt-1.5 space-y-1 pl-3 text-sm text-gray-600">
+              <li>
+                · 보도정보시스템 — Node.js 빌드 버전 표준화로 3개월 지연
+                프로젝트를 투입 후 2주 조기 완료
+              </li>
+              <li>
+                · Cordova 기반 모바일 앱 iOS 키보드 포커스 버그 해결 등 크로스
+                플랫폼 이슈 대응
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </>
