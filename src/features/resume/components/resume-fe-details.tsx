@@ -103,6 +103,21 @@ export function ResumeFeDetails() {
                     앱에 즉시 반영. HMR 설정으로 빌드 없이 실시간 확인 가능
                   </p>
                 </div>
+                <div>
+                  <p className="font-medium">
+                    복잡한 결제 폼에서 입력 검증 로직이 컴포넌트마다 분산
+                  </p>
+                  <p className="mt-1 text-gray-600">
+                    <span className="mr-1 text-red-400">▸</span>
+                    가맹점 정보, 결제 설정, 정산 계좌 등 다수의 입력 폼에서 검증
+                    로직이 각 컴포넌트에 흩어져 유지보수 어려움
+                  </p>
+                  <p className="mt-1">
+                    <span className="mr-1 text-emerald-500">▸</span>
+                    React Hook Form + Zod 스키마로 선언형 검증 구조 통합 — 폼별
+                    스키마만 정의하면 검증이 자동 동작하는 구조로 일원화
+                  </p>
+                </div>
               </div>
             </div>
           </div>
