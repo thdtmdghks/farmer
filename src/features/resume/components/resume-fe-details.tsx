@@ -112,7 +112,7 @@ export function ResumeFeDetails() {
                     공유 디자인 시스템 패키지로 분리하여 한 번 수정으로 양쪽
                     앱에 즉시 반영. HMR 설정으로 빌드 없이 실시간 확인 가능
                   </p>
-                  <p className="mt-1 text-xs font-medium text-gray-500">
+                  <p className="mt-1 text-sm font-medium text-emerald-600">
                     → 동일 수정 사항을 한 곳에서 관리하는 구조 확보
                   </p>
                 </div>
@@ -130,7 +130,7 @@ export function ResumeFeDetails() {
                     React Hook Form + Zod 스키마로 선언형 검증 구조 통합 — 폼별
                     스키마만 정의하면 검증이 자동 동작하는 구조로 일원화
                   </p>
-                  <p className="mt-1 text-xs font-medium text-gray-500">
+                  <p className="mt-1 text-sm font-medium text-emerald-600">
                     → 신규 폼 추가 시 스키마 정의만으로 검증 완료, 수정 포인트
                     최소화
                   </p>
@@ -241,7 +241,7 @@ export function ResumeFeDetails() {
                     MSW(Service Worker)로 전환하여 배포된 URL에서도 Mock 동작 —
                     모바일·에러 시나리오를 프론트엔드만으로 즉시 검증 가능
                   </p>
-                  <p className="mt-1 text-xs font-medium text-gray-500">
+                  <p className="mt-1 text-sm font-medium text-emerald-600">
                     → 백엔드 개발 일정과 독립적으로 화면 개발 및 QA 가능
                   </p>
                 </div>
@@ -342,7 +342,7 @@ export function ResumeFeDetails() {
                   정적 요소는 Canvas로, 인터랙티브 요소만 DOM으로 렌더링하는
                   하이브리드 구조를 설계하여 프레임 드랍 해소
                 </p>
-                <p className="mt-1 text-xs font-medium text-gray-500">
+                <p className="mt-1 text-sm font-medium text-emerald-600">
                   → 대량 데이터에서도 부드러운 편집 경험 유지
                 </p>
               </div>
@@ -381,7 +381,7 @@ export function ResumeFeDetails() {
                   타이머·리스너 일괄 정리 구조 설계하여
                   <span className="font-semibold"> 72시간+ 무중단</span> 확인
                 </p>
-                <p className="mt-1 text-xs font-medium text-gray-500">
+                <p className="mt-1 text-sm font-medium text-emerald-600">
                   → 장시간 운영 가능한 모니터링 환경 확보
                 </p>
               </div>
