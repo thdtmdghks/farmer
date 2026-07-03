@@ -71,11 +71,11 @@ export function ResumeFeDetails() {
               </li>
               <li>
                 2개 앱 간 UI 불일치를 방지하기 위해 shadcn/ui 기반 공유 디자인
-                시스템 패키지 구축 (웹 접근성 ARIA, RouteAnnouncer 포함)
+                시스템 패키지 구축 (웹 접근성 ARIA, 라우트 변경 알림 포함)
               </li>
               <li>
                 복잡한 입력 폼의 검증 로직 분산을 해결하기 위해 React Hook Form
-                + Zod superRefine 교차 검증으로 선언형 구조 통합
+                + Zod 필드 간 교차 검증으로 선언형 구조 통합
               </li>
               <li>
                 백엔드 API 없이 화면 개발·QA를 진행하기 위해 MSW 시나리오 기반
@@ -84,7 +84,7 @@ export function ResumeFeDetails() {
               </li>
               <li>
                 리팩토링 시 UI 회귀를 방지하기 위해 Vitest + RTL 유닛 테스트를
-                feature별 colocated testing으로 구성
+                feature별 소스 옆 테스트 배치로 구성
               </li>
               <li>
                 공통 코드 수정 시 중복 작업을 제거하기 위해 모노레포(Turborepo)
