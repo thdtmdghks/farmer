@@ -93,7 +93,7 @@ const fePersonalProjects = [
       'Next.js App Router + Tailwind CSS 기반 실제 업체용 홈페이지 상용 배포',
       'On-demand ISR + Streaming SSR 적용 — Lighthouse Performance 98 · SEO 100',
       'JSON-LD 구조화 데이터 + 동적 Sitemap으로 네이버 키워드 최상위 달성',
-      'Gemini API 연동 이미지 메타데이터 자동 생성 (3단계 Fallback 설계)',
+      'Gemini API 연동 메타데이터 자동 생성 (이미지 과대·API 에러 시 단계적 Fallback)',
     ],
   },
   {
