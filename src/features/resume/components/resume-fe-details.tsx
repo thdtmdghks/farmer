@@ -166,21 +166,23 @@ export function ResumeFeDetails() {
                 MVP 단독 구축. 이후 FE 1명 추가 합류하여 파트 리드
               </li>
               <li>
-                다단계 결제·가입 플로우의 상태 설계 — Pinia 스토어에 비즈니스
-                로직을 캡슐화하여 UI 컴포넌트와 상태 제어 분리, 유지보수성 확보
+                복잡한 다단계 결제·가입 플로우를 안정적으로 관리하기 위해 Pinia
+                스토어에 비즈니스 로직 캡슐화 — UI와 상태 제어 분리로 유지보수성
+                확보
               </li>
               <li>
-                Playwright E2E로 사용자 핵심 플로우(가입→결제→완료) 자동 검증 —
-                CI/CD 연계로 결함 배포 원천 차단, 회귀 QA
+                수동 회귀 테스트의 시간 소요와 누락을 해결하기 위해 Playwright
+                E2E로 핵심 사용자 플로우(가입→결제→완료) 자동 검증 — CI/CD
+                연계로 결함 배포 원천 차단, 회귀 QA
                 <span className="font-semibold"> 2~3일 → 반나절</span>
               </li>
               <li>
-                API 없이 화면 개발·디자인 검증이 가능한 MSW Mock 환경 도입을
-                비교 문서 작성 후 팀에 제안·실행 — 모바일 실기기 QA 해결
+                백엔드 완성 전에도 화면 개발·QA를 진행하기 위해 MSW Mock 환경
+                도입을 비교 문서 작성 후 팀에 제안·실행 — 모바일 실기기 QA 해결
               </li>
               <li>
-                공통 UI 컴포넌트·유틸을 독립 패키지로 분리 (pnpm workspace) —
-                서비스 간 일관된 UI 제공, PR/배포
+                서비스 간 동일 UI의 중복 구현을 제거하기 위해 공통 컴포넌트·유틸
+                독립 패키지 분리 (pnpm workspace) — PR/배포
                 <span className="font-semibold"> 2회 → 1회</span> 통합
               </li>
             </ul>
