@@ -165,33 +165,33 @@ export function ResumeFeSummary() {
         </p>
       </section>
 
-      {/* 핵심 메시지 — FE 관점 플로우 */}
+      {/* 핵심 메시지 — 스토리 기반 */}
       <section className="mb-6 rounded-lg border border-gray-200 bg-gray-50 p-6">
         <div className="flex items-stretch gap-4">
           <div className="flex-1 rounded-lg border border-indigo-200 bg-white p-4 text-center">
-            <p className="text-sm font-bold text-indigo-600">컴포넌트 설계</p>
+            <p className="text-sm font-bold text-indigo-600">개발 생산성</p>
             <p className="mt-1.5 text-sm text-gray-500">
-              디자인시스템
+              Mock · 모노레포
               <br />
-              재사용·일관성
+              자동화
             </p>
           </div>
           <div className="flex items-center text-lg text-gray-300">→</div>
           <div className="flex-1 rounded-lg border border-emerald-200 bg-white p-4 text-center">
-            <p className="text-sm font-bold text-emerald-600">상태·렌더링</p>
+            <p className="text-sm font-bold text-emerald-600">사용자 경험</p>
             <p className="mt-1.5 text-sm text-gray-500">
-              상태 설계
+              컴포넌트 · 상태관리
               <br />
-              SSR·ISR·성능
+              렌더링 · 성능
             </p>
           </div>
           <div className="flex items-center text-lg text-gray-300">→</div>
           <div className="flex-1 rounded-lg border border-amber-200 bg-white p-4 text-center">
-            <p className="text-sm font-bold text-amber-600">품질·배포</p>
+            <p className="text-sm font-bold text-amber-600">서비스 품질</p>
             <p className="mt-1.5 text-sm text-gray-500">
-              테스트 자동화
+              디자인 시스템
               <br />
-              CI/CD
+              테스트 · 접근성
             </p>
           </div>
         </div>
@@ -207,7 +207,7 @@ export function ResumeFeSummary() {
         </div>
         <div className="mt-1 rounded-lg bg-gray-800 py-3 text-center">
           <p className="text-sm font-bold tracking-wide text-white">
-            사용자 경험 ↑&nbsp;&nbsp;&nbsp;&nbsp;개발 생산성 ↑
+            빠르게 만들고&nbsp;&nbsp;&nbsp;&nbsp;안정적으로 운영
           </p>
         </div>
       </section>
