@@ -219,14 +219,16 @@ export function ResumeFeDetails() {
                   </p>
                   <p className="mt-1 text-gray-600">
                     <span className="mr-1 text-red-400">▸</span>
-                    html2canvas + jsPDF로 완납증명서 PDF 생성 시 A4 경계면에서
-                    표 행·텍스트가 쪼개져 사용자에게 잘못된 문서 전달
+                    완납증명서 PDF 생성 시 기존 라이브러리(html2pdf 등)가 표 행
+                    분할 보호 요구사항을 충족하지 못해 html2canvas + jsPDF를
+                    직접 조합하여 구현. 이후 A4 경계면에서 행·텍스트가 쪼개지는
+                    결함 발생
                   </p>
                   <p className="mt-1">
-                    <span className="mr-1 text-emerald-500">▸</span>
-                    라이브러리 내부 소스 분석 후 DOM을 순회하며 A4 높이 경계에
-                    도달한 요소를 감지, 동적 여백을 삽입하여 다음 페이지로
-                    넘기는 분할 로직 직접 구현
+                    <span className="mr-1 text-emerald-500">▸</span>두
+                    라이브러리의 소스를 분석하여 렌더링 메커니즘을 파악한 뒤,
+                    DOM을 순회하며 A4 높이 경계에 도달한 요소를 감지하고 동적
+                    여백을 삽입하여 다음 페이지로 넘기는 분할 로직 직접 구현
                   </p>
                 </div>
                 <div>
