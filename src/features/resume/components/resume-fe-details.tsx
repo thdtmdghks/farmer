@@ -54,31 +54,39 @@ export function ResumeFeDetails() {
 
             <ul className="mt-3 list-disc space-y-1.5 pl-8 text-sm text-gray-700">
               <li className="font-medium">
-                FE 단독. 컴포넌트 아키텍처 설계 및 전체 구현
+                FE 단독. 2개 앱, 8개 도메인(merchants, transactions, payments
+                등), 22개 라우트 규모의 아키텍처 설계 및 전체 구현
               </li>
               <li>
-                React + TanStack Router/Query + Zustand 기반 SPA 설계 — 라우팅,
-                서버 상태, 클라이언트 상태를 명확히 분리하여 데이터 흐름 단순화
+                Feature-Sliced Design 적용 — 도메인별 api/hooks/types/columns
+                응집, TanStack Router 파일 기반 타입 안전 라우팅
+              </li>
+              <li>
+                5단계 인증 플로우 상태 머신(useLoginFlow) 설계 — credentials →
+                OTP → TOTP setup → TOTP verify → 세션 충돌까지 처리
+              </li>
+              <li>
+                제네릭 DataTable&lt;TData, TValue&gt; 컴포넌트 설계 — children
+                합성 패턴으로 Pagination 슬롯 주입, 도메인 무관 재사용
               </li>
               <li>
                 shadcn/ui 기반 공유 디자인 시스템 패키지 구축 — 일관된 UI와 웹
-                접근성(ARIA) 확보, 멀티 앱에서 동일 컴포넌트 재사용
+                접근성(ARIA, RouteAnnouncer) 확보
               </li>
               <li>
-                React Hook Form + Zod 스키마 기반 폼 검증 구조 설계 — 복잡한
-                입력 폼의 유효성 검증을 선언적으로 관리, 런타임 에러 사전 차단
+                React Hook Form + Zod superRefine 교차 검증 — 필드 간 의존성
+                규칙을 스키마 레벨에서 선언적으로 강제
               </li>
               <li>
-                백엔드 API 없이 화면 개발·디자인 검증을 진행할 수 있는 MSW Mock
-                환경 구축 — 개발 병목 제거
+                MSW 시나리오 기반 Mock — 이메일별 다른 인증 응답(MFA, 잠금, TOTP
+                미설정), 95건 동적 데이터 생성, 필터링·페이지네이션 구현
               </li>
               <li>
-                Vitest + React Testing Library로 핵심 컴포넌트 유닛 테스트 —
-                리팩토링 시 UI 회귀 방지
+                Vitest + RTL 유닛 테스트 — feature별 colocated testing, 리팩토링
+                시 UI 회귀 방지
               </li>
               <li>
-                모노레포(Turborepo) 7개 패키지 구조로 공통 컴포넌트·유틸의
-                재사용성 확보, ESLint로 의존성 방향 자동 강제
+                모노레포(Turborepo) 7개 패키지, ESLint 단방향 의존성 자동 강제
               </li>
             </ul>
 
