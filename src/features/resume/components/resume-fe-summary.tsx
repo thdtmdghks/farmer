@@ -50,7 +50,7 @@ const feCareerSummary = [
     summary: '결제 백오피스 프론트엔드 아키텍처 설계 및 전체 구현 단독 담당',
     bullets: [
       'React + TypeScript 기반 어드민 2개 앱, 8개 도메인 Feature Slice 설계·구현 (TanStack Router/Query, Zustand)',
-      '5단계 인증 플로우 상태 머신 설계 (MFA, OTP, 세션 충돌 등 복합 시나리오 처리)',
+      '5단계 인증 플로우 상태 머신 설계 (MFA, OTP, TOTP, 세션 충돌 처리)',
       '제네릭 DataTable 컴포넌트 + children 합성 패턴으로 도메인 무관 재사용 구조',
       '공유 디자인 시스템 패키지 구축 (shadcn/ui, 웹 접근성 준수, HMR 즉시 반영)',
       'MSW 시나리오 기반 Mock — 이메일별 다른 응답, 필터링·페이지네이션 동적 생성',
