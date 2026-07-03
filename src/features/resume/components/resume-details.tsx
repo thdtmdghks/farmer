@@ -130,9 +130,9 @@ export function ResumeDetails() {
             </div>
           </div>
 
-          {/* 기타 기여 */}
+          {/* 기타 프로젝트 */}
           <div className="mt-4 pl-1">
-            <p className="text-sm font-semibold text-gray-700">기타 기여</p>
+            <p className="text-sm font-semibold text-gray-700">기타 프로젝트</p>
             <ul className="mt-1.5 space-y-1 pl-3 text-sm text-gray-600">
               <li>
                 · Coinflux Sandbox 통합 테스트 — 암호화폐 결제 요청·승인·콜백
@@ -255,9 +255,9 @@ export function ResumeDetails() {
             </div>
           </div>
 
-          {/* 기타 기여 */}
+          {/* 기타 프로젝트 */}
           <div className="mt-4 pl-1">
-            <p className="text-sm font-semibold text-gray-700">기타 기여</p>
+            <p className="text-sm font-semibold text-gray-700">기타 프로젝트</p>
             <ul className="mt-1.5 space-y-1 pl-3 text-sm text-gray-600">
               <li>
                 · 백오피스 리뉴얼 — Vue → Next.js 전면 재구축, 달력 기반 수수료

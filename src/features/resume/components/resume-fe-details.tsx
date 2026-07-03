@@ -133,9 +133,9 @@ export function ResumeFeDetails() {
             </div>
           </div>
 
-          {/* 기타 기여 */}
+          {/* 기타 프로젝트 */}
           <div className="mt-4 pl-1">
-            <p className="text-sm font-semibold text-gray-700">기타 기여</p>
+            <p className="text-sm font-semibold text-gray-700">기타 프로젝트</p>
             <ul className="mt-1.5 space-y-1 pl-3 text-sm text-gray-600">
               <li>
                 · 블록체인 지갑 UI — React 기반 지갑 생성·전송·조회 화면 개발
@@ -262,9 +262,9 @@ export function ResumeFeDetails() {
             </ul>
           </div>
 
-          {/* 기타 기여 */}
+          {/* 기타 프로젝트 */}
           <div className="mt-4 pl-1">
-            <p className="text-sm font-semibold text-gray-700">기타 기여</p>
+            <p className="text-sm font-semibold text-gray-700">기타 프로젝트</p>
             <ul className="mt-1.5 space-y-1 pl-3 text-sm text-gray-600">
               <li>
                 · 외상 결제 데모몰 — Next.js SSR 화면 + API Route 구현, MSW 기반
@@ -373,9 +373,9 @@ export function ResumeFeDetails() {
             </div>
           </div>
 
-          {/* 기타 기여 */}
+          {/* 기타 프로젝트 */}
           <div className="mt-4 pl-1">
-            <p className="text-sm font-semibold text-gray-700">기타 기여</p>
+            <p className="text-sm font-semibold text-gray-700">기타 프로젝트</p>
             <ul className="mt-1.5 space-y-1 pl-3 text-sm text-gray-600">
               <li>
                 · 보도정보시스템 — Node.js 빌드 버전 표준화로 3개월 지연
