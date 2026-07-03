@@ -78,8 +78,8 @@ export function ResumeFeDetails() {
                 규칙을 스키마 레벨에서 선언적으로 강제
               </li>
               <li>
-                MSW 시나리오 기반 Mock — 이메일별 다른 인증 응답(MFA, 잠금, TOTP
-                미설정), 95건 동적 데이터 생성, 필터링·페이지네이션 구현
+                MSW 시나리오 기반 Mock — 이메일별 다른 인증 응답, 동적 데이터
+                생성 및 필터링·페이지네이션 구현
               </li>
               <li>
                 Vitest + RTL 유닛 테스트 — feature별 colocated testing, 리팩토링
