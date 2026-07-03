@@ -15,7 +15,7 @@ export function ResumeFeDetails() {
               rel="noopener noreferrer"
               className="text-blue-500 hover:underline"
             >
-              thdtmdghks.github.io/farmer/resume-fe
+              thdtmdghks.github.io/farmer/resume
             </a>
           </div>
         </div>
