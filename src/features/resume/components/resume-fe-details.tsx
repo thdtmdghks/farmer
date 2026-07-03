@@ -58,35 +58,38 @@ export function ResumeFeDetails() {
                 전체 구현
               </li>
               <li>
-                Feature-Sliced Design 적용 — 도메인별 api/hooks/types/columns
-                응집, TanStack Router 파일 기반 타입 안전 라우팅
+                도메인 간 코드 결합을 방지하기 위해 Feature-Sliced Design 적용 —
+                도메인별 api/hooks/types/columns 응집, TanStack Router 파일 기반
+                타입 안전 라우팅
               </li>
               <li>
-                5단계 인증 플로우 상태 머신(useLoginFlow) 설계 — credentials →
-                OTP → TOTP setup → TOTP verify → 세션 충돌까지 처리
+                MFA·OTP·TOTP·세션 충돌 등 복합 인증 시나리오를 안정적으로
+                처리하기 위해 5단계 상태 머신(useLoginFlow) 설계
               </li>
               <li>
-                제네릭 DataTable&lt;TData, TValue&gt; 컴포넌트 설계 — children
-                합성 패턴으로 Pagination 슬롯 주입, 도메인 무관 재사용
+                도메인마다 반복되는 테이블 UI를 재사용하기 위해 제네릭 DataTable
+                컴포넌트 + children 합성 패턴 설계
               </li>
               <li>
-                shadcn/ui 기반 공유 디자인 시스템 패키지 구축 — 일관된 UI와 웹
-                접근성(ARIA, RouteAnnouncer) 확보
+                2개 앱 간 UI 불일치를 방지하기 위해 shadcn/ui 기반 공유 디자인
+                시스템 패키지 구축 (웹 접근성 ARIA, RouteAnnouncer 포함)
               </li>
               <li>
-                React Hook Form + Zod superRefine 교차 검증 — 필드 간 의존성
-                규칙을 스키마 레벨에서 선언적으로 강제
+                복잡한 입력 폼의 검증 로직 분산을 해결하기 위해 React Hook Form
+                + Zod superRefine 교차 검증으로 선언형 구조 통합
               </li>
               <li>
-                MSW 시나리오 기반 Mock — 이메일별 다른 인증 응답(MFA, 잠금, TOTP
-                미설정), 동적 데이터 생성 및 필터링·페이지네이션 구현
+                백엔드 API 없이 화면 개발·QA를 진행하기 위해 MSW 시나리오 기반
+                Mock 구축 — 이메일별 인증 분기(MFA, 잠금, TOTP 미설정), 동적
+                데이터 생성 및 필터링·페이지네이션
               </li>
               <li>
-                Vitest + RTL 유닛 테스트 — feature별 colocated testing, 리팩토링
-                시 UI 회귀 방지
+                리팩토링 시 UI 회귀를 방지하기 위해 Vitest + RTL 유닛 테스트를
+                feature별 colocated testing으로 구성
               </li>
               <li>
-                모노레포(Turborepo) 7개 패키지, ESLint 단방향 의존성 자동 강제
+                공통 코드 수정 시 중복 작업을 제거하기 위해 모노레포(Turborepo)
+                7개 패키지 구조 설계, ESLint로 단방향 의존성 자동 강제
               </li>
             </ul>
 
