@@ -138,7 +138,8 @@ export function ResumeFeDetails() {
             <p className="text-sm font-semibold text-gray-700">기타 기여</p>
             <ul className="mt-1.5 space-y-1 pl-3 text-sm text-gray-600">
               <li>
-                · 블록체인 지갑 UI — React 기반 지갑 생성·전송·조회 화면 개발
+                · 블록체인 지갑 API 단독 설계·구현 (NestJS, E2E 테스트) —
+                프론트엔드 연동 대상 API를 직접 개발
               </li>
             </ul>
           </div>
