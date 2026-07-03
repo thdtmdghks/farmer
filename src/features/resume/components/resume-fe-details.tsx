@@ -70,8 +70,8 @@ export function ResumeFeDetails() {
                 컴포넌트 + children 합성 패턴 설계
               </li>
               <li>
-                2개 앱 간 UI 불일치를 방지하기 위해 shadcn/ui 기반 공유 디자인
-                시스템 패키지 구축 (웹 접근성 ARIA, 라우트 변경 알림 포함)
+                2개 앱 간 UI 불일치를 방지하기 위해 shadcn/ui 기반 공유 UI
+                컴포넌트 패키지 구축 (웹 접근성 ARIA, 라우트 변경 알림 포함)
               </li>
               <li>
                 복잡한 입력 폼의 검증 로직 분산을 해결하기 위해 React Hook Form
@@ -109,8 +109,8 @@ export function ResumeFeDetails() {
                   </p>
                   <p className="mt-1">
                     <span className="mr-1 text-emerald-500">▸</span>
-                    공유 디자인 시스템 패키지로 분리하여 한 번 수정으로 양쪽
-                    앱에 즉시 반영. HMR 설정으로 빌드 없이 실시간 확인 가능
+                    공유 UI 컴포넌트 패키지로 분리하여 한 번 수정으로 양쪽 앱에
+                    즉시 반영. HMR 설정으로 빌드 없이 실시간 확인 가능
                   </p>
                   <p className="mt-1 text-sm font-semibold text-gray-800">
                     → 동일 수정 사항을 한 곳에서 관리하는 구조 확보

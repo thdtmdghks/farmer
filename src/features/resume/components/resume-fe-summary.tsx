@@ -52,7 +52,7 @@ const feCareerSummary = [
       'React + TypeScript 기반 어드민 2개 앱, 8개 도메인 Feature Slice 설계·구현 (TanStack Router/Query, Zustand)',
       '5단계 인증 플로우 상태 머신 설계 (MFA, OTP, TOTP, 세션 충돌 처리)',
       '제네릭 DataTable 컴포넌트 + children 합성 패턴으로 도메인 무관 재사용 구조',
-      '공유 디자인 시스템 패키지 구축 (shadcn/ui, 웹 접근성 준수, HMR 즉시 반영)',
+      '공유 UI 컴포넌트 패키지 구축 (shadcn/ui, 웹 접근성 준수, HMR 즉시 반영)',
       'MSW 시나리오 기반 Mock — 이메일별 다른 응답, 필터링·페이지네이션 동적 생성',
       'React Hook Form + Zod 활용 필드 간 의존성 검증, 선언형 폼 구조 통합',
       '모노레포(Turborepo) 7개 패키지, ESLint 단방향 의존성 자동 강제',
@@ -156,7 +156,7 @@ export function ResumeFeSummary() {
           프론트엔드 개발자입니다.
         </p>
         <p className="text-base leading-relaxed text-gray-800">
-          컴포넌트 설계부터 디자인 시스템 구축, 테스트 자동화까지 일관된 사용자
+          컴포넌트 설계부터 공유 UI 패키지 구축, 테스트 자동화까지 일관된 사용자
           경험과 안정적인 운영을 위한 프론트엔드 구조를 설계해왔습니다.
         </p>
         <p className="text-base leading-relaxed text-gray-800">
@@ -189,9 +189,9 @@ export function ResumeFeSummary() {
           <div className="flex-1 rounded-lg border border-amber-200 bg-white p-4 text-center">
             <p className="text-sm font-bold text-amber-600">서비스 품질</p>
             <p className="mt-1.5 text-sm text-gray-500">
-              디자인 시스템
+              공유 UI · 접근성
               <br />
-              테스트 · 접근성
+              테스트 자동화
             </p>
           </div>
         </div>
