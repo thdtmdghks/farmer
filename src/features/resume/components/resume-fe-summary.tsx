@@ -217,7 +217,7 @@ export function ResumeFeSummary() {
         <div className="mb-4 flex items-baseline justify-between">
           <h2 className="text-lg font-bold text-gray-900">경력</h2>
           <a
-            href="https://thdtmdghks.github.io/farmer/resume-fe-career"
+            href="https://thdtmdghks.github.io/farmer/resume-career"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-blue-500 hover:underline"

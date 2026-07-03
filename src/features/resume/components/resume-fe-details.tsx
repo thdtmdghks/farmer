@@ -10,7 +10,7 @@ export function ResumeFeDetails() {
           <div className="text-right text-sm text-gray-500">
             <p>{profile.email}</p>
             <a
-              href="https://thdtmdghks.github.io/farmer/resume-fe"
+              href="https://thdtmdghks.github.io/farmer/resume"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 hover:underline"
