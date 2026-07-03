@@ -19,20 +19,20 @@ const feArticles = [
     url: 'https://app.notion.com/p/383942e7a7ea81129099d368f0878b7e',
   },
   {
-    title: 'common js & es module',
-    url: 'https://www.notion.so/common-js-es-module-2616441365fb805da502cbffd4dc432e',
-  },
-  {
-    title: '프론트엔드 패키지 매니저',
-    url: 'https://www.notion.so/2616441365fb80f7aeb3c08d0918fbe0',
-  },
-  {
     title: 'Github Actions Workflow를 이용한 CD 적용기',
     url: 'https://www.notion.so/Github-Actions-Workflow-CD-2616441365fb80579036f43d009704eb',
   },
   {
     title: '웹 보안 — 주요 공격과 방어',
     url: 'https://www.notion.so/36d6441365fb809d9072f2c90c6bda2f',
+  },
+  {
+    title: 'common js & es module',
+    url: 'https://www.notion.so/common-js-es-module-2616441365fb805da502cbffd4dc432e',
+  },
+  {
+    title: '프론트엔드 패키지 매니저',
+    url: 'https://www.notion.so/2616441365fb80f7aeb3c08d0918fbe0',
   },
   {
     title: 'jsdom',
