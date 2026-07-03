@@ -54,7 +54,7 @@ const feCareerSummary = [
       '제네릭 DataTable 컴포넌트 + children 합성 패턴으로 도메인 무관 재사용 구조',
       '공유 디자인 시스템 패키지 구축 (shadcn/ui, 웹 접근성 준수, HMR 즉시 반영)',
       'MSW 시나리오 기반 Mock — 이메일별 다른 응답, 필터링·페이지네이션 동적 생성',
-      'React Hook Form + Zod superRefine 교차 검증으로 선언형 폼 구조 통합',
+      'React Hook Form + Zod 활용 필드 간 의존성 검증, 선언형 폼 구조 통합',
       '모노레포(Turborepo) 7개 패키지, ESLint 단방향 의존성 자동 강제',
     ],
   },

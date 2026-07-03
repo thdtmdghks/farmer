@@ -54,8 +54,8 @@ export function ResumeFeDetails() {
 
             <ul className="mt-3 list-disc space-y-1.5 pl-8 text-sm text-gray-700">
               <li className="font-medium">
-                FE 단독. 2개 앱, 8개 도메인(merchants, transactions, payments
-                등), 22개 라우트 규모의 아키텍처 설계 및 전체 구현
+                FE 단독. 2개 앱, 8개 도메인, 22개 라우트 규모의 아키텍처 설계 및
+                전체 구현
               </li>
               <li>
                 Feature-Sliced Design 적용 — 도메인별 api/hooks/types/columns
