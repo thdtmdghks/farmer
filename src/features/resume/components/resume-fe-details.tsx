@@ -59,12 +59,11 @@ export function ResumeFeDetails() {
               </li>
               <li>
                 도메인 간 코드 결합을 방지하기 위해 Feature-Sliced Design 적용 —
-                도메인별 api/hooks/types/columns 응집, TanStack Router 파일 기반
-                타입 안전 라우팅
+                도메인별 관심사 응집, TanStack Router 파일 기반 타입 안전 라우팅
               </li>
               <li>
                 MFA·OTP·TOTP·세션 충돌 등 복합 인증 시나리오를 안정적으로
-                처리하기 위해 5단계 상태 머신(useLoginFlow) 설계
+                처리하기 위해 5단계 상태 머신 설계
               </li>
               <li>
                 도메인마다 반복되는 테이블 UI를 재사용하기 위해 제네릭 DataTable
