@@ -156,12 +156,12 @@ export function ResumeFeSummary() {
           프론트엔드 개발자입니다.
         </p>
         <p className="text-base leading-relaxed text-gray-800">
-          컴포넌트 설계, 상태 관리, 렌더링 최적화부터 디자인시스템 구축, 테스트
-          자동화까지 프론트엔드 개발의 전 영역을 경험해왔습니다.
+          컴포넌트 설계부터 디자인 시스템 구축, 테스트 자동화까지 일관된 사용자
+          경험과 안정적인 운영을 위한 프론트엔드 구조를 설계해왔습니다.
         </p>
         <p className="text-base leading-relaxed text-gray-800">
-          재사용 가능한 컴포넌트 구조와 모노레포 기반 공통 패키지 관리를 통해
-          일관된 UI를 제공하고, 테스트 자동화로 안정적인 배포 환경을 구축합니다.
+          반복되는 문제를 구조적으로 해결하며, 개발 생산성과 서비스 품질이 함께
+          향상되는 프론트엔드 개발 환경을 만들어왔습니다.
         </p>
       </section>
 
@@ -171,7 +171,7 @@ export function ResumeFeSummary() {
           <div className="flex-1 rounded-lg border border-indigo-200 bg-white p-4 text-center">
             <p className="text-sm font-bold text-indigo-600">개발 생산성</p>
             <p className="mt-1.5 text-sm text-gray-500">
-              Mock · 모노레포
+              병렬 개발 · 공통화
               <br />
               자동화
             </p>
