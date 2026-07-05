@@ -63,7 +63,7 @@ export function ResumeFeDetails() {
               </li>
               <li>
                 MFA·OTP·TOTP·세션 충돌 등 복합 인증 시나리오를 안정적으로
-                처리하기 위해 5단계 상태 머신 설계
+                처리하기 위해 다단계 인증 플로우 설계
               </li>
               <li>
                 도메인마다 반복되는 테이블 UI를 재사용하기 위해 제네릭 DataTable
