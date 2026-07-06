@@ -186,14 +186,16 @@ export function ResumeFeSummary() {
       </header>
 
       {/* 자기소개 */}
-      <section className="mb-6">
+      <section className="mb-6 space-y-2">
         <p className="text-base leading-relaxed text-gray-800">
           반복되는 개발 병목을 구조적으로 해결하고, 팀의 개발 생산성과 서비스
-          안정성을 함께 높여온 프론트엔드 개발자입니다. 대규모 레거시 시스템
-          재구축부터 서비스 초기 기획, 설계, 개발, 출시까지 다양한 환경에서
-          서비스 전 과정을 경험했으며, Mock 기반 독립 개발 환경을 팀 표준으로
-          정착시키고, 재사용 가능한 UI 구조와 테스트 자동화를 구축하며 빠른
-          개발과 안정적인 배포를 위한 프론트엔드 개발 체계를 만들어왔습니다.
+          안정성을 함께 높여온 프론트엔드 개발자입니다.
+        </p>
+        <p className="text-base leading-relaxed text-gray-800">
+          대규모 레거시 시스템 재구축부터 서비스 초기 기획, 설계, 개발, 출시까지
+          다양한 환경에서 서비스 전 과정을 경험했습니다. Mock 기반 독립 개발
+          환경을 팀 표준으로 정착시키고, 재사용 가능한 UI 구조와 테스트 자동화를
+          구축하며 빠른 개발과 안정적인 배포 체계를 만들어왔습니다.
         </p>
       </section>
 
@@ -238,7 +240,7 @@ export function ResumeFeSummary() {
         </div>
         <div className="mt-1 rounded-lg bg-gray-800 py-2.5 text-center">
           <p className="text-sm font-bold tracking-wide text-white">
-            개발 속도 ↑&nbsp;&nbsp;&nbsp;&nbsp;배포 안정성 ↑
+            개발 속도 ↑&nbsp;&nbsp;·&nbsp;&nbsp;배포 안정성 ↑
           </p>
         </div>
       </section>
