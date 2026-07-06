@@ -204,35 +204,42 @@ export function ResumeFeSummary() {
             <p className="text-base font-bold text-indigo-600">
               독립 개발 환경
             </p>
-            <p className="mt-1.5 text-sm text-gray-500">
-              Mock · MSW · 병렬 개발
-            </p>
+            <p className="mt-1.5 text-sm text-gray-500">Mock · MSW</p>
             <p className="mt-1 text-sm font-medium text-gray-700">
-              백엔드 의존 없이 개발·QA
+              외부 의존 없이 빠른 개발 착수
             </p>
           </div>
           <div className="flex items-center text-lg text-gray-300">→</div>
           <div className="flex-1 rounded-lg border border-emerald-200 bg-emerald-50/30 p-5 text-center">
-            <p className="text-base font-bold text-emerald-600">
-              재사용 가능한 구조
-            </p>
-            <p className="mt-1.5 text-sm text-gray-500">
-              공유 UI · 모노레포 · 상태관리
-            </p>
+            <p className="text-base font-bold text-emerald-600">유닛 테스트</p>
+            <p className="mt-1.5 text-sm text-gray-500">Vitest · RTL</p>
             <p className="mt-1 text-sm font-medium text-gray-700">
-              중복 제거와 UI 일관성 확보
+              버그 부담↓ 빠른 수정·개발
             </p>
           </div>
           <div className="flex items-center text-lg text-gray-300">→</div>
           <div className="flex-1 rounded-lg border border-amber-200 bg-amber-50/30 p-5 text-center">
-            <p className="text-base font-bold text-amber-600">안정적인 배포</p>
-            <p className="mt-1.5 text-sm text-gray-500">
-              Unit Test · E2E · CI/CD
-            </p>
+            <p className="text-base font-bold text-amber-600">E2E 자동화</p>
+            <p className="mt-1.5 text-sm text-gray-500">Playwright · CI/CD</p>
             <p className="mt-1 text-sm font-medium text-gray-700">
-              회귀 결함 배포 전 차단
+              품질 검증 자동화, 빠른 배포
             </p>
           </div>
+        </div>
+        <div className="mt-4 flex justify-center">
+          <svg
+            className="h-6 w-6 text-gray-400"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path d="M8 11l5-5H3l5 5z" />
+          </svg>
+        </div>
+        <div className="mt-1 rounded-lg bg-gray-800 py-2.5 text-center">
+          <p className="text-sm font-bold tracking-wide text-white">
+            개발 속도 ↑&nbsp;&nbsp;&nbsp;&nbsp;배포 안정성 ↑
+          </p>
         </div>
       </section>
 
