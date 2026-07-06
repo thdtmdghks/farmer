@@ -55,7 +55,7 @@ const feCareerSummary = [
           'React + TypeScript 기반 Feature Slice 설계·구현 (TanStack Router/Query, Zustand)',
           '다단계 인증 플로우 설계 (MFA, OTP, TOTP, 세션 충돌 처리)',
           '제네릭 DataTable + 합성 패턴, React Hook Form + Zod 선언형 폼 검증',
-          '모노레포(Turborepo) 공유 UI 패키지로 2개 앱 UI 표준화 + ESLint 의존성 강제',
+          '7개 패키지 규모에 맞춰 Turborepo를 선택, 공유 UI 패키지로 2개 앱 UI 표준화 + ESLint 의존성 강제',
           'MSW 시나리오 Mock + Vitest 유닛 테스트 + Playwright E2E',
         ],
       },
@@ -76,10 +76,10 @@ const feCareerSummary = [
         name: '결제 서비스 & 대시보드 (MVP 단독 → 파트 리드)',
         bullets: [
           'Vue.js + Pinia 기반 다단계 결제 플로우 설계·구현, 프로덕션 출시',
-          'Playwright E2E + CI/CD 연계로 회귀 QA 2~3일→반나절',
+          'Cypress와 비교 검토 후 Playwright를 선택, CI 연계로 회귀 QA 2~3일→반나절',
           '연체 수수료 계산 로직 유닛 테스트 — 버그 0건, 백엔드팀에서 동일 로직 그대로 채택',
-          'JSON Server 독립 개발 환경 구축 → MSW 전환 제안·실행 (모바일 실기기 QA 해결)',
-          'pnpm workspace 모노레포 전환, PR/배포 2회→1회',
+          'JSON Server → MSW 전환을 비교 문서로 제안·실행, 이후 신규 프로젝트의 Mock 개발 표준으로 정착',
+          '규모에 맞춰 pnpm workspace를 선택해 공통 UI·유틸 패키지화, PR/배포 2회→1회',
           'PDF 완납증명서 — 라이브러리 소스 분석 후 페이지 분할 로직 직접 구현',
         ],
       },
@@ -186,52 +186,51 @@ export function ResumeFeSummary() {
       </header>
 
       {/* 자기소개 */}
-      <section className="mb-6 space-y-2">
+      <section className="mb-6">
         <p className="text-base leading-relaxed text-gray-800">
-          React와 Next.js 기반으로 사용자 경험과 개발 생산성을 함께 개선하는
-          프론트엔드 개발자입니다.
-        </p>
-        <p className="text-base leading-relaxed text-gray-800">
-          컴포넌트 설계부터 공유 UI 패키지 구축, 테스트 자동화까지 지속적으로
-          확장 가능한 프론트엔드 구조를 설계해왔습니다.
-        </p>
-        <p className="text-base leading-relaxed text-gray-800">
-          반복되는 문제를 구조적으로 해결하며, 개발 생산성과 서비스 품질이 함께
-          향상되는 프론트엔드 개발 환경을 만들어왔습니다.
+          반복되는 개발 병목을 구조적으로 해결하고, 팀의 개발 생산성과 서비스
+          안정성을 함께 높여온 프론트엔드 개발자입니다. 대규모 레거시 시스템
+          재구축부터 서비스 초기 기획, 설계, 개발, 출시까지 다양한 환경에서
+          서비스 전 과정을 경험했으며, Mock 기반 독립 개발 환경을 팀 표준으로
+          정착시키고, 재사용 가능한 UI 구조와 테스트 자동화를 구축하며 빠른
+          개발과 안정적인 배포를 위한 프론트엔드 개발 체계를 만들어왔습니다.
         </p>
       </section>
 
-      {/* 핵심 메시지 — 스토리 기반 */}
+      {/* 핵심 메시지 */}
       <section className="mb-6">
         <div className="flex items-stretch gap-4">
           <div className="flex-1 rounded-lg border border-indigo-200 bg-indigo-50/30 p-5 text-center">
             <p className="text-base font-bold text-indigo-600">
-              개발이 멈추지 않는 환경
+              독립 개발 환경
             </p>
             <p className="mt-1.5 text-sm text-gray-500">
-              Mock · 병렬 개발
-              <br />
-              자동화
+              Mock · MSW · 병렬 개발
+            </p>
+            <p className="mt-1 text-sm font-medium text-gray-700">
+              백엔드 의존 없이 개발·QA
             </p>
           </div>
           <div className="flex items-center text-lg text-gray-300">→</div>
           <div className="flex-1 rounded-lg border border-emerald-200 bg-emerald-50/30 p-5 text-center">
             <p className="text-base font-bold text-emerald-600">
-              확장 가능한 구조
+              안정적인 배포
             </p>
             <p className="mt-1.5 text-sm text-gray-500">
-              컴포넌트 · 상태관리
-              <br />
-              공유 UI
+              Unit Test · E2E · CI/CD
+            </p>
+            <p className="mt-1 text-sm font-medium text-gray-700">
+              회귀 결함 배포 전 차단
             </p>
           </div>
           <div className="flex items-center text-lg text-gray-300">→</div>
           <div className="flex-1 rounded-lg border border-amber-200 bg-amber-50/30 p-5 text-center">
-            <p className="text-base font-bold text-amber-600">안정적인 운영</p>
+            <p className="text-base font-bold text-amber-600">팀 표준화</p>
             <p className="mt-1.5 text-sm text-gray-500">
-              테스트 · 성능
-              <br />
-              접근성
+              문서화 · 비교 검토 · 도입
+            </p>
+            <p className="mt-1 text-sm font-medium text-gray-700">
+              제안에서 개발 방식으로 정착
             </p>
           </div>
         </div>
