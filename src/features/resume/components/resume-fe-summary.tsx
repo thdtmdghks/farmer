@@ -214,23 +214,23 @@ export function ResumeFeSummary() {
           <div className="flex items-center text-lg text-gray-300">→</div>
           <div className="flex-1 rounded-lg border border-emerald-200 bg-emerald-50/30 p-5 text-center">
             <p className="text-base font-bold text-emerald-600">
-              안정적인 배포
+              재사용 가능한 구조
             </p>
+            <p className="mt-1.5 text-sm text-gray-500">
+              공유 UI · 모노레포 · 상태관리
+            </p>
+            <p className="mt-1 text-sm font-medium text-gray-700">
+              중복 제거와 UI 일관성 확보
+            </p>
+          </div>
+          <div className="flex items-center text-lg text-gray-300">→</div>
+          <div className="flex-1 rounded-lg border border-amber-200 bg-amber-50/30 p-5 text-center">
+            <p className="text-base font-bold text-amber-600">안정적인 배포</p>
             <p className="mt-1.5 text-sm text-gray-500">
               Unit Test · E2E · CI/CD
             </p>
             <p className="mt-1 text-sm font-medium text-gray-700">
               회귀 결함 배포 전 차단
-            </p>
-          </div>
-          <div className="flex items-center text-lg text-gray-300">→</div>
-          <div className="flex-1 rounded-lg border border-amber-200 bg-amber-50/30 p-5 text-center">
-            <p className="text-base font-bold text-amber-600">팀 표준화</p>
-            <p className="mt-1.5 text-sm text-gray-500">
-              문서화 · 비교 검토 · 도입
-            </p>
-            <p className="mt-1 text-sm font-medium text-gray-700">
-              제안에서 개발 방식으로 정착
             </p>
           </div>
         </div>
