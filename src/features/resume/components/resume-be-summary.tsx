@@ -8,8 +8,12 @@ import {
   bePersonalProjects,
   beTechStack,
 } from '@/features/resume/data/resume-be-data'
-
-// ─── 컴포넌트 ───
+import {
+  CareerSection,
+  TechStackSection,
+  PersonalProjectsSection,
+  CredentialsSection,
+} from './shared'
 
 export function ResumeBeSummary() {
   return (
@@ -47,7 +51,7 @@ export function ResumeBeSummary() {
         </p>
       </section>
 
-      {/* 핵심 메시지 */}
+      {/* 핵심 메시지 — BE 카드 */}
       <section className="mb-6">
         <div className="flex items-stretch gap-4">
           <div className="flex-1 rounded-lg border border-indigo-200 bg-indigo-50/30 p-5 text-center">
@@ -93,131 +97,16 @@ export function ResumeBeSummary() {
         </div>
       </section>
 
-      {/* 경력 요약 */}
-      <section className="mb-6 rounded-lg bg-gray-50 p-6">
-        <div className="mb-4 flex items-baseline justify-between">
-          <h2 className="text-lg font-bold text-gray-900">경력</h2>
-          <a
-            href="https://thdtmdghks.github.io/farmer/resume-be-career"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-blue-500 hover:underline"
-          >
-            프로젝트별 상세 내용 ↗
-          </a>
-        </div>
+      <CareerSection
+        companies={beCareerSummary}
+        detailLink="https://thdtmdghks.github.io/farmer/resume-be-career"
+      />
 
-        {beCareerSummary.map((company, idx) => (
-          <div
-            key={company.company}
-            className={idx < beCareerSummary.length - 1 ? 'mb-8' : ''}
-          >
-            <div className="mb-1 flex items-baseline justify-between">
-              <div className="flex items-baseline gap-2">
-                <h3 className="text-lg font-bold text-gray-900">
-                  {company.company}
-                </h3>
-                <span className="text-sm text-gray-400">{company.meta}</span>
-              </div>
-              <span className="text-sm text-gray-400">{company.period}</span>
-            </div>
-            <p className="pl-1 text-sm text-gray-500">- {company.summary}</p>
-            {company.projects.map((project) => (
-              <div key={project.name} className="mt-3 pl-1">
-                <p className="text-sm font-bold text-gray-800">
-                  {project.name}
-                </p>
-                <ul className="mt-1.5 space-y-1 border-l-2 border-gray-200 pl-4 text-sm text-gray-600">
-                  {project.bullets.map((b) => (
-                    <li key={b}>· {b}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        ))}
-      </section>
+      <PersonalProjectsSection projects={bePersonalProjects} />
 
-      {/* 개인 프로젝트 — 최소화 */}
-      <section className="mb-6">
-        <h2 className="mb-3 text-lg font-bold text-gray-900">개인 프로젝트</h2>
+      <TechStackSection techStack={beTechStack} />
 
-        {bePersonalProjects.map((project) => (
-          <div key={project.name} className="mb-3 last:mb-0">
-            <h3 className="text-sm font-bold text-gray-900">
-              <a
-                href={project.repo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-500"
-                aria-label={`${project.name} GitHub 저장소`}
-              >
-                {project.name} ↗
-              </a>
-            </h3>
-            <ul className="mt-1 space-y-0.5 pl-3 text-sm text-gray-600">
-              {project.bullets.map((b) => (
-                <li key={b}>· {b}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </section>
-
-      {/* 기술 스택 */}
-      <section className="mb-6 grid grid-cols-2 gap-1.5 rounded-lg border border-gray-200 p-3 text-xs">
-        {beTechStack.map((category) => (
-          <div key={category.label}>
-            <span className="text-xs font-semibold text-gray-400">
-              {category.label}
-            </span>
-            <p className="mt-0.5 text-gray-700">{category.items}</p>
-          </div>
-        ))}
-      </section>
-
-      {/* 학력 · 자격증 */}
-      <section className="mb-4">
-        <div className="flex items-baseline gap-6 text-sm">
-          <div>
-            <span className="font-semibold text-gray-900">학력</span>
-            <span className="ml-2 text-gray-600">
-              대구가톨릭대학교 컴퓨터공학과
-              <span className="text-gray-400"> · 2019 졸업</span>
-            </span>
-          </div>
-          <div>
-            <span className="font-semibold text-gray-900">자격증</span>
-            {certifications.map((cert) => (
-              <span key={cert.name} className="ml-2 text-gray-600">
-                {cert.name}
-                <span className="text-gray-400">
-                  {' '}
-                  · {cert.issuer} · {cert.date}
-                </span>
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2 className="mb-2 text-sm font-semibold text-gray-900">작성한 글</h2>
-        <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-xs">
-          {articles.map((article) => (
-            <li key={article.url}>
-              <a
-                href={article.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 hover:underline"
-              >
-                {article.title}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
+      <CredentialsSection certifications={certifications} articles={articles} />
     </>
   )
 }
