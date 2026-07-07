@@ -2,7 +2,27 @@ import {
   profile,
   certifications,
   articles,
+  type ArticleLink,
 } from '@/features/resume/data/resume-v2-data'
+
+// FE 우선 순서로 정렬
+function getFeArticles(): ArticleLink[] {
+  const feFirst = [
+    'Next.js SSR vs On-demand ISR',
+    '프론트엔드 고도화',
+    'json-server vs msw',
+    '모노레포 순환 의존성',
+    'Github Actions',
+  ]
+
+  const prioritized = feFirst
+    .map((keyword) => articles.find((a) => a.title.includes(keyword)))
+    .filter(Boolean) as ArticleLink[]
+
+  const rest = articles.filter((a) => !prioritized.includes(a))
+
+  return [...prioritized, ...rest]
+}
 
 // ─── FE 전용 경력 요약 ───
 
@@ -320,7 +340,7 @@ export function ResumeFeSummary() {
       <section>
         <h2 className="mb-2 text-sm font-semibold text-gray-900">작성한 글</h2>
         <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-xs">
-          {articles.map((article) => (
+          {getFeArticles().map((article) => (
             <li key={article.url}>
               <a
                 href={article.url}
