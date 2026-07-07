@@ -1,6 +1,5 @@
 import {
   profile,
-  techStack,
   certifications,
   articles,
 } from '@/features/resume/data/resume-v2-data'
@@ -116,7 +115,7 @@ export function ResumeSummary() {
   return (
     <>
       {/* 헤더 */}
-      <header className="mb-6">
+      <header className="mb-4">
         <div className="flex items-baseline justify-between">
           <h1 className="text-3xl font-bold text-gray-900">{profile.name}</h1>
           <div className="text-right text-sm text-gray-500">
@@ -266,8 +265,25 @@ export function ResumeSummary() {
       </section>
 
       {/* 기술 스택 */}
-      <section className="mb-6 grid grid-cols-2 gap-2 rounded-lg border border-gray-200 p-4 text-sm">
-        {techStack.map((category) => (
+      <section className="mb-6 grid grid-cols-2 gap-1.5 rounded-lg border border-gray-200 p-3 text-xs">
+        {[
+          {
+            label: 'Frontend',
+            items: 'TypeScript · React · Next.js · Vue.js · Tailwind CSS',
+          },
+          {
+            label: 'Backend',
+            items: 'NestJS · Node.js · PostgreSQL · AWS Lambda/SAM',
+          },
+          {
+            label: 'Test',
+            items: 'Vitest · Playwright · Jest · MSW · nock · supertest',
+          },
+          {
+            label: 'Tooling',
+            items: 'Turborepo · pnpm workspace · Docker · ESLint · CI/CD',
+          },
+        ].map((category) => (
           <div key={category.label}>
             <span className="text-xs font-semibold text-gray-400">
               {category.label}
