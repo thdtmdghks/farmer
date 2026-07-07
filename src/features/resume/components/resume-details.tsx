@@ -39,8 +39,8 @@ export function ResumeDetails() {
             <span className="text-sm text-gray-400">2026.03 ~ 재직중</span>
           </div>
           <p className="mt-1 text-sm text-gray-700">
-            결제 서비스 개발팀. 백오피스 프론트엔드 아키텍처 설계 및 블록체인
-            지갑 API 개발 전담
+            결제 서비스 개발팀. 백오피스 프론트엔드 아키텍처와 블록체인 지갑
+            API를 전담하며, 화면 개발부터 API 설계·테스트·문서화까지 수행
           </p>
 
           {/* 결제 백오피스 */}
@@ -67,8 +67,8 @@ export function ResumeDetails() {
                 <span className="font-semibold">순환 참조 0건</span> 유지
               </li>
               <li>
-                MSW 기반 독립 Mock 환경 설계 — 백엔드 완성 전 피처 개발·모바일
-                QA 병행 가능한 구조 확보
+                백엔드 API 명세를 기준으로 MSW Mock을 구성해, API 완성 전에도
+                피처 개발·모바일 QA를 병행 가능한 구조 확보
               </li>
               <li>
                 인증·스토어·유틸 핵심 모듈에 Vitest + RTL 유닛 테스트 적용 —
@@ -91,19 +91,21 @@ export function ResumeDetails() {
 
             <ul className="mt-3 list-disc space-y-1.5 pl-8 text-sm text-gray-700">
               <li className="font-medium">
-                단독 전담. 설계→구현→테스트→문서화
+                단독 전담. 지갑 생성·조회·전송 API의 설계, 구현, 테스트, 문서화
+                수행
               </li>
+              <li>
+                EVM 코인·ERC-20 토큰의 트랜잭션 전송 및 영수증 폴링 API 구현으로
+                온체인 전송 프로세스 안정화
+              </li>
+              <li>Drizzle ORM + PostgreSQL 기반 지갑/트랜잭션 데이터 모델링</li>
               <li>
                 외부 API를 nock으로 격리 + DB를 테스트마다 초기화하여
                 네트워크·테스트넷 상태 무관한 결정론적 E2E 환경 확보
               </li>
               <li>
-                EVM 코인·ERC-20 토큰의 트랜잭션 전송 및 영수증 폴링 모듈 개발로
-                온체인 전송 프로세스 안정화
-              </li>
-              <li>
-                주요 설계 결정에 ADR 문서화를 적용하여 &quot;왜 이
-                구조인지&quot; 히스토리 투명화
+                Swagger 문서화와 ADR 기록으로 API 사용 방식과 주요 설계 결정
+                히스토리 관리
               </li>
             </ul>
 
@@ -123,8 +125,12 @@ export function ResumeDetails() {
                 </p>
                 <p className="mt-1">
                   <span className="mr-1 text-emerald-500">▸</span>
-                  지갑 ID를 키로 하는 Promise 체인 큐를 구현 — 동일 지갑은 순차,
-                  다른 지갑은 병렬 처리하여 서명 거부 예방
+                  지갑 ID별 Promise Queue를 구현해 동일 지갑 요청은 순차
+                  처리하고, 서로 다른 지갑 요청은 병렬 처리하여 서명 거부 예방
+                </p>
+                <p className="mt-1 text-sm font-semibold text-gray-800">
+                  → 동시 요청 상황에서도 지갑 단위 처리 순서를 보장하고, 전체
+                  처리량 저하 없이 서명 안정성 확보
                 </p>
               </div>
             </div>
@@ -156,7 +162,8 @@ export function ResumeDetails() {
             <span className="text-sm text-gray-400">2022.08 ~ 2025.07</span>
           </div>
           <p className="mt-1 text-sm text-gray-700">
-            첫 FE 개발자로 합류, 결제 MVP 0→1 구현 후 2인 프론트엔드 파트 리드
+            첫 FE 개발자로 합류해 결제 MVP를 0→1로 구축하고, 백엔드·QA 병목을
+            Mock, 테스트 자동화, 서버리스 API로 직접 해소
           </p>
 
           {/* 결제 서비스 */}
@@ -198,14 +205,16 @@ export function ResumeDetails() {
                 <p className="font-medium">PDF 페이지 경계에서 텍스트 잘림</p>
                 <p className="mt-1 text-gray-600">
                   <span className="mr-1 text-red-400">▸</span>
-                  html2canvas + jsPDF로 PDF 생성 시 A4 경계면에서 행·텍스트가
-                  쪼개지는 결함
+                  완납증명서 PDF 생성 시 기존 라이브러리(html2pdf 등)가 표 행
+                  분할 보호 요구사항을 충족하지 못해 html2canvas + jsPDF를 직접
+                  조합하여 구현. 이후 A4 경계면에서 행·텍스트가 쪼개지는 결함
+                  발생
                 </p>
                 <p className="mt-1">
-                  <span className="mr-1 text-emerald-500">▸</span>
-                  라이브러리 내부 소스 분석 후 DOM 순회하며 A4 높이 경계 도달
-                  요소를 감지, 동적 여백 삽입으로 다음 페이지로 넘기는 분할 로직
-                  직접 구현
+                  <span className="mr-1 text-emerald-500">▸</span>두
+                  라이브러리의 소스를 분석하여 렌더링 메커니즘을 파악한 뒤,
+                  DOM을 순회하며 A4 높이 경계에 도달한 요소를 감지하고 동적
+                  여백을 삽입하여 다음 페이지로 넘기는 분할 로직 직접 구현
                 </p>
               </div>
             </div>
@@ -222,13 +231,22 @@ export function ResumeDetails() {
 
             <ul className="mt-3 list-disc space-y-1.5 pl-8 text-sm text-gray-700">
               <li className="font-medium">
-                BE 리소스 부재로 가입 플로우 블로킹 — AWS Lambda 기반 서버리스
-                API를 인프라 설계부터 배포까지 자진하여 단독 수행
+                백엔드 리소스 부족으로 가입 플로우가 지연되던 상황에서, 사업자
+                정보 검증용 Lambda API를 설계·구현·배포하여 출시 병목 해소
               </li>
               <li>
-                컨트롤러/서비스/레포지토리 3계층 분리 + Jest 유닛 테스트, SAM
-                CLI 이벤트 테스트, LocalStack 통합 테스트로{' '}
-                <span className="font-semibold">장애 0건</span> 운영
+                외부 공공 API 연동, 요청 파라미터 검증, 응답 정규화, 예외 케이스
+                처리 구조 설계
+              </li>
+              <li>
+                Controller / Service / Repository 3계층 분리로 테스트 가능한
+                구조 구성
+              </li>
+              <li>
+                Jest 유닛 테스트, SAM CLI 이벤트 테스트, LocalStack 통합
+                테스트로 로컬 검증 체계 구축,{' '}
+                <span className="font-semibold">애플리케이션 장애 0건</span>{' '}
+                운영
               </li>
             </ul>
 
@@ -250,6 +268,9 @@ export function ResumeDetails() {
                   <span className="mr-1 text-emerald-500">▸</span>
                   LocalStack + Docker로 로컬에 Lambda/API Gateway 환경을
                   재현하여 배포 없이 통합 검증 가능한 구조 확보
+                </p>
+                <p className="mt-1 text-sm font-semibold text-gray-800">
+                  → 배포 없이 로컬에서 전체 API 검증 가능한 개발 환경 확보
                 </p>
               </div>
             </div>
