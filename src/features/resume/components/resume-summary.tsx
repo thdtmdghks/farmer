@@ -269,11 +269,13 @@ export function ResumeSummary() {
         {[
           {
             label: 'Frontend',
-            items: 'TypeScript · React · Next.js · Vue.js · Tailwind CSS',
+            items:
+              'TypeScript · React · Next.js · Vue.js · Tailwind CSS · Vite',
           },
           {
             label: 'Backend',
-            items: 'NestJS · Node.js · PostgreSQL · AWS Lambda/SAM',
+            items:
+              'NestJS · Node.js · PostgreSQL · Drizzle ORM · AWS Lambda/SAM',
           },
           {
             label: 'Test',
