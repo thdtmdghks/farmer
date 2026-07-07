@@ -1,14 +1,14 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { ResumeSummary } from '@/features/resume/components/resume-summary'
+import { ResumeBeSummary } from '@/features/resume/components/resume-be-summary'
 
-export const Route = createFileRoute('/resume-general')({
+export const Route = createFileRoute('/resume-be')({
   component: ResumeGeneralPage,
 })
 
 function ResumeGeneralPage() {
   return (
     <div className="mx-auto max-w-3xl bg-white p-8 print:p-6">
-      <ResumeSummary />
+      <ResumeBeSummary />
     </div>
   )
 }

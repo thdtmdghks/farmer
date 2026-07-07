@@ -111,7 +111,7 @@ const personalProjectsSummary = [
 
 // ─── 컴포넌트 ───
 
-export function ResumeSummary() {
+export function ResumeBeSummary() {
   return (
     <>
       {/* 헤더 */}
@@ -198,7 +198,7 @@ export function ResumeSummary() {
         <div className="mb-4 flex items-baseline justify-between">
           <h2 className="text-lg font-bold text-gray-900">경력</h2>
           <a
-            href="https://thdtmdghks.github.io/farmer/resume-general-career"
+            href="https://thdtmdghks.github.io/farmer/resume-be-career"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-blue-500 hover:underline"

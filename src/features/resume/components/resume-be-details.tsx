@@ -1,6 +1,6 @@
 import { profile } from '@/features/resume/data/resume-v2-data'
 
-export function ResumeDetails() {
+export function ResumeBeDetails() {
   return (
     <>
       {/* 상세 경력 헤더 */}
@@ -10,12 +10,12 @@ export function ResumeDetails() {
           <div className="text-right text-sm text-gray-500">
             <p>{profile.email}</p>
             <a
-              href="https://thdtmdghks.github.io/farmer/resume-general"
+              href="https://thdtmdghks.github.io/farmer/resume-be"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 hover:underline"
             >
-              thdtmdghks.github.io/farmer/resume-general
+              thdtmdghks.github.io/farmer/resume-be
             </a>
           </div>
         </div>
