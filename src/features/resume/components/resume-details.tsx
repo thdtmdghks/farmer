@@ -205,16 +205,13 @@ export function ResumeDetails() {
                 <p className="font-medium">PDF 페이지 경계에서 텍스트 잘림</p>
                 <p className="mt-1 text-gray-600">
                   <span className="mr-1 text-red-400">▸</span>
-                  완납증명서 PDF 생성 시 기존 라이브러리(html2pdf 등)가 표 행
-                  분할 보호 요구사항을 충족하지 못해 html2canvas + jsPDF를 직접
-                  조합하여 구현. 이후 A4 경계면에서 행·텍스트가 쪼개지는 결함
+                  완납증명서 PDF 생성 시 A4 경계면에서 행·텍스트가 쪼개지는 결함
                   발생
                 </p>
                 <p className="mt-1">
-                  <span className="mr-1 text-emerald-500">▸</span>두
-                  라이브러리의 소스를 분석하여 렌더링 메커니즘을 파악한 뒤,
-                  DOM을 순회하며 A4 높이 경계에 도달한 요소를 감지하고 동적
-                  여백을 삽입하여 다음 페이지로 넘기는 분할 로직 직접 구현
+                  <span className="mr-1 text-emerald-500">▸</span>
+                  html2canvas + jsPDF 렌더링 구조를 분석하고 DOM 순회 기반
+                  페이지 경계 감지·여백 삽입 로직을 구현해 표 행 분할 문제 해결
                 </p>
               </div>
             </div>
@@ -244,9 +241,8 @@ export function ResumeDetails() {
               </li>
               <li>
                 Jest 유닛 테스트, SAM CLI 이벤트 테스트, LocalStack 통합
-                테스트로 로컬 검증 체계 구축,{' '}
-                <span className="font-semibold">애플리케이션 장애 0건</span>{' '}
-                운영
+                테스트로 로컬 검증 체계를 구축하고 운영 중 애플리케이션 장애
+                없이 유지
               </li>
             </ul>
 
