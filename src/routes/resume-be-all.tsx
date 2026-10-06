@@ -8,7 +8,7 @@ export const Route = createFileRoute('/resume-be-all')({
 
 function ResumeGeneralAllPage() {
   return (
-    <div className="mx-auto max-w-3xl bg-white p-8 print:p-6">
+    <div className="mx-auto max-w-3xl bg-white p-4 sm:p-8 print:p-6">
       <ResumeBeSummary />
       <hr className="my-10 border-gray-300" />
       <ResumeBeDetails />

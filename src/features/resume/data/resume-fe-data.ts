@@ -5,6 +5,7 @@ import { articles, type ArticleLink } from './resume-v2-data'
 export type ProjectGroup = {
   name: string
   bullets: string[]
+  links?: { id: string; label: string }[]
 }
 
 export type CareerCompany = {
@@ -32,22 +33,33 @@ export const feCareerSummary: CareerCompany[] = [
   {
     company: '(주)엑심베이',
     meta: '글로벌 결제 서비스 기업 · 프론트엔드 개발자',
-    period: '2026.03 ~ 재직중',
-    summary: '결제 백오피스 프론트엔드 아키텍처 설계 및 전체 구현 단독 담당',
+    period: '2026.03 ~ 2026.07',
+    summary: '백오피스·어드민 2개 앱, 8개 도메인의 FE 구축·배포·운영 담당',
     projects: [
       {
-        name: '결제 백오피스 & 어드민 (FE 단독, 2개 앱, 8개 도메인)',
+        name: '결제 백오피스 & 어드민',
         bullets: [
-          'React + TypeScript 기반 Feature Slice 설계·구현 (TanStack Router/Query, Zustand)',
-          '다단계 인증 플로우 설계 (MFA, OTP, TOTP, 세션 충돌 처리)',
-          '제네릭 DataTable + 합성 패턴, React Hook Form + Zod 선언형 폼 검증',
-          '7개 패키지 규모에 맞춰 Turborepo를 선택, 공유 UI 패키지로 2개 앱 UI 표준화 + ESLint 의존성 강제',
-          'MSW 시나리오 Mock + Vitest 유닛 테스트 + Playwright E2E',
+          'MFA·OTP·TOTP와 세션 충돌을 처리하는 다단계 인증 흐름 설계',
+          'DataTable 합성 패턴과 폼 스키마로 반복되는 테이블·입력 화면 구성',
+          '공유 UI 패키지로 두 앱의 수정 지점을 통합하고 ESLint로 의존성 규칙 검사',
+        ],
+        links: [
+          {
+            id: 'shared-ui',
+            label: '공통 UI 설계',
+          },
+          {
+            id: 'forms',
+            label: '폼 검증',
+          },
         ],
       },
       {
-        name: '블록체인 지갑 UI / API',
-        bullets: ['React UI + NestJS API 단독 설계·구현·테스트·문서화'],
+        name: '추가 기여',
+        bullets: [
+          'MSW 인증 시나리오와 Vitest·RTL로 인증·스토어·유틸 검증',
+          'React 지갑 UI와 NestJS API MVP 개발 완료(고객 배포 전)',
+        ],
       },
     ],
   },
@@ -56,52 +68,58 @@ export const feCareerSummary: CareerCompany[] = [
     meta: '핀테크 결제 솔루션 스타트업 · 프론트엔드 개발자',
     period: '2022.08 ~ 2025.07',
     summary:
-      '첫 FE 개발자로 개발 환경부터 테스트 체계까지 구축, 이후 FE 파트 리드',
+      '첫 FE로 결제 MVP 구축·출시, 이후 2인 FE 팀에서 개발·검증 체계 개선 주도',
     projects: [
       {
-        name: '결제 서비스 & 대시보드 (MVP 단독 → 파트 리드)',
+        name: '결제 서비스 & 사용자 대시보드',
         bullets: [
-          'Vue.js + Pinia 기반 다단계 결제 플로우 설계·구현, 프로덕션 출시',
-          'Cypress와 비교 검토 후 Playwright를 선택, CI 연계로 회귀 QA 2~3일→반나절',
-          '연체 수수료 계산 로직 유닛 테스트 — 버그 0건, 백엔드팀에서 동일 로직 그대로 채택',
-          'JSON Server → MSW 전환을 비교 문서로 제안·실행, 이후 신규 프로젝트의 Mock 개발 표준으로 정착',
-          '규모에 맞춰 pnpm workspace를 선택해 공통 UI·유틸 패키지화, PR/배포 2회→1회',
-          'PDF 완납증명서 — 라이브러리 소스 분석 후 페이지 분할 로직 직접 구현',
+          'Pinia에 결제·가입 상태 제어를 캡슐화하고 UI와 비즈니스 로직 분리',
+          '가입·결제 핵심 흐름을 Playwright와 CI로 검증해 회귀 QA 2~3일 → 반나절',
+          'PDF 페이지 경계에서 표 행이 잘리는 문제를 DOM 경계 감지와 여백 삽입으로 해결',
+        ],
+        links: [
+          {
+            id: 'qa',
+            label: '회귀 QA 단축',
+          },
+          {
+            id: 'pdf',
+            label: 'PDF 분할 해결',
+          },
         ],
       },
       {
-        name: '백오피스 리뉴얼',
-        bullets: ['Next.js SSR 재구축, 달력 UI 수수료 자동 계산, 분할 패널 UX'],
-      },
-      {
-        name: '기타',
+        name: '개발 체계 및 운영 화면 개선',
         bullets: [
-          '외상 결제 데모몰 (Next.js SSR + MSW 모바일 QA)',
-          '서버리스 API 단독 설계·배포·모니터링 — 가입 블로킹 해소, 장애 0건',
+          'MSW를 신규 프로젝트 Mock 표준으로 정착시키고 공통 코드 패키지화로 중복 변경 절차 통합',
+          '정산 목록·상세 분할 패널과 달력 수수료 계산으로 건당 약 1시간의 수작업 검증을 화면 확인으로 전환',
         ],
       },
     ],
   },
   {
     company: '(주)제머나이소프트',
-    meta: '방송·미디어 솔루션 기업 · 프론트엔드 개발자',
+    meta: '방송·미디어 솔루션 기업 · 웹 개발자',
     period: '2020.06 ~ 2022.04',
-    summary: '웹 영상 편집기 타임라인 UI/인터랙션 개발 및 성능 최적화',
+    summary: '영상 편집기 타임라인 UI·인터랙션 전담 및 CMS 모니터링 개발',
     projects: [
       {
-        name: '웹 영상 편집기 (타임라인 코어 전담)',
+        name: '영상 편집기 & CMS 모니터링',
         bullets: [
-          'Canvas + DOM 하이브리드 렌더링으로 대량 클립 프레임 드랍 해소',
-          '드래그, 스냅, 멀티 셀렉션, 로그 스케일 줌 인터랙션 구현',
+          '드래그·스냅·멀티 셀렉션과 로그 함수 기반 줌 구현',
+          '정적 요소는 Canvas, 인터랙티브 요소는 DOM으로 분리해 대량 클립 렌더링 개선',
+          '힙 스냅샷으로 타이머 미정리를 찾아 수정하고 72시간 이상 연속 가동 확인',
         ],
-      },
-      {
-        name: 'CMS 모니터링',
-        bullets: ['24시간 가동 SPA 메모리 누수 분석·해결 (72시간+ 무중단)'],
-      },
-      {
-        name: '기타',
-        bullets: ['보도정보시스템 — 3개월 지연 프로젝트 2주 조기 완료'],
+        links: [
+          {
+            id: 'timeline',
+            label: '타임라인 렌더링',
+          },
+          {
+            id: 'memory',
+            label: '메모리 누수 분석',
+          },
+        ],
       },
     ],
   },
@@ -115,7 +133,7 @@ export const fePersonalProjects: PersonalProject[] = [
     repo: 'https://github.com/thdtmdghks/potato',
     bullets: [
       'Next.js App Router + Tailwind CSS 기반 실제 업체용 홈페이지 상용 배포',
-      'On-demand ISR + JSON-LD — Lighthouse SEO 100 · Performance 98 · 네이버 키워드 최상위',
+      'On-demand ISR로 콘텐츠 갱신, JSON-LD와 동적 sitemap으로 검색 메타데이터 구성',
       'Gemini API 연동 메타데이터 자동 생성 (이미지 과대·API 에러 시 단계적 Fallback)',
     ],
   },
@@ -124,7 +142,6 @@ export const fePersonalProjects: PersonalProject[] = [
     repo: 'https://github.com/thdtmdghks/farmer',
     bullets: [
       'ESLint Flat Config로 React 레이어 간 단방향 의존성 자동 강제 + Git Hook 커밋 차단',
-      'Intersection Observer + CSS GPU 가속으로 라이브러리 없는 경량 스크롤 애니메이션 구현',
     ],
   },
 ]
@@ -168,5 +185,5 @@ export function getFeArticles(): ArticleLink[] {
 
   const rest = articles.filter((a) => !prioritized.includes(a))
 
-  return [...prioritized, ...rest]
+  return [...prioritized, ...rest].slice(0, 3)
 }

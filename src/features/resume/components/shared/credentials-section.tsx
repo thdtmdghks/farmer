@@ -16,7 +16,7 @@ export function CredentialsSection({ certifications, articles }: Props) {
     <>
       {/* 학력 · 자격증 */}
       <section className="mb-4">
-        <div className="flex items-baseline gap-6 text-sm">
+        <div className="flex flex-wrap items-baseline gap-x-6 gap-y-2 text-sm">
           <div>
             <span className="font-semibold text-gray-900">학력</span>
             <span className="ml-2 text-gray-600">
@@ -42,7 +42,7 @@ export function CredentialsSection({ certifications, articles }: Props) {
       {/* 작성한 글 */}
       <section>
         <h2 className="mb-2 text-sm font-semibold text-gray-900">작성한 글</h2>
-        <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-xs">
+        <ul className="grid grid-cols-1 gap-x-4 gap-y-1 text-xs sm:grid-cols-2">
           {articles.map((article) => (
             <li key={article.url}>
               <a
