@@ -34,26 +34,27 @@ export function ResumeBeSummary() {
             </a>
           </div>
         </div>
-        <p className="mt-1 text-lg text-gray-600">
+        <p className="mt-1 break-keep text-lg text-gray-600">
           프론트엔드 중심 Node.js 풀스택 개발자 · 6년차
         </p>
       </header>
 
       <section className="mb-6" aria-label="소개와 대표 경험">
-        <h2 className="text-xl font-bold leading-snug text-gray-900">
+        <h2 className="text-xl leading-snug font-bold text-gray-900">
           화면부터 API까지 구현해 제품 개발의 병목을 해결합니다.
         </h2>
         <p className="mt-3 text-base leading-relaxed text-gray-800">
-          결제 서비스와 백오피스의 프론트엔드를 구축·운영하며, 제품 개발에 필요한
-          API까지 직접 구현해왔습니다. 백엔드 리소스 부족으로 지연된 가입 기능을
-          위해 Node.js API를 개발·배포했고, 지갑 API MVP에서는 외부 연동과
-          동시 요청 처리를 구현하고 테스트 환경을 구성했습니다.
+          결제 서비스와 백오피스의 프론트엔드를 구축·운영하며, 제품 개발에
+          필요한 API까지 직접 구현해왔습니다. 화면과 API의 연결 지점에서 문제를
+          해결하고, 외부 연동과 동시 요청을 검증할 수 있는 테스트 환경을 함께
+          구성합니다.
         </p>
         <dl className="mt-4 space-y-2 border-l-2 border-blue-600 pl-4">
           <div className="text-sm leading-relaxed">
             <dt className="font-semibold text-gray-900">API 개발·배포</dt>
             <dd className="text-gray-700">
-              백엔드 리소스 부족으로 지연된 가입 기능에 필요한 사업자 검증 API 배포
+              백엔드 리소스 부족으로 지연된 가입 기능에 필요한 사업자 검증 API
+              배포
             </dd>
           </div>
           <div className="text-sm leading-relaxed">
@@ -63,7 +64,9 @@ export function ResumeBeSummary() {
             </dd>
           </div>
           <div className="text-sm leading-relaxed">
-            <dt className="font-semibold text-gray-900">반복 가능한 API 검증</dt>
+            <dt className="font-semibold text-gray-900">
+              반복 가능한 API 검증
+            </dt>
             <dd className="text-gray-700">
               외부 API Mock과 PostgreSQL 테스트 데이터 초기화로 E2E 환경 구성
             </dd>
