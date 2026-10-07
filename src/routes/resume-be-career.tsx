@@ -7,7 +7,7 @@ export const Route = createFileRoute('/resume-be-career')({
 
 function ResumeGeneralCareerPage() {
   return (
-    <div className="mx-auto max-w-3xl bg-white p-4 sm:p-8 print:p-6">
+    <div className="mx-auto max-w-3xl bg-white p-4 sm:p-8 print:p-0">
       <ResumeBeDetails />
     </div>
   )
