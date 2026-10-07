@@ -34,16 +34,17 @@ export function ResumeFeSummary() {
         <p className="mt-1 text-lg text-gray-600">프론트엔드 개발자 · 6년차</p>
       </header>
 
-      <section className="mb-6" aria-label="소개와 대표 경험">
+      <section className="mb-6 print:mb-4" aria-label="소개와 대표 경험">
         <h2 className="text-xl leading-snug font-bold text-gray-900">
-          반복되는 개발 문제를 구조와 자동화로 해결합니다.
+          제품을 만드는 데서 그치지 않고, 개발 과정까지 개선합니다.
         </h2>
-        <p className="mt-3 text-base leading-relaxed text-gray-800">
-          React·Vue 기반 결제 서비스의 MVP 출시와 백오피스·어드민 구축·운영을
-          담당했습니다. 사용자의 수작업을 줄이는 UI를 직접 제안하고, 반복되는
-          개발·검증 작업은 공통 UI와 테스트 자동화로 개선해왔습니다.
+        <p className="mt-3 text-base leading-relaxed text-gray-800 print:mt-2 print:text-sm">
+          결제 서비스의 MVP 출시부터 백오피스·어드민 구축·운영까지 담당한
+          프론트엔드 개발자입니다. 사용자의 수작업을 줄이는 UI를 직접 제안하고,
+          두 앱에서 함께 쓰는 공통 UI를 설계했습니다. 반복되는 수동 검증은 E2E
+          테스트로 자동화하며 제품과 개발 과정을 함께 개선해왔습니다.
         </p>
-        <dl className="mt-4 space-y-2 border-l-2 border-blue-600 pl-4">
+        <dl className="mt-4 space-y-2 border-l-2 border-blue-600 pl-4 print:mt-3 print:space-y-1">
           <div className="text-sm leading-relaxed">
             <dt className="font-semibold text-gray-900">공통 UI 설계</dt>
             <dd className="text-gray-700">
