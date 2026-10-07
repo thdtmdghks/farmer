@@ -1,4 +1,8 @@
-import type { CareerCompany, PersonalProject, TechCategory } from './resume-fe-data'
+import type {
+  CareerCompany,
+  PersonalProject,
+  TechCategory,
+} from './resume-fe-data'
 
 // ─── BE(풀스택) 경력 요약 ───
 
@@ -11,6 +15,7 @@ export const beCareerSummary: CareerCompany[] = [
     projects: [
       {
         name: '블록체인 지갑 API (MVP 완료 · 고객 배포 전)',
+        highlight: '지갑 ID별 메모리 큐로 서명 요청 직렬화',
         bullets: [
           'NestJS 지갑 생성·조회·전송 API와 PostgreSQL 지갑·트랜잭션 모델 설계',
           '단일 프로세스의 지갑 ID별 메모리 큐로 서명 요청 직렬화 및 실패 시 예외 처리',
@@ -51,6 +56,7 @@ export const beCareerSummary: CareerCompany[] = [
     projects: [
       {
         name: '사업자 정보 검증 API',
+        highlight: 'Lambda API 설계·구현·배포',
         bullets: [
           '백엔드 리소스 부족으로 지연된 가입 기능을 위해 Lambda API 설계·구현·배포',
           '공공 API 응답 정규화와 예외 처리, LocalStack 기반 로컬 통합 검증 구성',
@@ -64,6 +70,7 @@ export const beCareerSummary: CareerCompany[] = [
       },
       {
         name: '결제 서비스 & 사용자 대시보드',
+        highlight: '수동 회귀 테스트 부담 감소',
         bullets: [
           'MVP 출시 후 Playwright·CI로 핵심 흐름을 자동 검증해 수동 회귀 테스트 부담 감소',
           '공통 UI·유틸을 패키지화해 서비스 간 중복 수정 절차 통합',
@@ -89,6 +96,7 @@ export const beCareerSummary: CareerCompany[] = [
     projects: [
       {
         name: '영상 편집기 & CMS 모니터링',
+        highlight: '72시간 이상 연속 가동 테스트',
         bullets: [
           '드래그·스냅·멀티 셀렉션과 로그 함수 기반 줌 구현',
           '여러 렌더링 방식을 비교·테스트해 정적 요소는 Canvas, 편집 인터랙션은 DOM으로 구현',
