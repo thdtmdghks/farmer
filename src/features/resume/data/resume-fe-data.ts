@@ -39,9 +39,9 @@ export const feCareerSummary: CareerCompany[] = [
       {
         name: '결제 백오피스 & 어드민',
         bullets: [
-          'MFA·OTP·TOTP와 세션 충돌을 처리하는 다단계 인증 흐름 설계',
-          'DataTable 합성 패턴과 폼 스키마로 반복되는 테이블·입력 화면 구성',
           '공유 UI 패키지로 두 앱의 수정 지점을 통합하고 ESLint로 의존성 규칙 검사',
+          'DataTable 합성 패턴과 폼 스키마로 반복되는 테이블·입력 화면 구성',
+          '다단계 인증(MFA·OTP·TOTP)과 세션 충돌 처리, ARIA·라우트 변경 알림 적용',
         ],
         links: [
           {
@@ -55,9 +55,9 @@ export const feCareerSummary: CareerCompany[] = [
         ],
       },
       {
-        name: '추가 기여',
+        name: 'API 협업 및 검증',
         bullets: [
-          'MSW 인증 시나리오와 Vitest·RTL로 인증·스토어·유틸 검증',
+          '백엔드팀과 API 스키마를 사전 합의하고 MSW로 인증·목록 시나리오 구성, Vitest·RTL로 핵심 모듈 검증',
           'React 지갑 UI와 NestJS API MVP 개발 완료(고객 배포 전)',
         ],
       },
@@ -73,8 +73,8 @@ export const feCareerSummary: CareerCompany[] = [
       {
         name: '결제 서비스 & 사용자 대시보드',
         bullets: [
-          'Pinia에 결제·가입 상태 제어를 캡슐화하고 UI와 비즈니스 로직 분리',
           '가입·결제 핵심 흐름을 Playwright와 CI로 검증해 회귀 QA 2~3일 → 반나절',
+          'Pinia에 결제·가입 상태 제어를 캡슐화하고 UI와 비즈니스 로직 분리',
           'PDF 페이지 경계에서 표 행이 잘리는 문제를 DOM 경계 감지와 여백 삽입으로 해결',
         ],
         links: [
@@ -132,14 +132,14 @@ export const fePersonalProjects: PersonalProject[] = [
     name: 'potato | Next.js 기업 홈페이지',
     repo: 'https://github.com/thdtmdghks/potato',
     bullets: [
-      'Next.js App Router + Tailwind CSS 기반 실제 업체용 홈페이지 상용 배포',
+      '시공사례 관리·고객 후기 작성/승인 기능을 갖춘 Next.js 업체 홈페이지 개발·배포',
+      'On-demand ISR로 콘텐츠 갱신을 반영하고 JSON-LD·동적 sitemap으로 검색 메타데이터 구성',
       '서버·클라이언트·공용 영역과 Repository 경계를 설계하고 DB 없이 개발 가능한 Mock 구현체 구성',
-      '기능을 검토 가능한 작업 단위로 나누고, AI 에이전트에 코드 배치·재사용·테스트 작성 기준 제공',
-      '코드 검토에서 발견한 중복 구현·상태 범위·로딩 UI 문제를 리팩터링하고 컨벤션·에이전트 규칙에 반영',
+      'AI 구현을 검토하며 중복 UI·상태 범위·로딩 경계를 개선하고, 재사용·코드 배치·테스트 기준을 에이전트 규칙에 반영',
     ],
   },
   {
-    name: 'farmer | React 아키텍처 규칙 검증 도구',
+    name: 'farmer | 의존성 규칙을 적용한 React 보일러플레이트',
     repo: 'https://github.com/thdtmdghks/farmer',
     bullets: [
       'ESLint Flat Config로 React 레이어 간 단방향 의존성 자동 강제 + Git Hook 커밋 차단',

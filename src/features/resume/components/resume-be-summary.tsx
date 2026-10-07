@@ -41,10 +41,9 @@ export function ResumeBeSummary() {
 
       <section className="mb-6" aria-label="소개와 대표 경험">
         <p className="text-base leading-relaxed text-gray-800">
-          프론트엔드 제품 개발을 기반으로 Node.js API까지 직접
-          설계·구현해왔습니다. 외부 연동과 동시성 문제를 구조적으로 해결하고,
-          Mock과 자동화로 반복 가능한 검증 환경을 만듭니다. AI 활용 개발에도
-          설계·구현·검증 기준을 적용합니다.
+          결제 서비스와 백오피스의 프론트엔드를 구축·운영하고, 가입 기능에
+          필요한 Node.js API를 직접 개발·배포했습니다. 외부 연동과 동시성 문제를
+          해결하며, API 설계부터 Mock 기반 검증까지 담당합니다.
         </p>
         <dl className="mt-4 space-y-2 border-l-2 border-blue-600 pl-4">
           <div className="text-sm leading-relaxed">
@@ -54,17 +53,17 @@ export function ResumeBeSummary() {
             </dd>
           </div>
           <div className="text-sm leading-relaxed">
-            <dt className="font-semibold text-gray-900">Node.js API 설계</dt>
+            <dt className="font-semibold text-gray-900">
+              API 개발로 출시 병목 해소
+            </dt>
             <dd className="text-gray-700">
-              NestJS 지갑 API MVP 완료 · 지갑별 동시 서명 처리
+              백엔드 리소스 부족으로 지연된 사업자 검증 Lambda API 개발·배포
             </dd>
           </div>
           <div className="text-sm leading-relaxed">
-            <dt className="font-semibold text-gray-900">
-              외부 환경과 분리한 검증
-            </dt>
+            <dt className="font-semibold text-gray-900">개발·검증 체계 개선</dt>
             <dd className="text-gray-700">
-              지갑 API의 외부 연동 Mock · 테스트별 DB 초기화
+              회귀 QA 2~3일 → 반나절 · 외부 연동을 격리한 지갑 API E2E
             </dd>
           </div>
         </dl>

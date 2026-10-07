@@ -24,7 +24,7 @@ export const resumeDetailGroups = [
         cases: ['wallet-queue', 'wallet-test'],
         contributions: [
           '지갑 생성·조회, EVM·ERC-20 전송과 영수증 폴링 구현. 지갑·트랜잭션 데이터 모델 설계.',
-          'Swagger와 ADR로 API 사용 방식과 설계 결정 기록.',
+          'Swagger와 ADR로 API 사용 방식과 설계 결정 기록. 코딩 컨벤션·에이전트 규칙을 정립하고 구현 검토에서 발견한 문제를 반영해 보완.',
         ],
       },
       {
