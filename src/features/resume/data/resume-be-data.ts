@@ -1,4 +1,4 @@
-import type { CareerCompany, TechCategory } from './resume-fe-data'
+import type { CareerCompany, PersonalProject, TechCategory } from './resume-fe-data'
 
 // ─── BE(풀스택) 경력 요약 ───
 
@@ -109,9 +109,26 @@ export const beCareerSummary: CareerCompany[] = [
   },
 ]
 
-// ─── BE 개인 프로젝트 (FE와 동일) ───
+// ─── 풀스택 개인 프로젝트 ───
 
-export { fePersonalProjects as bePersonalProjects } from './resume-fe-data'
+export const bePersonalProjects: PersonalProject[] = [
+  {
+    name: 'potato | Next.js 기업 홈페이지',
+    repo: 'https://github.com/thdtmdghks/potato',
+    bullets: [
+      '시공사례 관리·고객 후기 작성/승인 기능을 갖춘 Next.js 업체 홈페이지 개발·배포',
+      '서버·클라이언트·공용 영역과 Repository 경계를 설계하고 DB 없이 개발 가능한 Mock 구현체 구성',
+      'On-demand ISR로 콘텐츠 변경을 페이지에 반영',
+    ],
+  },
+  {
+    name: 'farmer | 의존성 규칙을 적용한 React 보일러플레이트',
+    repo: 'https://github.com/thdtmdghks/farmer',
+    bullets: [
+      'ESLint로 레이어 간 의존성 규칙을 검사하고 Git Hook으로 커밋 시 검증',
+    ],
+  },
+]
 
 // ─── BE 기술 스택 ───
 
