@@ -7,7 +7,7 @@ type Props = {
 
 export function CareerSection({ companies, detailLink }: Props) {
   return (
-    <section className="mb-6 rounded-lg bg-gray-50 p-4 sm:p-6">
+    <section className="resume-career mb-6 rounded-lg bg-gray-50 p-3 sm:p-6">
       <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
         <h2 className="text-lg font-bold text-gray-900">경력</h2>
         <a
@@ -25,7 +25,7 @@ export function CareerSection({ companies, detailLink }: Props) {
           key={company.company}
           className={idx < companies.length - 1 ? 'mb-8' : ''}
         >
-          <div className="mb-1 flex flex-wrap items-baseline justify-between gap-2">
+          <div className="mb-1 flex flex-wrap items-baseline justify-between gap-2 print:break-after-avoid">
             <div className="flex flex-wrap items-baseline gap-2">
               <h3 className="text-lg font-bold text-gray-900">
                 {company.company}
@@ -34,15 +34,31 @@ export function CareerSection({ companies, detailLink }: Props) {
             </div>
             <span className="text-sm text-gray-500">{company.period}</span>
           </div>
-          <p className="pl-1 text-sm leading-relaxed text-gray-700">
+          <p className="text-sm leading-relaxed text-gray-700 print:break-after-avoid">
             - {company.summary}
           </p>
           {company.projects.map((project) => (
-            <div key={project.name} className="mt-3 pl-1">
+            <div key={project.name} className="mt-3 print:break-inside-avoid">
               <p className="text-sm font-bold text-gray-800">{project.name}</p>
-              <ul className="mt-1.5 space-y-2 border-l-2 border-gray-200 pl-4 text-sm leading-relaxed text-gray-700">
+              <ul className="mt-1.5 space-y-2 border-l-2 border-gray-200 pl-3 text-sm leading-relaxed text-gray-700">
                 {project.bullets.map((b) => (
-                  <li key={b}>· {b}</li>
+                  <li key={b}>
+                    ·{' '}
+                    {project.highlight && b.includes(project.highlight) ? (
+                      <>
+                        {b.slice(0, b.indexOf(project.highlight))}
+                        <strong className="font-semibold text-gray-900">
+                          {project.highlight}
+                        </strong>
+                        {b.slice(
+                          b.indexOf(project.highlight) +
+                            project.highlight.length,
+                        )}
+                      </>
+                    ) : (
+                      b
+                    )}
+                  </li>
                 ))}
               </ul>
               {project.links && project.links.length > 0 && (
