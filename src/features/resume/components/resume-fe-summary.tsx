@@ -35,31 +35,31 @@ export function ResumeFeSummary() {
       </header>
 
       <section className="mb-6" aria-label="소개와 대표 경험">
-        <p className="text-base leading-relaxed text-gray-800">
+        <h2 className="text-xl font-bold leading-snug text-gray-900">
+          반복되는 개발 문제를 구조와 자동화로 해결합니다.
+        </h2>
+        <p className="mt-3 text-base leading-relaxed text-gray-800">
           React·Vue 기반 결제 서비스의 MVP 출시와 백오피스·어드민 구축·운영을
-          담당했습니다. 반복되는 화면 구현은 공통 UI로 통합하고, 렌더링·메모리
-          문제는 원인을 추적해 해결했습니다. 테스트 자동화로 팀의 회귀 QA 시간도
-          줄였습니다.
+          담당했습니다. 공통 UI 설계와 테스트 자동화로 반복 작업을 줄여왔습니다.
         </p>
         <dl className="mt-4 space-y-2 border-l-2 border-blue-600 pl-4">
           <div className="text-sm leading-relaxed">
-            <dt className="font-semibold text-gray-900">제품 구축과 공통화</dt>
+            <dt className="font-semibold text-gray-900">공통 UI 설계</dt>
             <dd className="text-gray-700">
-              백오피스·어드민 2개 앱 구축·운영 · 공유 UI로 수정 지점 통합
+              백오피스·어드민 2개 앱의 공통 UI를 공유 패키지로 통합
             </dd>
           </div>
           <div className="text-sm leading-relaxed">
-            <dt className="font-semibold text-gray-900">
-              브라우저 성능·안정성
-            </dt>
+            <dt className="font-semibold text-gray-900">회귀 QA 단축</dt>
             <dd className="text-gray-700">
-              영상 편집기 렌더링 개선 · CMS 메모리 누수 수정 후 72시간 연속
-              테스트
+              가입·결제 핵심 흐름 자동 검증으로 2~3일 → 반나절
             </dd>
           </div>
           <div className="text-sm leading-relaxed">
-            <dt className="font-semibold text-gray-900">검증 시간 단축</dt>
-            <dd className="text-gray-700">회귀 QA 2~3일 → 반나절</dd>
+            <dt className="font-semibold text-gray-900">브라우저 안정성 개선</dt>
+            <dd className="text-gray-700">
+              CMS 메모리 누수 수정 후 72시간 이상 연속 가동 테스트로 확인
+            </dd>
           </div>
         </dl>
       </section>
