@@ -45,6 +45,19 @@ export function CareerSection({ companies, detailLink }: Props) {
                   <li key={b}>· {b}</li>
                 ))}
               </ul>
+              {project.links && project.links.length > 0 && (
+                <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs">
+                  {project.links.map((link) => (
+                    <a
+                      key={link.id}
+                      href={`${detailLink}#${link.id}`}
+                      className="text-blue-700 underline underline-offset-4"
+                    >
+                      {link.label} ↗
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>
