@@ -75,7 +75,7 @@ export const feCareerSummary: CareerCompany[] = [
       {
         name: '결제 서비스 & 사용자 대시보드',
         bullets: [
-          '가입·결제 핵심 흐름을 Playwright와 CI로 검증해 회귀 QA 2~3일 → 반나절',
+          '가입·결제 핵심 흐름을 Playwright·CI로 자동 검증해 수동 회귀 테스트 부담 감소',
           'Pinia에 결제·가입 상태 제어를 캡슐화하고 UI와 비즈니스 로직 분리',
           'PDF 페이지 경계에서 표 행이 잘리는 문제를 DOM 경계 감지와 여백 삽입으로 해결',
         ],
@@ -94,7 +94,7 @@ export const feCareerSummary: CareerCompany[] = [
         name: '개발 체계 및 운영 화면 개선',
         bullets: [
           'MSW를 신규 프로젝트의 Mock 표준으로 정착시켜 배포 환경에서도 실기기 QA 지원',
-          '달력 기반 수수료 계산 화면으로 건당 약 1시간 걸리던 수작업 확인·계산 대체',
+          '기준일별 수수료를 조회하는 달력 UI를 직접 제안·구현해 날짜별 수동 계산 개선',
         ],
       },
     ],
@@ -109,7 +109,7 @@ export const feCareerSummary: CareerCompany[] = [
         name: '영상 편집기 & CMS 모니터링',
         bullets: [
           '드래그·스냅·멀티 셀렉션과 로그 함수 기반 줌 구현',
-          '정적 요소는 Canvas, 인터랙티브 요소는 DOM으로 분리해 대량 클립 렌더링 개선',
+          '여러 렌더링 방식을 비교·테스트해 정적 요소는 Canvas, 편집 인터랙션은 DOM으로 구현',
           '힙 스냅샷으로 미해제 타이머를 찾아 메모리 누수 수정, 72시간 이상 연속 가동 테스트로 확인',
         ],
         links: [
