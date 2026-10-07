@@ -58,7 +58,7 @@ export function ResumeBeSummary() {
           <div className="text-sm leading-relaxed">
             <dt className="font-semibold text-gray-900">동시 서명 충돌 처리</dt>
             <dd className="text-gray-700">
-              지갑 API MVP에서 동일 지갑 요청은 순차 처리하고 지갑 간 병렬 처리 유지
+              단일 프로세스 내 지갑별 요청 직렬화와 지갑 간 병렬 처리 구현
             </dd>
           </div>
           <div className="text-sm leading-relaxed">
