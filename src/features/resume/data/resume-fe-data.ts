@@ -133,8 +133,9 @@ export const fePersonalProjects: PersonalProject[] = [
     repo: 'https://github.com/thdtmdghks/potato',
     bullets: [
       'Next.js App Router + Tailwind CSS 기반 실제 업체용 홈페이지 상용 배포',
-      'On-demand ISR로 콘텐츠 갱신, JSON-LD와 동적 sitemap으로 검색 메타데이터 구성',
-      'Gemini API 연동 메타데이터 자동 생성 (이미지 과대·API 에러 시 단계적 Fallback)',
+      '서버·클라이언트·공용 영역과 Repository 경계를 설계하고 DB 없이 개발 가능한 Mock 구현체 구성',
+      '기능을 검토 가능한 작업 단위로 나누고, AI 에이전트에 코드 배치·재사용·테스트 작성 기준 제공',
+      '코드 검토에서 발견한 중복 구현·상태 범위·로딩 UI 문제를 리팩터링하고 컨벤션·에이전트 규칙에 반영',
     ],
   },
   {

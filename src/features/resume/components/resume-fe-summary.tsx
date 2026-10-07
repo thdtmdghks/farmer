@@ -37,24 +37,28 @@ export function ResumeFeSummary() {
       <section className="mb-6" aria-label="소개와 대표 경험">
         <p className="text-base leading-relaxed text-gray-800">
           React·Vue 기반 결제 서비스와 백오피스를 설계하고 출시·운영했습니다.
-          복잡한 화면과 렌더링 문제를 해결하고, 테스트 자동화로 팀의 검증 시간을
-          줄여왔습니다.
+          반복되는 구현과 검증 병목을 공통 구조·Mock·자동화로 개선합니다. AI
+          활용 개발에서도 설계와 코드 검토를 바탕으로 작업 규칙을 보완합니다.
         </p>
         <dl className="mt-4 space-y-2 border-l-2 border-blue-600 pl-4">
           <div className="text-sm leading-relaxed">
-            <dt className="font-semibold text-gray-900">제품 개발 책임</dt>
+            <dt className="font-semibold text-gray-900">
+              반복 구현을 줄이는 구조
+            </dt>
             <dd className="text-gray-700">
-              결제 MVP 출시 · 백오피스·어드민 2개 앱 구축·운영
+              백오피스·어드민 2개 앱의 공유 UI · 의존성 규칙 검사
             </dd>
           </div>
           <div className="text-sm leading-relaxed">
-            <dt className="font-semibold text-gray-900">복잡한 UI 구현</dt>
+            <dt className="font-semibold text-gray-900">
+              화면 특성에 맞는 설계
+            </dt>
             <dd className="text-gray-700">
               영상 편집기 타임라인 · Canvas와 DOM 렌더링
             </dd>
           </div>
           <div className="text-sm leading-relaxed">
-            <dt className="font-semibold text-gray-900">검증 시간 단축</dt>
+            <dt className="font-semibold text-gray-900">반복 가능한 검증</dt>
             <dd className="text-gray-700">회귀 QA 2~3일 → 반나절</dd>
           </div>
         </dl>

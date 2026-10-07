@@ -15,6 +15,7 @@ export const beCareerSummary: CareerCompany[] = [
           'NestJS 지갑 생성·조회·전송 API와 PostgreSQL 지갑·트랜잭션 모델 설계',
           '지갑 ID별 큐로 동일 지갑의 서명을 순차 처리하고 다른 지갑은 병렬 처리',
           '외부 API Mock과 테스트별 DB 초기화로 반복 가능한 E2E 환경 구성',
+          'API 아키텍처를 정립하고 코딩 컨벤션·에이전트 규칙을 AI 활용 개발의 기준으로 적용',
         ],
         links: [
           {
