@@ -40,30 +40,31 @@ export function ResumeBeSummary() {
       </header>
 
       <section className="mb-6" aria-label="소개와 대표 경험">
-        <p className="text-base leading-relaxed text-gray-800">
-          결제 서비스와 백오피스의 프론트엔드를 구축·운영하고, 가입 기능에
-          필요한 Node.js API를 직접 개발·배포했습니다. 외부 연동과 동시성 문제를
-          해결하고, API 설계부터 Mock을 활용한 테스트까지 담당했습니다.
+        <h2 className="text-xl font-bold leading-snug text-gray-900">
+          화면부터 API까지 구현해 제품 개발의 병목을 해결합니다.
+        </h2>
+        <p className="mt-3 text-base leading-relaxed text-gray-800">
+          결제 서비스와 백오피스의 프론트엔드를 구축·운영했습니다. 가입에 필요한
+          Node.js API를 개발·배포하고, 지갑 API MVP의 설계·구현·테스트를
+          담당했습니다.
         </p>
         <dl className="mt-4 space-y-2 border-l-2 border-blue-600 pl-4">
           <div className="text-sm leading-relaxed">
-            <dt className="font-semibold text-gray-900">제품 구축·운영</dt>
+            <dt className="font-semibold text-gray-900">API 개발·배포</dt>
             <dd className="text-gray-700">
-              결제 MVP 출시 · 백오피스 FE 구축·배포·운영
+              백엔드 리소스 부족으로 지연된 가입 기능에 필요한 사업자 검증 API 배포
             </dd>
           </div>
           <div className="text-sm leading-relaxed">
-            <dt className="font-semibold text-gray-900">
-              API 개발로 출시 병목 해소
-            </dt>
+            <dt className="font-semibold text-gray-900">동시 서명 충돌 처리</dt>
             <dd className="text-gray-700">
-              백엔드 리소스 부족으로 지연된 사업자 검증 Lambda API 개발·배포
+              지갑 API MVP에서 동일 지갑 요청은 순차 처리하고 지갑 간 병렬 처리 유지
             </dd>
           </div>
           <div className="text-sm leading-relaxed">
-            <dt className="font-semibold text-gray-900">개발·검증 체계 개선</dt>
+            <dt className="font-semibold text-gray-900">반복 가능한 API 검증</dt>
             <dd className="text-gray-700">
-              Playwright·CI 자동 검증으로 회귀 QA 2~3일 → 반나절
+              외부 API Mock과 PostgreSQL 테스트 데이터 초기화로 E2E 환경 구성
             </dd>
           </div>
         </dl>
