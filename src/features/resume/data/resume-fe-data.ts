@@ -41,7 +41,7 @@ export const feCareerSummary: CareerCompany[] = [
         bullets: [
           '공유 UI 패키지로 두 앱의 수정 지점을 통합하고 ESLint로 의존성 규칙 검사',
           'DataTable 합성 패턴과 폼 스키마로 반복되는 테이블·입력 화면 구성',
-          '다단계 인증(MFA·OTP·TOTP)과 세션 충돌 처리, ARIA·라우트 변경 알림 적용',
+          'MFA·OTP·TOTP 인증 흐름과 세션 충돌 처리 구현',
         ],
         links: [
           {
@@ -57,7 +57,8 @@ export const feCareerSummary: CareerCompany[] = [
       {
         name: 'API 협업 및 검증',
         bullets: [
-          '백엔드팀과 API 스키마를 사전 합의하고 MSW로 인증·목록 시나리오 구성, Vitest·RTL로 핵심 모듈 검증',
+          '백엔드팀과 API 스키마를 사전 합의하고 MSW로 인증·목록 시나리오를 구현해 독립 개발 환경 구성',
+          'Vitest·RTL로 인증·스토어·유틸의 동작 검증',
           'React 지갑 UI와 NestJS API MVP 개발 완료(고객 배포 전)',
         ],
       },
@@ -91,8 +92,8 @@ export const feCareerSummary: CareerCompany[] = [
       {
         name: '개발 체계 및 운영 화면 개선',
         bullets: [
-          'MSW를 신규 프로젝트 Mock 표준으로 정착시키고 공통 코드 패키지화로 중복 변경 절차 통합',
-          '정산 목록·상세 분할 패널과 달력 수수료 계산으로 건당 약 1시간의 수작업 검증을 화면 확인으로 전환',
+          'MSW를 신규 프로젝트의 Mock 표준으로 정착시켜 배포 환경에서도 실기기 QA 지원',
+          '달력 기반 수수료 계산 화면으로 건당 약 1시간 걸리던 수작업 확인·계산 대체',
         ],
       },
     ],
@@ -108,7 +109,7 @@ export const feCareerSummary: CareerCompany[] = [
         bullets: [
           '드래그·스냅·멀티 셀렉션과 로그 함수 기반 줌 구현',
           '정적 요소는 Canvas, 인터랙티브 요소는 DOM으로 분리해 대량 클립 렌더링 개선',
-          '힙 스냅샷으로 타이머 미정리를 찾아 수정하고 72시간 이상 연속 가동 확인',
+          '힙 스냅샷으로 미해제 타이머를 찾아 메모리 누수 수정, 72시간 이상 연속 가동 테스트로 확인',
         ],
         links: [
           {
@@ -135,14 +136,14 @@ export const fePersonalProjects: PersonalProject[] = [
       '시공사례 관리·고객 후기 작성/승인 기능을 갖춘 Next.js 업체 홈페이지 개발·배포',
       'On-demand ISR로 콘텐츠 갱신을 반영하고 JSON-LD·동적 sitemap으로 검색 메타데이터 구성',
       '서버·클라이언트·공용 영역과 Repository 경계를 설계하고 DB 없이 개발 가능한 Mock 구현체 구성',
-      'AI 구현을 검토하며 중복 UI·상태 범위·로딩 경계를 개선하고, 재사용·코드 배치·테스트 기준을 에이전트 규칙에 반영',
+      'AI가 작성한 코드의 중복 UI·입력 상태·로딩 경계를 검토·개선하고, 후속 구현을 위한 에이전트 규칙에 반영',
     ],
   },
   {
     name: 'farmer | 의존성 규칙을 적용한 React 보일러플레이트',
     repo: 'https://github.com/thdtmdghks/farmer',
     bullets: [
-      'ESLint Flat Config로 React 레이어 간 단방향 의존성 자동 강제 + Git Hook 커밋 차단',
+      'ESLint로 React 레이어 간 의존성 규칙을 검사하고 Git Hook으로 규칙 위반 코드의 커밋 차단',
     ],
   },
 ]

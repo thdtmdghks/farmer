@@ -12,9 +12,11 @@ export const resumeDetailGroups = [
           'React · TypeScript · TanStack Router/Query · Zustand · Turborepo',
         cases: ['shared-ui', 'forms'],
         contributions: [
-          'MFA·OTP·TOTP와 세션 충돌을 처리하는 인증 흐름 구현.',
-          '백엔드팀과 요청·응답 스키마를 사전 합의하고 MSW로 인증 분기·필터링·페이지네이션 시나리오 구성. Vitest·RTL로 핵심 모듈 검증.',
-          'RSA-OAEP 비밀번호 암호화와 공개키 캐싱·만료 시 재발급 흐름 구현. ARIA와 라우트 변경 알림 적용.',
+          'MFA·OTP·TOTP 인증 흐름과 세션 충돌 처리 구현.',
+          '백엔드팀과 요청·응답 스키마를 사전 합의하고 MSW로 인증 분기·필터링·페이지네이션을 구현해 독립 개발 환경 구성.',
+          'Vitest·RTL로 인증·스토어·유틸의 동작 검증.',
+          'RSA-OAEP 비밀번호 암호화와 공개키 캐싱·만료 시 재발급 흐름 구현.',
+          '웹 접근성을 위해 ARIA 속성과 라우트 변경 알림 적용.',
         ],
       },
       {
@@ -24,7 +26,8 @@ export const resumeDetailGroups = [
         cases: ['wallet-queue', 'wallet-test'],
         contributions: [
           '지갑 생성·조회, EVM·ERC-20 전송과 영수증 폴링 구현. 지갑·트랜잭션 데이터 모델 설계.',
-          'Swagger와 ADR로 API 사용 방식과 설계 결정 기록. 코딩 컨벤션·에이전트 규칙을 정립하고 구현 검토에서 발견한 문제를 반영해 보완.',
+          'Swagger로 API 사용 방식을 문서화하고 ADR에 설계 결정과 근거 기록.',
+          'AI 활용 개발을 위한 코딩 컨벤션·에이전트 규칙을 정립하고, 코드 검토에서 발견한 문제를 반영해 보완.',
         ],
       },
       {
@@ -49,8 +52,9 @@ export const resumeDetailGroups = [
         cases: ['qa', 'pdf'],
         contributions: [
           'Pinia에 결제·가입 상태 제어를 캡슐화하고 UI와 비즈니스 로직 분리.',
-          'MSW 전환을 비교 문서로 제안·실행해 배포 URL에서도 실기기 QA가 가능하도록 개선하고 신규 프로젝트 표준으로 정착.',
-          '공통 UI·유틸을 패키지화해 서비스 간 중복 변경 절차 통합. 연체 수수료 계산 로직을 유닛 테스트하고 백엔드팀에 공유.',
+          '기존 Mock 방식과 MSW를 비교해 전환을 제안·실행. 배포 환경에서도 실기기 QA가 가능하도록 구성하고 신규 프로젝트의 Mock 표준으로 정착.',
+          '공통 UI·유틸을 패키지화해 서비스 간 중복 수정 절차 통합.',
+          '연체 수수료 계산 로직을 유닛 테스트하고 백엔드팀에 공유.',
         ],
       },
       {
@@ -66,7 +70,8 @@ export const resumeDetailGroups = [
         stack: 'Next.js · React · TypeScript',
         cases: [],
         contributions: [
-          '정산 목록·상세 분할 패널과 달력 기반 수수료 자동 계산 구현. 건당 약 1시간 걸리던 수작업 확인·계산을 화면에서 확인하도록 개선하고 정산 연산을 유닛 테스트.',
+          '정산 목록과 상세를 함께 확인할 수 있는 분할 패널 구현.',
+          '달력 기반 수수료 계산 화면으로 건당 약 1시간 걸리던 수작업 확인·계산 대체. 계산 로직은 유닛 테스트로 검증.',
           '외상 결제 데모몰의 SSR 화면과 API Route 구현, MSW 기반 모바일 QA 환경 구성.',
         ],
       },

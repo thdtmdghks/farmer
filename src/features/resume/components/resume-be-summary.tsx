@@ -43,7 +43,7 @@ export function ResumeBeSummary() {
         <p className="text-base leading-relaxed text-gray-800">
           결제 서비스와 백오피스의 프론트엔드를 구축·운영하고, 가입 기능에
           필요한 Node.js API를 직접 개발·배포했습니다. 외부 연동과 동시성 문제를
-          해결하며, API 설계부터 Mock 기반 검증까지 담당합니다.
+          해결하고, API 설계부터 Mock을 활용한 테스트까지 담당했습니다.
         </p>
         <dl className="mt-4 space-y-2 border-l-2 border-blue-600 pl-4">
           <div className="text-sm leading-relaxed">
@@ -63,7 +63,7 @@ export function ResumeBeSummary() {
           <div className="text-sm leading-relaxed">
             <dt className="font-semibold text-gray-900">개발·검증 체계 개선</dt>
             <dd className="text-gray-700">
-              회귀 QA 2~3일 → 반나절 · 외부 연동을 격리한 지갑 API E2E
+              Playwright·CI 자동 검증으로 회귀 QA 2~3일 → 반나절
             </dd>
           </div>
         </dl>

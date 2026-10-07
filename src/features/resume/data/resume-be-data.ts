@@ -66,7 +66,7 @@ export const beCareerSummary: CareerCompany[] = [
         name: '결제 서비스 & 사용자 대시보드',
         bullets: [
           'MVP 출시 후 Playwright·CI 자동 검증으로 회귀 QA 2~3일 → 반나절',
-          'MSW Mock 표준화와 공통 코드 패키지화로 FE 개발·검증 병목 개선',
+          '공통 UI·유틸을 패키지화해 서비스 간 중복 수정 절차 통합',
         ],
         links: [
           {
@@ -92,7 +92,7 @@ export const beCareerSummary: CareerCompany[] = [
         bullets: [
           '드래그·스냅·멀티 셀렉션과 로그 함수 기반 줌 구현',
           '정적 요소는 Canvas, 인터랙티브 요소는 DOM으로 분리해 대량 클립 렌더링 개선',
-          '힙 스냅샷으로 타이머 미정리를 찾아 수정하고 72시간 이상 연속 가동 확인',
+          '힙 스냅샷으로 미해제 타이머를 찾아 메모리 누수 수정, 72시간 이상 연속 가동 테스트로 확인',
         ],
         links: [
           {
