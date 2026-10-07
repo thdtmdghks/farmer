@@ -40,7 +40,8 @@ export function ResumeFeSummary() {
         </h2>
         <p className="mt-3 text-base leading-relaxed text-gray-800">
           React·Vue 기반 결제 서비스의 MVP 출시와 백오피스·어드민 구축·운영을
-          담당했습니다. 공통 UI 설계와 테스트 자동화로 반복 작업을 줄여왔습니다.
+          담당했습니다. 사용자의 수작업을 줄이는 UI를 직접 제안하고, 반복되는
+          개발·검증 작업은 공통 UI와 테스트 자동화로 개선해왔습니다.
         </p>
         <dl className="mt-4 space-y-2 border-l-2 border-blue-600 pl-4">
           <div className="text-sm leading-relaxed">
