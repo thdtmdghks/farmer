@@ -35,7 +35,7 @@ export function ResumeFeSummary() {
       </header>
 
       <section className="mb-6" aria-label="소개와 대표 경험">
-        <h2 className="text-xl font-bold leading-snug text-gray-900">
+        <h2 className="text-xl leading-snug font-bold text-gray-900">
           반복되는 개발 문제를 구조와 자동화로 해결합니다.
         </h2>
         <p className="mt-3 text-base leading-relaxed text-gray-800">
@@ -57,9 +57,12 @@ export function ResumeFeSummary() {
             </dd>
           </div>
           <div className="text-sm leading-relaxed">
-            <dt className="font-semibold text-gray-900">브라우저 안정성 개선</dt>
+            <dt className="font-semibold text-gray-900">
+              브라우저 안정성 개선
+            </dt>
             <dd className="text-gray-700">
-              CMS 메모리 누수 수정 후 72시간 이상 연속 가동 테스트에서 무중단 동작 확인
+              CMS 메모리 누수 수정 후 72시간 이상 연속 가동 테스트에서 무중단
+              동작 확인
             </dd>
           </div>
         </dl>
