@@ -42,7 +42,7 @@ export const feCareerSummary: CareerCompany[] = [
         highlight: '공통 UI를 한 곳에서 수정해 두 앱에 반영',
         bullets: [
           '공유 패키지의 공통 UI를 한 곳에서 수정해 두 앱에 반영하고, ESLint로 의존성 규칙 검사',
-          'DataTable 합성 패턴으로 도메인별 테이블 화면 구성',
+          '공통 테이블을 기반으로 도메인별 요구사항을 조합할 수 있도록 DataTable 설계',
           'React Hook Form·Zod로 폼별 입력 규칙과 필드 간 교차 검증 관리',
           '다중 요소 인증(MFA) 흐름과 세션 충돌 처리 구현',
         ],
@@ -61,7 +61,7 @@ export const feCareerSummary: CareerCompany[] = [
         name: 'API 협업 및 검증',
         bullets: [
           '백엔드팀과 API 스키마를 사전 합의하고 MSW로 인증·목록 시나리오를 구현해 독립 개발 환경 구성',
-          'Vitest·RTL로 인증·스토어·유틸의 동작 검증',
+          '인증 흐름·상태 관리·공통 유틸의 동작을 확인하는 자동화 테스트 작성(Vitest·RTL)',
           'React 지갑 UI와 NestJS API MVP 개발 완료(고객 배포 전)',
         ],
       },
