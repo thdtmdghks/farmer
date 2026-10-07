@@ -8,9 +8,9 @@ export const resumeCases = [
     problem:
       '두 앱에서 사용하는 공통 UI를 한 곳에서 관리하고, 도메인별 화면 차이도 수용할 구조가 필요했습니다.',
     implementation:
-      '모노레포에 공유 패키지 5개와 도구 설정 2개를 구성했습니다. DataTable은 제네릭과 children 합성 패턴으로 설계해 화면별 구성을 조합하도록 했습니다. 패키지 간 의존성 규칙은 ESLint로 검사했습니다.',
+      'UI·인증·API 클라이언트를 모노레포의 공유 패키지로 분리했습니다. DataTable은 제네릭과 children 합성 패턴으로 설계해 도메인별 화면 구성을 조합하도록 했습니다. ESLint로 앱과 패키지의 참조 방향을 검사했습니다.',
     result:
-      '공통 UI를 한 곳에서 수정해 두 앱에 반영하는 개발 구조를 마련했습니다.',
+      '공통 UI는 공유 패키지 한 곳에서 수정해 두 앱에 반영하고, 도메인별 화면 차이는 각 앱에서 조합하도록 구성했습니다.',
   },
   {
     id: 'forms',
@@ -34,7 +34,7 @@ export const resumeCases = [
     problem:
       '결제 서비스 변경 시 전체 회귀 QA에 2~3일이 소요됐고 핵심 사용자 흐름의 검증 누락 가능성이 있었습니다.',
     implementation:
-      'Cypress와 비교 후 Playwright를 선택했습니다. 가입·결제·완료 흐름을 E2E로 구성하고 CI에 연결했습니다.',
+      '가입·결제·완료 흐름을 Playwright E2E 테스트로 구성하고 CI에 연결했습니다.',
     result: '회귀 QA를 2~3일에서 반나절로 단축했습니다.',
   },
   {
@@ -97,7 +97,7 @@ export const resumeCases = [
     problem:
       '실제 외부 API와 테스트넷 상태에 의존하면 동일한 조건으로 API를 반복 검증하기 어려웠습니다.',
     implementation:
-      'nock으로 외부 API를 격리하고 테스트마다 DB를 초기화했습니다.',
+      '외부 WaaS에 별도 Sandbox가 없어 nock으로 외부 호출을 격리했습니다. PostgreSQL의 ENUM 등 실제 DB 동작을 검증하기 위해 SQLite 대신 Docker의 PostgreSQL을 사용했습니다. 비동기 영수증 폴링이 트랜잭션 밖에서 실행되므로 롤백 대신 테스트별 TRUNCATE로 데이터를 초기화했습니다.',
     result:
       '외부 네트워크와 테스트넷 상태에 의존하지 않는 반복 가능한 E2E 검증 환경을 구성했습니다.',
   },
