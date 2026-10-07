@@ -40,8 +40,9 @@ export const feCareerSummary: CareerCompany[] = [
         name: '결제 백오피스 & 어드민',
         bullets: [
           '공유 UI 패키지로 두 앱의 수정 지점을 통합하고 ESLint로 의존성 규칙 검사',
-          'DataTable 합성 패턴과 폼 스키마로 반복되는 테이블·입력 화면 구성',
-          'MFA·OTP·TOTP 인증 흐름과 세션 충돌 처리 구현',
+          'DataTable 합성 패턴으로 도메인별 테이블 화면 구성',
+          'React Hook Form·Zod로 폼별 입력 규칙과 필드 간 교차 검증 관리',
+          '다중 요소 인증(MFA) 흐름과 세션 충돌 처리 구현',
         ],
         links: [
           {
@@ -136,7 +137,7 @@ export const fePersonalProjects: PersonalProject[] = [
       '시공사례 관리·고객 후기 작성/승인 기능을 갖춘 Next.js 업체 홈페이지 개발·배포',
       'On-demand ISR로 콘텐츠 갱신을 반영하고 JSON-LD·동적 sitemap으로 검색 메타데이터 구성',
       '서버·클라이언트·공용 영역과 Repository 경계를 설계하고 DB 없이 개발 가능한 Mock 구현체 구성',
-      'AI가 작성한 코드의 중복 UI·입력 상태·로딩 경계를 검토·개선하고, 후속 구현을 위한 에이전트 규칙에 반영',
+      'AI 구현 코드의 중복 UI와 상태 처리를 검토·개선하고, 검토 결과를 에이전트 규칙에 반영',
     ],
   },
   {
