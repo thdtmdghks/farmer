@@ -52,7 +52,7 @@ export function ResumeFeSummary() {
           <div className="text-sm leading-relaxed">
             <dt className="font-semibold text-gray-900">회귀 QA 단축</dt>
             <dd className="text-gray-700">
-              가입·결제 핵심 흐름 자동 검증으로 2~3일 → 반나절
+              가입·결제 E2E 도입으로 회귀 QA 부담 감소
             </dd>
           </div>
           <div className="text-sm leading-relaxed">
