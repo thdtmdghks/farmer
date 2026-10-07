@@ -16,7 +16,7 @@ export function CareerSection({ companies, detailLink }: Props) {
           rel="noopener noreferrer"
           className="text-sm text-blue-500 hover:underline"
         >
-          프로젝트별 상세 내용 ↗
+          상세 경력기술서 ↗
         </a>
       </div>
 
@@ -45,19 +45,6 @@ export function CareerSection({ companies, detailLink }: Props) {
                   <li key={b}>· {b}</li>
                 ))}
               </ul>
-              {project.links && (
-                <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 print:hidden">
-                  {project.links.map((link) => (
-                    <a
-                      key={link.id}
-                      href={`${detailLink}#${link.id}`}
-                      className="text-sm text-blue-700 underline underline-offset-4"
-                    >
-                      {link.label} ↗
-                    </a>
-                  ))}
-                </div>
-              )}
             </div>
           ))}
         </div>
