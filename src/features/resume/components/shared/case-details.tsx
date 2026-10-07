@@ -70,7 +70,7 @@ export function CaseDetails({ variant }: Props) {
       <div className="space-y-10">
         {groups.map((group, index) => (
           <section key={group.company} aria-label={group.company}>
-            <header className="border-b-2 border-gray-800 pb-3 print:break-after-avoid">
+            <header className="border-b-2 border-gray-800 pb-3 print:break-inside-avoid print:break-after-avoid">
               <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <h3 className="text-xl font-bold text-gray-900">
                   {group.company}
@@ -93,25 +93,18 @@ export function CaseDetails({ variant }: Props) {
                     <h4 className="text-base font-bold text-gray-900 print:break-after-avoid">
                       {project.title}
                     </h4>
-                    <p className="mt-1 text-sm text-gray-700">
+                    <p className="mt-1 text-sm text-gray-700 print:break-after-avoid">
                       {project.scope}
                     </p>
-                    <p className="mt-1 text-xs leading-relaxed text-gray-500">
+                    <p className="mt-1 text-sm leading-relaxed text-gray-600 print:break-after-avoid">
                       {project.stack}
                     </p>
-                    {project.contributions.length > 0 && (
-                      <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-gray-700">
-                        {project.contributions.map((text) => (
-                          <li key={text}>{text}</li>
-                        ))}
-                      </ul>
-                    )}
                     <div className="space-y-5">
                       {cases.map((item) => (
                         <section
                           key={item.id}
                           id={item.id}
-                          className="mt-4 scroll-mt-6 border-l-2 border-blue-200 pl-4"
+                          className="mt-4 scroll-mt-6 border-l-2 border-blue-200 pl-3 sm:pl-4 print:break-inside-avoid"
                         >
                           <h5 className="text-sm font-semibold text-gray-900 print:break-after-avoid">
                             {item.title}
@@ -126,6 +119,15 @@ export function CaseDetails({ variant }: Props) {
                         </section>
                       ))}
                     </div>
+                    {project.contributions.length > 0 && (
+                      <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-gray-700">
+                        {project.contributions.map((text) => (
+                          <li key={text} className="print:break-inside-avoid">
+                            {text}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </article>
                 )
               })}
