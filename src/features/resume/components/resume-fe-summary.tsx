@@ -58,7 +58,7 @@ export function ResumeFeSummary() {
           <div className="text-sm leading-relaxed">
             <dt className="font-semibold text-gray-900">브라우저 안정성 개선</dt>
             <dd className="text-gray-700">
-              CMS 메모리 누수 수정 후 72시간 이상 연속 가동 테스트로 확인
+              CMS 메모리 누수 수정 후 72시간 이상 연속 가동 테스트에서 무중단 동작 확인
             </dd>
           </div>
         </dl>
