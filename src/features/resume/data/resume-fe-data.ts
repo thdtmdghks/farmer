@@ -5,6 +5,7 @@ import { articles, type ArticleLink } from './resume-v2-data'
 export type ProjectGroup = {
   name: string
   bullets: string[]
+  highlight?: string
   links?: { id: string; label: string }[]
 }
 
@@ -38,8 +39,9 @@ export const feCareerSummary: CareerCompany[] = [
     projects: [
       {
         name: '결제 백오피스 & 어드민',
+        highlight: '공통 UI를 한 곳에서 수정해 두 앱에 반영',
         bullets: [
-          '공유 UI 패키지로 두 앱의 수정 지점을 통합하고 ESLint로 의존성 규칙 검사',
+          '공유 패키지의 공통 UI를 한 곳에서 수정해 두 앱에 반영하고, ESLint로 의존성 규칙 검사',
           'DataTable 합성 패턴으로 도메인별 테이블 화면 구성',
           'React Hook Form·Zod로 폼별 입력 규칙과 필드 간 교차 검증 관리',
           '다중 요소 인증(MFA) 흐름과 세션 충돌 처리 구현',
@@ -74,6 +76,7 @@ export const feCareerSummary: CareerCompany[] = [
     projects: [
       {
         name: '결제 서비스 & 사용자 대시보드',
+        highlight: '수동 회귀 테스트 부담 감소',
         bullets: [
           '가입·결제 핵심 흐름을 Playwright·CI로 자동 검증해 수동 회귀 테스트 부담 감소',
           'Pinia에 결제·가입 상태 제어를 캡슐화하고 UI와 비즈니스 로직 분리',
@@ -92,9 +95,10 @@ export const feCareerSummary: CareerCompany[] = [
       },
       {
         name: '개발 체계 및 운영 화면 개선',
+        highlight: '달력 UI를 직접 제안·구현',
         bullets: [
+          '다른 날짜의 수수료를 수작업으로 계산하던 불편을 줄이기 위해, 기준일을 선택하는 달력 UI를 직접 제안·구현',
           'MSW를 신규 프로젝트의 Mock 표준으로 정착시켜 배포 환경에서도 실기기 QA 지원',
-          '수수료 기준일을 선택하는 달력 UI를 직접 제안·구현해 다른 날짜의 수수료도 화면에서 조회',
         ],
       },
     ],
@@ -107,6 +111,7 @@ export const feCareerSummary: CareerCompany[] = [
     projects: [
       {
         name: '영상 편집기 & CMS 모니터링',
+        highlight: '72시간 이상 연속 가동 테스트',
         bullets: [
           '드래그·스냅·멀티 셀렉션과 로그 함수 기반 줌 구현',
           '여러 렌더링 방식을 비교·테스트해 정적 요소는 Canvas, 편집 인터랙션은 DOM으로 구현',
