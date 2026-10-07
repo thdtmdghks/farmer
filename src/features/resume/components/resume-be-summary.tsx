@@ -34,7 +34,7 @@ export function ResumeBeSummary() {
             </a>
           </div>
         </div>
-        <p className="mt-1 break-keep text-lg text-gray-600">
+        <p className="mt-1 text-lg break-keep text-gray-600">
           프론트엔드 중심 Node.js 풀스택 개발자 · 6년차
         </p>
       </header>
