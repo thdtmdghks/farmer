@@ -44,9 +44,10 @@ export function ResumeBeSummary() {
           화면부터 API까지 구현해 제품 개발의 병목을 해결합니다.
         </h2>
         <p className="mt-3 text-base leading-relaxed text-gray-800">
-          결제 서비스와 백오피스의 프론트엔드를 구축·운영했습니다. 가입에 필요한
-          Node.js API를 개발·배포하고, 지갑 API MVP의 설계·구현·테스트를
-          담당했습니다.
+          결제 서비스와 백오피스의 프론트엔드를 구축·운영하며, 제품 개발에 필요한
+          API까지 직접 구현해왔습니다. 백엔드 리소스 부족으로 지연된 가입 기능을
+          위해 Node.js API를 개발·배포했고, 지갑 API MVP에서는 외부 연동과
+          동시 요청 처리를 구현하고 테스트 환경을 구성했습니다.
         </p>
         <dl className="mt-4 space-y-2 border-l-2 border-blue-600 pl-4">
           <div className="text-sm leading-relaxed">
