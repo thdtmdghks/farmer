@@ -12,7 +12,7 @@ export const resumeDetailGroups = [
           'React · TypeScript · TanStack Router/Query · Zustand · Turborepo',
         cases: ['shared-ui', 'forms'],
         contributions: [
-          'MFA·OTP·TOTP 인증 흐름과 세션 충돌 처리 구현.',
+          '다중 요소 인증(MFA) 흐름과 세션 충돌 처리 구현.',
           '백엔드팀과 요청·응답 스키마를 사전 합의하고 MSW로 인증 분기·필터링·페이지네이션을 구현해 독립 개발 환경 구성.',
           'Vitest·RTL로 인증·스토어·유틸의 동작 검증.',
           'RSA-OAEP 비밀번호 암호화와 공개키 캐싱·만료 시 재발급 흐름 구현.',
