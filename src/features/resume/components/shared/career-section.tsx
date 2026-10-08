@@ -7,7 +7,7 @@ type Props = {
 
 export function CareerSection({ companies, detailLink }: Props) {
   return (
-    <section className="resume-career mb-6 rounded-lg bg-gray-50 p-3 sm:p-6">
+    <section className="resume-career mb-6 rounded-lg bg-gray-50 p-3 sm:p-6 print:p-4">
       <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
         <h2 className="text-lg font-bold text-gray-900">경력</h2>
         <a
@@ -23,7 +23,7 @@ export function CareerSection({ companies, detailLink }: Props) {
       {companies.map((company, idx) => (
         <div
           key={company.company}
-          className={idx < companies.length - 1 ? 'mb-8' : ''}
+          className={idx < companies.length - 1 ? 'mb-8 print:mb-5' : ''}
         >
           <div className="mb-1 flex flex-wrap items-baseline justify-between gap-2 print:break-after-avoid">
             <div className="flex flex-wrap items-baseline gap-2">
@@ -38,9 +38,12 @@ export function CareerSection({ companies, detailLink }: Props) {
             - {company.summary}
           </p>
           {company.projects.map((project) => (
-            <div key={project.name} className="mt-3 print:break-inside-avoid">
+            <div
+              key={project.name}
+              className="mt-3 print:mt-2 print:break-inside-avoid"
+            >
               <p className="text-sm font-bold text-gray-800">{project.name}</p>
-              <ul className="mt-1.5 space-y-2 border-l-2 border-gray-200 pl-3 text-sm leading-relaxed text-gray-700">
+              <ul className="mt-1.5 space-y-2 border-l-2 border-gray-200 pl-3 text-sm leading-relaxed text-gray-700 print:space-y-1">
                 {project.bullets.map((b) => (
                   <li key={b}>
                     ·{' '}
