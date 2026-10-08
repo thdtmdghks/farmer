@@ -73,7 +73,7 @@ export const beCareerSummary: CareerCompany[] = [
         highlight: '수동 회귀 테스트 부담 감소',
         bullets: [
           'MVP 출시 후 Playwright·CI로 핵심 흐름을 자동 검증해 수동 회귀 테스트 부담 감소',
-          '공통 UI·유틸을 패키지화해 서비스 간 중복 수정 절차 통합',
+          '공통 UI·유틸을 공유 패키지로 옮겨 여러 서비스에서 각각 수정하던 작업을 줄임',
         ],
         links: [
           {
@@ -95,23 +95,25 @@ export const beCareerSummary: CareerCompany[] = [
     summary: '영상 편집기 타임라인 UI·인터랙션 전담 및 CMS 모니터링 개발',
     projects: [
       {
-        name: '영상 편집기 & CMS 모니터링',
-        highlight: '72시간 이상 연속 가동 테스트',
+        name: '웹 영상 편집기',
         bullets: [
           '드래그·스냅·멀티 셀렉션과 로그 함수 기반 줌 구현',
           '여러 렌더링 방식을 비교·테스트해 정적 요소는 Canvas, 편집 인터랙션은 DOM으로 구현',
-          '힙 스냅샷으로 미해제 타이머를 찾아 메모리 누수를 수정하고, 72시간 이상 연속 가동 테스트에서 중단 없이 동작 확인',
         ],
         links: [
           {
             id: 'timeline',
             label: '타임라인 렌더링',
           },
-          {
-            id: 'memory',
-            label: '메모리 누수 분석',
-          },
         ],
+      },
+      {
+        name: 'CMS 모니터링',
+        highlight: '72시간 이상 연속 가동 테스트',
+        bullets: [
+          '힙 스냅샷으로 미해제 타이머를 찾아 메모리 누수를 수정하고, 72시간 이상 연속 가동 테스트에서 중단 없이 동작 확인',
+        ],
+        links: [{ id: 'memory', label: '메모리 누수 분석' }],
       },
     ],
   },
