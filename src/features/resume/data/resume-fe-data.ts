@@ -58,12 +58,15 @@ export const feCareerSummary: CareerCompany[] = [
         ],
       },
       {
-        name: 'API 협업 및 검증',
+        name: '백오피스·어드민 개발 및 검증 환경',
         bullets: [
           '백엔드팀과 API 스키마를 사전 합의하고 MSW로 인증·목록 시나리오를 구현해 독립 개발 환경 구성',
           '인증 흐름·상태 관리·공통 유틸의 동작을 확인하는 자동화 테스트 작성(Vitest·RTL)',
-          'React 지갑 UI와 NestJS API MVP 개발 완료(고객 배포 전)',
         ],
+      },
+      {
+        name: '블록체인 지갑 MVP (고객 배포 전)',
+        bullets: ['React 지갑 UI와 NestJS API 개발 완료'],
       },
     ],
   },
@@ -79,6 +82,7 @@ export const feCareerSummary: CareerCompany[] = [
         highlight: '수동 회귀 테스트 부담 감소',
         bullets: [
           '가입·결제 핵심 흐름을 Playwright·CI로 자동 검증해 수동 회귀 테스트 부담 감소',
+          'MSW를 신규 프로젝트의 Mock 표준으로 정착시켜 배포 환경에서도 실기기 QA 지원',
           'Pinia에 결제·가입 상태 제어를 캡슐화하고 UI와 비즈니스 로직 분리',
           'PDF 페이지 경계에서 표 행이 잘리는 문제를 DOM 경계 감지와 여백 삽입으로 해결',
         ],
@@ -94,11 +98,10 @@ export const feCareerSummary: CareerCompany[] = [
         ],
       },
       {
-        name: '개발 체계 및 운영 화면 개선',
+        name: '백오피스 운영 화면 개선',
         highlight: '달력 UI를 직접 제안·구현',
         bullets: [
           '다른 날짜의 수수료를 수작업으로 계산하던 불편을 줄이기 위해, 기준일을 선택하는 달력 UI를 직접 제안·구현',
-          'MSW를 신규 프로젝트의 Mock 표준으로 정착시켜 배포 환경에서도 실기기 QA 지원',
         ],
       },
     ],
@@ -110,23 +113,25 @@ export const feCareerSummary: CareerCompany[] = [
     summary: '영상 편집기 타임라인 UI·인터랙션 전담 및 CMS 모니터링 개발',
     projects: [
       {
-        name: '영상 편집기 & CMS 모니터링',
-        highlight: '72시간 이상 연속 가동 테스트',
+        name: '웹 영상 편집기',
         bullets: [
           '드래그·스냅·멀티 셀렉션과 로그 함수 기반 줌 구현',
           '여러 렌더링 방식을 비교·테스트해 정적 요소는 Canvas, 편집 인터랙션은 DOM으로 구현',
-          '힙 스냅샷으로 미해제 타이머를 찾아 메모리 누수를 수정하고, 72시간 이상 연속 가동 테스트에서 중단 없이 동작 확인',
         ],
         links: [
           {
             id: 'timeline',
             label: '타임라인 렌더링',
           },
-          {
-            id: 'memory',
-            label: '메모리 누수 분석',
-          },
         ],
+      },
+      {
+        name: 'CMS 모니터링',
+        highlight: '72시간 이상 연속 가동 테스트',
+        bullets: [
+          '힙 스냅샷으로 미해제 타이머를 찾아 메모리 누수를 수정하고, 72시간 이상 연속 가동 테스트에서 중단 없이 동작 확인',
+        ],
+        links: [{ id: 'memory', label: '메모리 누수 분석' }],
       },
     ],
   },
