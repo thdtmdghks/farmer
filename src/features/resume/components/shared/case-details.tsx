@@ -10,10 +10,7 @@ export function CaseDetails({ variant }: Props) {
       : resumeCases.map((item) => item.id)
   const groups = resumeDetailGroups.map((group, index) => {
     const projects = group.projects.filter(
-      (project) =>
-        variant === 'be' ||
-        project.cases.some((id) => visibleIds.includes(id)) ||
-        project.stack.includes('Next.js'),
+      (project) => variant === 'be' || project.showInFe !== false,
     )
     if (variant === 'be' && index < 2)
       [projects[0], projects[1]] = [projects[1], projects[0]]
@@ -112,9 +109,11 @@ export function CaseDetails({ variant }: Props) {
                           <div className="mt-2 space-y-2 text-sm leading-relaxed text-gray-700">
                             <p>{item.problem}</p>
                             <p>{item.implementation}</p>
-                            <p className="font-medium text-gray-900">
-                              {item.result}
-                            </p>
+                            {item.result && (
+                              <p className="font-medium text-gray-900">
+                                {item.result}
+                              </p>
+                            )}
                           </div>
                         </section>
                       ))}
